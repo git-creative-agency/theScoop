@@ -1,0 +1,1556 @@
+<!--
+=== meltBoilerplate - Blank - 2 column layout - version 1.00 ===
+ This blank template contains the common elements that are used in the production 
+of our 2 column email campaigns here at Meltmedia.
+__________________________________________________________________________________
+ === Useful Tips ===
+ - Use Premailer or Putsmail to bring styles inline with elements 
+   when email is code complete. You'll need to remove/comment out the mobile styles
+   before you move the global styles inline. Then paste/uncomment them back in. 
+   Otherwise Premailer or Putsmail will add the mobile styles inline.(view References)
+ - Use the "Safe CSS" below to prevent weird client issues
+ - Do not use shorthand css
+ - Use VML so background images can be displayed in Outlook 2007-10.
+   Use wisely. (see VML reference)
+ - Use absolute links for all images
+ - Outlook 2007-10 will add a page break after a certain height(23 inches).
+   So if you get weird gaps this could be the issue.
+ - Use nothing but tables. This will ensure cross client compatibility.
+ - Try using padding for spacing instead of margins
+ - Add width and height dimensions to all img tags.
+ __________________________________________________________________________________
+ === References ===
+ Premailer   - http://premailer.dialect.ca/
+ VML         - http://www.campaignmonitor.com/forums/viewtopic.php?id=3862   
+__________________________________________________________________________________
+ === Snippets ===
+ If you use Sublime Text 2, tab triggered snippets have been created 
+that mimmick common html tags. Can be found from the link below.
+https://github.com/meltmedia/campaign-monitor/tree/master/_campaign-monitor-boilerplate/snippets/sublime-text/email-snippets
+ =============================
+Snippet       |  HTML Element
+=============================
+cm-single       | campaign monitor single column layout
+cm-two          | campaign monitor two column layout
+ramp-single     | ramp single column layout
+ramp-two        | ramp two column layout
+th1             | H1 header
+th1             | H1 header
+th2             | H2 header
+th3             | H3 header
+th4             | H4 header
+tp              | paragraph
+timg            | image
+tul             | unordered list
+tulul           | unordered list with sublist
+tulimg          | unordered list with images as bullets
+tfigure         | figure
+tfigcaption     | figcaption
+tfigcaptionlist | figcaption list
+tfootnote       | footnote
+tfootnotelist   | footnote list
+tborder         | add border around table
+tvml            | VML (allow background images in Outlook 2007-10)
+tlegal          | legal links
+taddress        | address
+tunsub          | unsubscribe link (campaign monitor only) 
+tunsubhack      | unsubscribe hack (campaign monitor only) 
+tintable        | inner table block
+tcopyright      | copyright info
+thr             | horizontal rule
+tbutton         | button
+trtd            | sets up a <tr> <td> layout
+__________________________________________________________________________________
+ === CSS that is safe to use ===
+ background-color
+border
+color
+font-family
+font-size
+font-style
+font-variant
+font-weight
+letter-spacing
+line-height
+padding
+table-layout
+text-align
+text-decoration
+text-indent
+text-transform
+ __________________________________________________________________________________
+ === VML Shapes and Attributes ===
+ SHAPES
+  v:rect              | rectangle
+  v:roundrect         | rectangle with rounded corners  
+ ELEMENTS
+  v:background        | full page background 
+ SUB-ELEMENT
+  v:fill              | gradient, tile, frame
+ ATTRIBUTES
+  arcsize             | change the border radius using % values
+  color2              | use for v:fill gradient
+  colors              | use for v:fill gradient, add multiple colors using 
+                        e.g. colors="20% green, 10% blue"
+  fillcolor           | fill shape with specified color
+  fill                | set to true or false (default is true)
+  href                | link entire shape to create a callout 
+  src                 | source to image
+  stroke              | set to true or false (default is true)
+  strokecolor         | specify color of stroke 
+  strokeweight        | adjust thickness of stroke
+ STYLES
+  v-text-anchor       | top, middle, bottom
+  
+References:
+  http://msdn.microsoft.com/en-us/library/ee384217(v=vs.85).aspx
+  http://www.w3.org/TR/NOTE-VML
+ =============================================================================-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ <!-- Target IE10 phones -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>GIT The Scoop</title>
+<style type="text/css">
+/***************************************
+                GLOBAL STYLES
+    ****************************************/
+.main-td {
+    min-width: 600px;/*android fix*/
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #000001;
+    line-height: 17px;
+}
+.h1 {
+    font-size: 22px;
+    line-height: 26px;
+    color: #404040;
+    font-weight: bold;
+}
+.h2 {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h2-scholarships {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h2-resources {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h2-events {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h2-clubs {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h3 {
+    font-size: 14px;
+    line-height: 18px;
+    color: #8c1d40;
+    font-weight: bold;
+}
+.h4 {
+    font-size: 12px;
+    line-height: 16px;
+    color: #000001;
+    font-weight: bold;
+}
+.h5 {
+    font-size: 10px;
+    line-height: 14px;
+    color: #8c1d40;
+    font-weight: bold;
+}
+.p,  .ul {
+    padding-bottom: 15px;
+}
+.p {
+    color: #737373;
+}
+.li {
+    width: 1px;
+}
+.ul .li {
+    padding-right: 5px;
+}
+.ul .ul {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+}
+.ul tr:first-child .li + td {
+    width: 100%;
+}
+.references tr:first-child .li + td {
+    width: auto;
+}
+.references .li {
+    width: 11px;
+}
+/*fixes width issue in yahoo*/
+ .hr {
+    background-color: #ffdc7b;
+    display: block;
+    font-size: 0px;
+    height: 1px;
+    line-height: 0px;
+    padding: 0;
+}
+/* horizontal rule */
+ .centerText {
+    text-align: center;
+}
+.footnote,  .footnote table {
+    font-size: 10px;
+    line-height: 13px;
+}
+sup {
+    line-height: 0;
+    font-size: 75%;
+}
+.webversion {
+    font-size: 10px;
+    text-decoration: underline;
+}
+.linkDivider {
+    font-weight: lighter;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.no-underline {
+    text-decoration: none;
+}
+.underline {
+    text-decoration: underline;
+}
+.bold {
+    font-weight: bold;
+}
+.no-link {
+    color: #000001;
+    text-decoration: none;
+    cursor: text;
+}
+.six-star {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.mobile-only {
+    display: none;
+    max-height: 0px;
+    overflow: hidden;
+}
+.legal a {
+    text-decoration: none;
+}
+.legal a span {
+    text-decoration: underline;
+}
+.yahoo-table-fix {
+    margin: 0 auto;
+}
+/*fixes table width issue in yahoo*/
+ .black {
+    color: #000001;
+}
+.white {
+    color: #ffffff;
+}
+.button {
+    background-color: #8c1d40;
+}
+.button a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    border: 1px solid #8c1d40; /*border hack needed for outlook clients*/
+}
+.babyline {
+    background-color: #ffd255;
+}
+.babybayline {
+    border-top: 1px solid #ffd255;
+}
+.background-gold {
+    background-color: #ffd255;
+}
+.maroon-color {
+    background-color: #8c1d40;
+}
+strong,  .maroon-text {
+    color: #8C1D40;
+}
+a {
+    color: #e6a800;
+    font-weight: 600;
+}
+a:hover {
+    color: #00A3E0;
+}
+a span.link {
+    color: #8c1d40 !important;
+    text-decoration: none !important;
+}
+em {
+    color: #000001;
+}
+p {
+    color: #5C6670;
+}
+.border-top {
+    border-top: 1px solid #ffd255;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+/*.border table { border-top: 1px solid; border-left: 1px solid; } */
+      /*.border td {  border-bottom: 1px solid; border-right: 1px solid; } */
+      
+    /***************************************
+                 SPACING STYLES 
+    ****************************************/
+ .p0 {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+.p5 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.p10 {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.p15 {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+.p20 {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+.p25 {
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+}
+.p30 {
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+.p35 {
+    padding-top: 35px;
+    padding-right: 35px;
+    padding-bottom: 35px;
+    padding-left: 35px;
+}
+.p40 {
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+/* zero padding on all side*/
+ .ptb0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.ptb5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.ptb10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ptb15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.ptb20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.ptb25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.ptb30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ptb35 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.ptb40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+/* Padding top and bottom */
+ .prl0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+.prl5 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.prl10 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.prl15 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.prl20 {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.prl25 {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.prl30 {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.prl35 {
+    padding-right: 35px;
+    padding-left: 35px;
+}
+.prl40 {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+/* Padding left and right */
+ .pt0 {
+    padding-top: 0px;
+}
+.pt5 {
+    padding-top: 5px;
+}
+ .pt7 {
+    padding-top: 7px;
+}
+ .pt10 {
+    padding-top: 10px;
+}
+.pt15 {
+    padding-top: 15px;
+}
+.pt20 {
+    padding-top: 20px;
+}
+.pt25 {
+    padding-top: 25px;
+}
+.pt30 {
+    padding-top: 30px;
+}
+.pt35 {
+    padding-top: 35px;
+}
+.pt40 {
+    padding-top: 40px;
+}
+/* padding top */
+ .pr0 {
+    padding-right: 0px;
+}
+.pr5 {
+    padding-right: 5px;
+}
+.pr10 {
+    padding-right: 10px;
+}
+.pr15 {
+    padding-right: 15px;
+}
+.pr20 {
+    padding-right: 20px;
+}
+.pr25 {
+    padding-right: 25px;
+}
+.pr30 {
+    padding-right: 30px;
+}
+.pr35 {
+    padding-right: 35px;
+}
+.pr40 {
+    padding-right: 40px;
+}
+/* padding right */
+ .pb5 {
+    padding-bottom: 5px;
+}
+.pb0 {
+    padding-bottom: 0px;
+}
+.pb10 {
+    padding-bottom: 10px;
+}
+.pb15 {
+    padding-bottom: 15px;
+}
+.pb20 {
+    padding-bottom: 20px;
+}
+.pb25 {
+    padding-bottom: 25px;
+}
+.pb30 {
+    padding-bottom: 30px;
+}
+.pb35 {
+    padding-bottom: 35px;
+}
+.pb40 {
+    padding-bottom: 40px;
+}
+/* padding bottom */
+ .pl0 {
+    padding-left: 0px;
+}
+.pl5 {
+    padding-left: 5px;
+}
+.pl10 {
+    padding-left: 10px;
+}
+.pl15 {
+    padding-left: 15px;
+}
+.pl20 {
+    padding-left: 20px;
+}
+.pl25 {
+    padding-left: 25px;
+}
+.pl30 {
+    padding-left: 30px;
+}
+.pl35 {
+    padding-left: 35px;
+}
+.pl40 {
+    padding-left: 40px;
+}
+/* padding left */
+     /***************************************
+            CLIENT SPECIFIC STYLES
+    ****************************************/
+     /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+.mso-exact {
+    mso-line-height-rule: exactly;
+}
+.preheader-text,  .hide-all {
+    display: none;
+    font-size: 0;
+    max-height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+/* Used to hide elements for mobile */      
+ #outlook a {
+    padding: 0;
+}
+/* Force Outlook to provide a "view in browser" menu link. */
+ body {
+    width: 100% !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+ #backgroundTable {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    line-height: 100% !important;
+}
+/* end reset */
+ img {
+    display: block;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+    font-size: 10px;
+}
+a img {
+    border: none;
+}
+    /* Some sensible defaults for images*/
+</style>
+<!--[if gte mso 9]>
+        <style>
+          sup { font-size: 100% !important; }
+        </style> 
+      <![endif]-->
+
+ <style type="text/css" data-embed>
+     /***************************************
+                GLOBAL STYLES
+    ****************************************/
+     body {
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 12px;
+      color: #000001;
+      line-height: 16px;
+    }
+    /* Render font family properly in Outlook */
+     table { font-size: inherit; }
+    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+     * { line-height: inherit; }
+    /* Prevent Outlook.com from overriding line-height */
+     table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+    /* Outlook 07, 10 Padding issue fix
+    Bring inline: No.*/
+     a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    /* Disguises iOS auto links */
+     .mobile-only td, 
+    .mobile-only table { mso-hide:all;}
+    /* Fix to hide elements in Outlook 2007-13 issue */
+     .mobile-only { display: none; max-height:0px; overflow:hidden; }
+    /***************************************
+          UNRESPONSIVE MOBILE STYLES
+    ****************************************/
+    
+    /*@media only screen and (max-width: 37.5em) {
+      .main-table { padding-left: 5px !important; padding-right: 5px !important; }
+    }*/
+     /***************************************
+               MOBILE STYLES
+    ****************************************/
+    
+    @media only screen and (max-width: 37.5em) {
+       .main-table { width: 100% !important; }
+      .main-td { min-width: initial !important; }
+       .main-table table { width:100% !important; margin: 0 auto !important; }
+      
+      .block, 
+      .content, 
+      .safety { display: block; }
+      /* place content you want stacked here */
+       .desktop-only { display:none !important; }
+      /* hide elements for mobile */
+       img { max-width: 100% !important; height: auto !important; }
+      /* large images resize down according to their parent container size */
+       .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+       .width-auto { width: auto !important; height: auto !important; }
+       .text-center { text-align: center !important; }
+       .main-table .fixed-60 { width: 60px !important; }
+       .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
+       .m-prl0 { padding-right: 0 !important; padding-left: 0 !important; }
+       .m-img-center img { margin: 0 auto !important; }
+       .m-pr0 { padding-right: 0 !important; }
+       .m-pb10 { padding-bottom: 10px !important; }
+       .m-pb15 { padding-bottom: 15px !important; }
+       .m-img-resize img { width: 15% !important; }
+       .m-pt20 { padding-top: 20px !important; }
+     }
+     </style>
+</head>
+<body>
+<!-- Adds preheader text to build --> 
+<!-- This text shows in inbox as the email description --> 
+<span class="preheader-text">It's time to work on your portfolio...</span>
+<table align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+  <tr bgcolor="#eaeaea">
+    <td class="main-td">
+        <table class="yahoo-table-fix main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
+
+         <!-- Start Preheader -->
+        <tr>
+          <td class="preheader" style="border-bottom: 4px solid #ffca38;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                 <td class="p10 text-center"><a href="https://www.public.asu.edu/~jlbarn11/scoop/20200301newsletter.html" class="webversion">View this email in your browser</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Preheader --> 
+
+         <!-- Start Header -->
+        <tr bgcolor="#ffffff">
+          <td class="header">
+            <table align="center" class="yahoo-web-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-bottom: 1px solid #f2f2f2;">
+
+               <!-- Start Scoop Logo -->
+              <tr>
+                <td class="image yahoo-web-fix pt10 m-prl10" align="center"><img src="http://carrasquilla.faculty.asu.edu/scoop/scoopLogov2.png" alt="Scoop Logo" width="540">
+                </td>
+              </tr>
+              <!-- End Scoop Logo --> 
+
+               <!-- Start Social Media Links -->
+              <tr>
+                <td>
+                  <table align="center" class="yahoo-web-fix pb10 fixed-60" border="0" cellpadding="0" cellspacing="0" width="60">
+                    <tr>
+                      <td class="image" align="center" width="30"><a href="http://fb.me/gitasupoly"><img src="http://carrasquilla.faculty.asu.edu/scoop/facebooklogo2copy.png" alt="Facebook logo" width="30" height="30"></a></td>
+                      <td class="image" width="30" align="center"><a href="https://twitter.com/ASUGIT?lang=en"><img src="http://carrasquilla.faculty.asu.edu/scoop/twitterlogo2copy.png" alt="Twitter Logo" width="30" height="30"></a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- End Social Media Links -->
+<!-- Single column header code start -->
+             </table>
+          </td>
+        </tr> 
+        <!-- End Header --> 
+
+         <!-- Start Highlighted Content block -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+
+               <!-- Start Hero Image-->
+               <tr>
+                <td class="image pb10 pt20 m-prl10" align="center">
+                  <a href="https://www.eventbrite.com/e/2020-aiga-az-portfolio-review-asu-polytechnic-tickets-94080973725"><img src="https://www.public.asu.edu/~jlbarn11/scoop/portfolioReview2020.png" width="540" alt="2020 Portfolio Review at ASU Poly on March 26"></a>
+                </td> 
+              </tr>
+              <!-- End Hero Image -->
+               <!-- Hero text -->
+               <tr>
+
+                  <td class="h2 centerText ptb5">Get Ready for the Portfolio Review</td>
+               </tr>
+              <tr>
+                <td class="p m-prl10 pb15 pt5">
+                    The AIGA Arizona Portfolio Review is happening on March 26th and spring break is the perfect time to start organizing your work.<br>
+                    Collect your projects and practice talking about your creative process. The industry professionals at this event will give you feedback and suggestions that will help prepare you for interviewing for jobs.<br>
+                  <strong><a href="https://www.eventbrite.com/e/2020-aiga-az-portfolio-review-asu-polytechnic-tickets-94080973725">Learn more and RSVP online</a></strong>.<br>
+                </td>
+              </tr>
+              <!-- End hero text -->
+             </table>
+          </td>
+        </tr>
+<!-- end single column header block -->
+                 <!-- Start two column header block -->
+                 <!-- <tr>
+                    <td>
+                      <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                        <tr>
+                          <td class="m-prl10 m-pb10">
+                              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="block m-img-center pr25">
+                                    <a href="https://www.eventbrite.com/e/2020-aiga-az-portfolio-review-asu-polytechnic-tickets-94080973725"><img class="pb15" width="175" height="175" src="https://www.public.asu.edu/~jlbarn11/scoop/portfolioReviewSquare.png" alt="2020 Portfolio Review at ASU Poly"></a>
+                                </td>
+                                <td class="block">
+                                  <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="p pb5"><strong>Get Ready for the Portfolio Review</strong></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="p pb5">The AIGA Arizona Portfolio Review is happening on March 26th and spring break is the perfect time to start organizing your work.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p pb5">Collect your projects and practice talking about your creative process. The industry professionals at this event will give you feedback and suggestions that will help prepare you for interviewing for jobs.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p pb5"><a href="https://www.eventbrite.com/e/2020-aiga-az-portfolio-review-asu-polytechnic-tickets-94080973725">Learn more and RSVP online</a>.</td>
+                                    </tr>
+                                  </table> -->
+          
+                                   <!-- END TABLE BLOCK -->
+                                <!-- </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr> -->
+                  <!-- End two column header block --> 
+
+         <!-- Start Jobs and Internships Block --> 
+        <!-- Start h2 Banner - Don't Touch -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                        <tr>
+                          <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Jobs and Internships</td>
+                        </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End h2 Banner - Don't Touch-->
+
+         <tr>
+          <td class="prl10 m-prl0">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-prl10">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+
+                        <!-- Start Job - Added March 1- Expires March 6-->
+                        <tr>
+                            <td class="p"><strong>Student Graphic Designer</strong> <em>Tempe Campus</em><br>
+                                The Fulton Schools of Engineering seeks a student to work collaboratively with faculty to design and produce professional print and online materials ranging from posters to large format banners and social media graphics and web designs. <br>
+                            <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 58998BR.
+                            </td>
+                        </tr>
+                        <!-- End Job -->
+
+                        <!-- Start Job - Added March 1- Expires March 9-->
+                        <tr>
+                            <td class="p"><strong>Student Graphic Designer Assistant</strong> <em>ASU SkySong</em><br>
+                                EdPlus at ASU seeks a student to work closely with both the product and web teams to assist in designing elegant solutions that are aligned with the ASU brand.<br>
+                            <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 58248BR.
+                            </td>
+                        </tr>
+                        <!-- End Job -->
+                        
+                        <!-- Start Job - Added March 1- Expires March 6-->
+                        <tr>
+                            <td class="p"><strong>Student tSR Social Media Contributor</strong> <em>Tempe Campus</em><br>
+                                The School of Sustainability seeks a student to assist them with planning, posting, and updating The Sustainability Review's social media accounts and online presence in general.<br>
+                            <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 59503BR.
+                            </td>
+                        </tr>
+                        <!-- End Job -->
+                        
+                        <!-- Start Job - Added March 1- Expires March 9-->
+                        <tr>
+                            <td class="p"><strong>Student PAB Vice President of Marketing</strong> <em>Tempe Campus</em><br>
+                                The Programming and Activities Board seeks a student to work collaboratively with the President in providing leadership to all personnel in the organization, managing overall marketing and promotional efforts of events and programs, and general branding of the organization.<br>
+                            <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 59528BR.
+                            </td>
+                        </tr>
+                        <!-- End Job -->
+                        
+                        <!-- Start Job - Added March 1- Expires March 11-->
+                        <tr>
+                            <td class="p"><strong>Student Marketing Copywriter Assistant</strong> <em>ASU SkySong</em><br>
+                                EdPlus at Arizona State University seeks a student to assist in writing engaging marketing copy that builds interest and leads to conversions on our digital and print assets while maintaining the ASU brand.<br>
+                            <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 59536BR.
+                            </td>
+                        </tr>
+                        <!-- End Job -->
+                    
+                        <!-- Start Job - Added March 1- Expires March 3-->
+                        <tr>
+                            <td class="p"><strong>Student Social Media and Outreach Assistant</strong> <em>Tempe Campus</em><br>
+                                Sun Devil Fitness  seeks a student to assist the marketing coordinator in promoting all of the programs and services Live Well @ ASU offers in the SDFC and throughout the ASU community.<br>
+                            <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 59615BR.
+                            </td>
+                        </tr>
+                        <!-- End Job -->
+                        
+                            <!-- Start Job - Added February 23- Expires Feb 24 ROLLING-->
+                        <tr>
+                        <td class="p"><strong>Student Marketing Coordinator</strong> <em>Polytechnic Campus</em><br>
+                            Sun Devil Fitness (SDFC) seeks a student to assist in the development and creation of marketing collateral under general guidance. <br>
+                            <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 59391BR.
+                        </td>
+                        </tr>
+                        <!-- End Job -->
+
+                        <!-- Start Job - Added February 23- Expires Feb 22 ROLLING-->
+                        <tr>
+                        <td class="p"><strong>Student Marketing Photographer/Videographer</strong> <em>Polytechnic Campus</em><br>
+                            The Sun Devil Fitness Complex seeks a student to record activities, programs, and events and the larger Sun Devil experience through still photography or video.<br>
+                            <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 59364BR.
+                        </td>
+                        </tr>
+                        <!-- End Job -->
+
+                        <!-- Start Job - Added February 16 - February 29-->
+                        <tr>
+                        <td class="p"><strong>Full-Time Graphic Designer</strong> <em>Provo, UT</em><br>
+                            Qualtrics is looking for a mid-level graphic designer to perform design work for in-house clients that is creative, strategically sound, and on-brand.<br>
+                            <a href="https://boards.greenhouse.io/qualtrics/jobs/2062664?gh_src=cb865eb81&fbclid=IwAR2hV-yfG7KQDvTE15VxofFiwHAH-CyIHX-SR7VsbKTQnFYaaf5DcWgaLXc">View the full job description and apply online</a>.
+                        </td> 
+                        </tr>
+                    <!-- End Job -->
+
+                 </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Jobs and Internships Block --> 
+
+         <!-- Start Scholarships Block --> 
+        <!-- Start h2 Banner - Don't Touch -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                  <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Scholarships</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End h2 Banner - Don't Touch-->
+
+         <tr>
+          <td class="prl10 m-prl0">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-prl10">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                    <!--  Start Scholarship - (Added January 11, expires March 12) - -->
+                    <tr>
+                      <td class="p"><strong>Design Circle Scholarships</strong><br>
+                        To help reach untapped youth communities and foster more diversity in the design industry, the Design Circle scholarship will do just that: we are awarding 10 annual college scholarships -- up to $25,000 per year, for each year of the recipient’s undergraduate education (up to four years or $100,000).<br>
+                        <a href="https://www.iie.org/AdobeDesign">Apply online</a>. 
+                      </td>
+                    </tr>
+                    <!-- End Scholarship -->
+
+                     <!--  Start Scholarship - (Added August 24, expires 20th of each month, reopens on the 1st) - -->
+                    <tr>
+                      <td class="p"><strong>Innovation In Education Scholarship</strong><br>
+                        We at LA Tutors are passionate about sparking the creative genius in students and would love to commend those outstanding students who have a made a difference in the lives of others in some innovative or technological fashion.<br>
+                        <a href="https://scholarships.asu.edu/scholarship/61882">Learn more and apply online</a>. 
+                      </td>
+                    </tr>
+                    <!-- End Scholarship -->
+
+                     <!--  Start Scholarship - (Added August 24, expires November 30) - -->
+                   <!--  <tr>
+                      <td class="p"><strong>Creative Excellence in Graphic Design &amp; Marketing Intelligence Scholarship</strong><br>
+                        DesignAShirt.com is pleased to offer the Creative Excellence in Graphic Design and/or Fashion with Market Intelligence Scholarship, which is made up of (two) $500 scholastic awards.<br>
+                        <a href="https://scholarships.asu.edu/scholarship/44736">Learn more and apply online</a>. </td>
+                    </tr> -->
+                    <!-- End Scholarship -->
+
+                     <!--  Start Scholarship - (Added March 20, Dec 3) - -->
+                   <!--  <tr>
+                      <td class="p"><strong>Beliz Law Firm Scholarship</strong><br>
+                        The Beliz Law Firm is offering a $500 scholarship that will raise awareness about distracted driving and helps students achieve their goals.<br>
+                        <a href="https://scholarships.asu.edu/scholarship/89251">Learn more and apply online</a>. </td>
+                    </tr> -->
+                    <!-- End Scholarship -->
+
+                   </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Scholarships Block --> 
+
+         <!-- Start Tutoring Block --> 
+        <!-- Start h2 Banner - Don't Touch -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                        <tr>
+                          <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Student Resources</td>
+                        </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End h2 Banner - Don't Touch--> 
+
+         <!-- Start DULL block -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-prl10 m-pb10">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td class="block m-img-center pr25"><img class="pb15" width="175" height="175" src="http://carrasquilla.faculty.asu.edu/scoop/DULL-square-logo-02.png" alt="DULL Logo">
+                      </td>
+                      <td class="block">
+                        <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td class="p pb5"><strong>The Device and Usability Learning Lab</strong></td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Tutoring | Study Space | Collaboration Space</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Santa Catalina #157</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Monday &amp; Wednesday:<br>9:00AM-2:45PM</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Tuesday &amp; Thursday:<br>9:00AM-2:45PM</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Friday:<br>9:00AM-2:30PM</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">
+                              <strong>JavaScript Tutoring</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">
+                              Monday, Wednesday &amp; Friday:<br>9:00AM-2:30PM
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Tuesday &amp; Thursday:<br>9:00AM-1:00PM</td>
+                          </tr>
+                           <tr>
+                            <td class="p pb5">Visit the <a href="http://device.lab.asu.edu/">DULL website</a> for more information.</td>
+                          </tr>
+                        </table>
+
+                         <!-- END TABLE BLOCK -->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End DULL Block --> 
+
+         <!-- Start Make Media Lab block -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-prl10 m-pb10">
+                    <table align="center" class="yahoo-table-fix border-top" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td class="block m-img-center pr25"><img class="ptb15 pr20" width="170" height="170" src="http://carrasquilla.faculty.asu.edu/scoop/makeMediaLogo.jpg" alt="Make Media Lab Logo"></td>
+                      <td class="block">
+                        <table align="center" class="yahoo-table-fix pb10" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td class="p pb5"><strong>The Make Media Lab</strong></td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">The Make Media Lab in TECH #104 is a video studio providing students, teachers, and faculty with equipment and help in videography, photography, and animation.</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Monday:<br>11:50AM-2:50PM &amp; 4:30PM-6:00PM</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Tuesday:<br>4:25PM-5:25PM</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Wednesday:<br>11:50AM-2:50PM &amp; 4:30PM-6:00PM</td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5">Friday:<br>11:30AM-4:30PM</td>
+                          </tr>
+                        </table>
+
+                         <!-- END TABLE BLOCK -->
+                        </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Make Media Lab Block -->
+
+         <!-- Announcements Block --> 
+        <!-- Start h2 Banner-->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Announcements</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+         <!-- End h2 Banner - Don't Touch -->
+
+         <!--  Start Announcements Block -->
+        <tr>
+          <td class="prl10 m-prl0">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-prl10">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                        <!-- Added February 9, ends March 1-->
+                        <tr>
+                          <td class="p pt0">
+                            <strong>Sex, Love and Disability Art Competition</strong><br>
+                            The Downtown Committee for Campus Inclusion at ASU is pleased to invite students to participate in the Sex, Love &amp; Disability juried art competition, with a grand prize and certificates to be awarded on April 2, 2020at the Change the World event.<br>
+                              <a href="https://www.public.asu.edu/~jlbarn11/scoop/sexLoveAndDisability.jpg">Read more about the submission requirements and how to apply</a>.
+                          </td>
+                        </tr> 
+                        <!-- End Announcement -->
+                     </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--  End announcements    --> 
+
+         <!-- Start Events Block -->
+        <!-- Start h2 Banner - Don't Touch -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                        <tr>
+                          <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Events</td>
+                        </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End h2 Banner - Don't Touch--> 
+        <tr>
+          <td class="prl10 m-prl0 yahoo-table-fix">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-prl10 yahoo-table-fix">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                    <!-- begin event -->
+                      <tr>
+                        <td>
+                          <strong>Open Studio Hours</strong>
+                        </td>
+                      </tr>
+                        <tr>
+                          <td class="p">
+                            March 20, 10:00AM-2:00PM in the AAPAV Lobby<br>
+                            Get a free professional portrait taken during open studio hours on the Polytechnic campus.<br>
+                            <a href="https://intheloop.engineering.asu.edu/2020/01/23/get-your-professional-portrait-taken-at-open-studio-in-february/">Learn more on the Fulton website</a>.
+                          </td>
+                        </tr>
+                    <!-- end event -->
+
+                    <!-- begin event -->
+                      <tr>
+                        <td>
+                          <strong>AIGA AZ Portfolio Review</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td class="p">
+                            March 26, 7:00-9:00PM in Cooley Ballroom<br>
+                            Connecting students and emerging designers (1-5 years experience) with local design leaders for a 10-minute portfolio review.<br>
+                            <a href="https://www.eventbrite.com/e/2020-aiga-az-portfolio-review-asu-polytechnic-tickets-94080973725">Learn more and RSVP online</a>.
+                          </td>
+                      </tr>
+                    <!-- end event -->
+
+                    <!-- begin event -->
+                      <tr>
+                        <td>
+                          <strong>AIGA Poly Lunch and Learn</strong>
+                        </td>
+                      </tr>
+                        <tr>
+                          <td class="p">
+                            March 23, 12:00-1:00PM in TECH113<br>
+                            GIT Alumni, Kahn Van Toor- SEO/SEM Manager at <a href="https://www.socialseo.com/">SocialSEO Inc</a> will talk about paid advertising with Google and Bing ads and SEO.
+                          </td>
+                        </tr>
+                    <!-- end event -->
+
+                    <!-- begin event -->
+                      <tr>
+                        <td>
+                          <strong>ASU Change the World</strong>
+                        </td>
+                      </tr>
+                        <tr>
+                          <td class="p">
+                            April 2 at Sun Devil Stadium in Tempe<br>
+                            The Change the World Showcase and Competition celebrates the many ways Arizona State University students are making a difference through their art, entrepreneurship and good works. The deadline to register is March 2. <br><a href="https://eoss.asu.edu/change-the-world">Learn more and register online</a>.
+                          </td>
+                        </tr>
+                    <!-- end event -->
+
+                    <!-- begin event -->
+                      <tr>
+                        <td>
+                          <strong>AIGA Poly Lunch and Learn</strong>
+                        </td>
+                      </tr>
+                        <tr>
+                          <td class="p">
+                            April 6, 12:00-1:00PM in TECH113<br>
+                            Adobe Behance Workshop with Professor Carrasquilla.
+                          </td>
+                        </tr>
+                    <!-- end event -->
+
+                    <!-- begin event -->
+                      <tr>
+                        <td>
+                          <strong>Open Studio Hours</strong>
+                        </td>
+                      </tr>
+                        <tr>
+                          <td class="p">
+                            April 9, 10:00AM-2:00PM in the AAPAV Lobby<br>
+                            Get a free professional portrait taken during open studio hours on the Polytechnic campus.<br>
+                            <a href="https://intheloop.engineering.asu.edu/2020/01/23/get-your-professional-portrait-taken-at-open-studio-in-february/">Learn more on the Fulton website</a>.
+                          </td>
+                        </tr>
+                    <!-- end event -->
+
+                    <!-- begin event -->
+                      <tr>
+                        <td>
+                          <strong>Innovation Showcase</strong>
+                        </td>
+                      </tr>
+                        <tr>
+                          <td class="p">
+                            May 1, 3:00-5:00PM in the SDFC at Poly<br>
+                            <a href="https://poly.engineering.asu.edu/innovation-showcase/">Learn more on the Polytechnic School website</a>.
+                          </td>
+                        </tr>
+                    <!-- end event -->
+
+                    <!-- begin event -->
+                      <tr>
+                        <td>
+                          <strong>GIT Awards</strong>
+                        </td>
+                      </tr>
+                        <tr>
+                          <td class="p">
+                            May 1, 5:00-7:00PM in the Blackbox Theater<br>
+                            <a href="http://carrasquilla.faculty.asu.edu/GIT-Awards/">More information can be found on the awards website</a>.
+                          </td>
+                        </tr>
+                    <!-- end event -->
+
+                     </table> 
+                </td>
+              </tr>
+            </table> 
+          </td>
+        </tr> 
+
+         <!-- End Events Block -->
+
+
+
+         <!-- Updates Block --> 
+        <!-- Start h2 Banner - Don't Touch -->
+        <!-- Commented out March 31 for no updates 
+        <tr>
+          <td><table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td><table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff">Updates</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr> -->
+        <!-- End h2 Banner - Don't Touch-->
+        <!-- Commented out March 31 for no updates
+        <tr>
+          <td class="prl10 m-prl0"><table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-prl10"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">   
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>]-->
+
+         <!-- End Updates Block --> 
+
+         <!-- Industry Networking event Block --> 
+        <!-- Start h2 Banner - Don't Touch comment out 2/28, no announcements!-->
+        <!--  <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Industry Networking</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr> -->
+
+         <!-- End h2 Banner - Don't Touch -->
+        <!--  Start Industry Networking event -->
+        <!--   <tr>
+              <td class="prl10 m-prl0">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                  <tr>
+                    <td class="m-prl10">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+                            <tr>
+                              <td>
+                                <strong>Creative Connect</strong>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="p">
+                                Creative Connect will be held on February 11th at <a href="https://www.paulmarkow.com/Artist.asp?ArtistID=8198&Akey=N7FHNS24">Paul Markow Studios</a>. This event is a mixer format with no agenda. Light refreshments are provided, and there is no cost and no need to RSVP. <br>
+                          <a href="http://www.creativeconnect.org/">Visit the Creative Connect website</a> to learn more.
+                              </td>
+                            </tr>
+                       </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr> -->
+
+         <!--  End Industry Networking Block -->  
+
+         <!-- Start Clubs Block --> 
+        <!-- Start h2 Banner - Don't Touch -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Student Clubs</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End h2 Banner - Don't Touch--> 
+
+         <!-- Start Photo Club block -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-pb10 pt10">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td class="block m-img-center pr5"><img class="m-pb15" width="175" height="175" src="http://carrasquilla.faculty.asu.edu/scoop/PhotoClub.png" alt="Photo Club Logo"></td>
+                      <td class="block">
+                        <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td class="p pb5 pl20 m-prl10"><strong>The ASU Poly Photo Club</strong></td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5 pl20 m-prl10">Meet fellow photographers and collaborate! </td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5 pl20 m-prl10">Contact <a href="mailto:asupolyphotoclub@gmail.com">The Photography Club</a> for more information.</td>
+                          </tr>
+                        </table>
+                      </td>    
+                        <!-- END TABLE BLOCK --><!-- </td> -->
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Photo Club Block --> 
+
+         <!-- Start AIGA Poly block -->
+        <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-pb10 ptb20 border-top">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td class="block m-img-center pr20 m-pb15"><img width="175" height="175" src="http://carrasquilla.faculty.asu.edu/scoop/AIGA-POLY-logo.png" alt="AIGA Logo"></td>
+                      <td class="block m-prl0">
+                       <!--  Second Column -->
+
+                         <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td class="p pb5 pl5 m-pt20 m-prl10"><strong>AIGA Poly</strong></td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5 pl5 m-prl10">
+                              AIGA Poly members meet and talk design. Sometimes we have tacos!<br>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5 pl5 m-prl10">Join the club every Monday in TECH 113 at 12:00PM to get involved.</td>
+                          </tr>
+                          <tr>
+                            <td class="p pl5 m-prl10">
+                              Find us on <a href="https://www.facebook.com/aigapoly/">Facebook</a> and <a href="https://www.instagram.com/aigapoly/">Instagram</a>.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- End Second Column --> 
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr> <!-- End AIGA Poly Block -->
+
+         <!-- Start VP Club block -->
+
+         <!-- <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-pb10 border-top">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td class="block m-img-center pr20 m-pb15"><img width="175" height="175" src="http://www.public.asu.edu/~jlbarn11/scoop/VPClubLogo.jpg" alt="AIGA Logo"></td>
+                      <td class="block m-prl0">  -->
+                       <!--  Second Column -->
+
+                         <!-- <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td class="p pb5 pl5 m-pt20 m-prl10"><strong>Visual Production Club</strong></td>
+                          </tr>
+                          <tr>
+                            <td class="p pb5 pl5 m-prl10">
+                                Join us this Friday at 12:00pm in Tech 113 as we start discussing fundraising and events for this spring and next fall. Anyone who has an interest in larger visual production, such as video and/or animation productions, photography exhibitions, image mapping, etc., is invited to check the VPC out!
+                            </td>
+                          </tr>
+                        </table>
+                      </td>  -->
+                      <!-- End Second Column --> 
+                    <!-- </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td> -->
+       <!--  </tr> --> <!-- End VP Club Block -->
+
+
+
+         <!-- Start Footer -->
+        <tr>
+          <td class="footer pt15 m-prl10" style="border-top: 3px solid #8c1d40;">
+            <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="h3 pt15">Post in The Scoop!</td>
+              </tr>
+              <tr>
+                <td class="p"> Do you know of an opportunity or event that should be shared in The Scoop? Please fill out <a href="https://forms.gle/5Skht62rekVMtytW8"> The Scoop Request Form</a>. </td>
+              </tr>
+              <tr>
+                <td class="h3">Have Questions?</td>
+              </tr>
+              <tr>
+                <td class="p">Direct any questions about The Scoop to <a href="mailto:ask.git@asu.edu">ask.git@asu.edu</a>.</td>
+              </tr>
+              <tr>
+                <td class="image pb20"><img src="http://carrasquilla.faculty.asu.edu/scoop/asu-logo.png" alt="ASU Logo" width="115" height="49"></td>
+              </tr>
+            </table>
+            </td>
+        </tr>
+        <!-- End Footer -->
+
+       </table>
+    </td>
+  </tr>
+</table>
+<!-- end table wrapper -->                      
+<div style="display: none;white-space: nowrap;font: 15px courier;"> 
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+</body>
+</html> 
