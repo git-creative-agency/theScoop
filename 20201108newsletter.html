@@ -1,0 +1,2305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="line-height: inherit;">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" style="line-height:inherit;">
+    <!-- Target IE10 phones -->
+    <meta http-equiv="x-ua-compatible" content="IE=edge" style="line-height:inherit;">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" style="line-height:inherit;">
+    <title style="line-height:inherit;">GIT The Scoop</title>
+    <!--[if gte mso 9]>
+    <style>
+      sup {
+      font-size:100% !important;
+      }
+    </style>
+    <![endif]-->
+    <style type="text/css">
+      /***************************************
+                      GLOBAL STYLES
+          ****************************************/
+      .main-td {
+        min-width:600px;
+        /*android fix*/
+        font-family:Verdana,Arial,sans-serif;
+        font-size:13px;
+        color:#000001;
+        line-height:17px;
+      }
+      
+      .h1 {
+        font-size:22px;
+        line-height:26px;
+        color:#404040;
+        font-weight:bold;
+      }
+      
+      .h2 {
+        font-size:20px;
+        line-height:24px;
+        color:#8c1d40;
+        font-weight:bold;
+        font-style:italic;
+      }
+      
+      .h2-scholarships {
+        font-size:20px;
+        line-height:24px;
+        color:#8c1d40;
+        font-weight:bold;
+        font-style:italic;
+      }
+      
+      .h2-resources {
+        font-size:20px;
+        line-height:24px;
+        color:#8c1d40;
+        font-weight:bold;
+        font-style:italic;
+      }
+      
+      .h2-events {
+        font-size:20px;
+        line-height:24px;
+        color:#8c1d40;
+        font-weight:bold;
+        font-style:italic;
+      }
+      
+      .h2-clubs {
+        font-size:20px;
+        line-height:24px;
+        color:#8c1d40;
+        font-weight:bold;
+        font-style:italic;
+      }
+      
+      .h3 {
+        font-size:14px;
+        line-height:18px;
+        color:#8c1d40;
+        font-weight:bold;
+      }
+      
+      .h4 {
+        font-size:12px;
+        line-height:16px;
+        color:#000001;
+        font-weight:bold;
+      }
+      
+      .h5 {
+        font-size:10px;
+        line-height:14px;
+        color:#8c1d40;
+        font-weight:bold;
+      }
+      
+      .p,.ul {
+        padding-bottom:15px;
+      }
+      
+      .p {
+        color:#737373;
+      }
+      
+      .li {
+        width:1px;
+      }
+      
+      .ul .li {
+        padding-right:5px;
+      }
+      
+      .ul .ul {
+        padding-top:0;
+        padding-right:0;
+        padding-bottom:0;
+        padding-left:10px;
+      }
+      
+      .ul tr:first-child .li + td {
+        width:100%;
+      }
+      
+      .references tr:first-child .li + td {
+        width:auto;
+      }
+      
+      .references .li {
+        width:11px;
+      }
+      
+      /*fixes width issue in yahoo*/
+      .hr {
+        background-color:#ffdc7b;
+        display:block;
+        font-size:0;
+        height:1px;
+        line-height:0;
+        padding:0;
+      }
+      
+      /* horizontal rule */
+      .centerText {
+        text-align:center;
+      }
+      
+      .footnote,.footnote table {
+        font-size:10px;
+        line-height:13px;
+      }
+      
+      sup {
+        line-height:0;
+        font-size:75%;
+      }
+      
+      .webversion {
+        font-size:10px;
+        text-decoration:underline;
+      }
+      
+      .linkDivider {
+        font-weight:lighter;
+        padding-left:6px;
+        padding-right:6px;
+      }
+      
+      .no-underline {
+        text-decoration:none;
+      }
+      
+      .underline {
+        text-decoration:underline;
+      }
+      
+      .bold {
+        font-weight:bold;
+      }
+      
+      .no-link {
+        color:#000001;
+        text-decoration:none;
+        cursor:text;
+      }
+      
+      .six-star {
+        font-family:Georgia,Times,'Times New Roman',serif;
+      }
+      
+      .mobile-only {
+        display:none;
+        max-height:0;
+        overflow:hidden;
+      }
+      
+      .legal a {
+        text-decoration:none;
+      }
+      
+      .legal a span {
+        text-decoration:underline;
+      }
+      
+      .yahoo-table-fix {
+        margin:0 auto;
+      }
+      
+      /*fixes table width issue in yahoo*/
+      .black {
+        color:#000001;
+      }
+      
+      .white {
+        color:#ffffff;
+      }
+      
+      .button {
+        background-color:#8c1d40;
+      }
+      
+      .button a {
+        color:#ffffff;
+        text-decoration:none;
+        display:inline-block;
+        padding-top:5px;
+        padding-right:25px;
+        padding-left:25px;
+        padding-bottom:5px;
+        border:1px solid #8c1d40;
+        /*border hack needed for outlook clients*/
+      }
+      
+      .babyline {
+        background-color:#ffd255;
+      }
+      
+      .babybayline {
+        border-top:1px solid #ffd255;
+      }
+      
+      .background-gold {
+        background-color:#ffd255;
+      }
+      
+      .maroon-color {
+        background-color:#8c1d40;
+      }
+      
+      strong,.maroon-text {
+        color:#8C1D40;
+      }
+      
+      a {
+        color:#e6a800;
+        font-weight:600;
+      }
+      
+      a:hover {
+        color:#00A3E0;
+      }
+      
+      a span.link {
+        color:#8c1d40 !important;
+        text-decoration:none !important;
+      }
+      
+      em {
+        color:#000001;
+      }
+      
+      p {
+        color:#5C6670;
+      }
+      
+      .border-top {
+        border-top:1px solid #ffd255;
+        padding-top:5px;
+        margin-top:5px;
+      }
+      
+      /*.border table { border-top: 1px solid; border-left: 1px solid; } */
+        /*.border td {  border-bottom: 1px solid; border-right: 1px solid; } */
+          /***************************************
+                           SPACING STYLES 
+              ****************************************/
+          .p0 {
+            padding-top:0;
+            padding-right:0;
+            padding-bottom:0;
+            padding-left:0;
+          }
+          
+          .p5 {
+            padding-top:5px;
+            padding-right:5px;
+            padding-bottom:5px;
+            padding-left:5px;
+          }
+          
+          .p10 {
+            padding-top:10px;
+            padding-right:10px;
+            padding-bottom:10px;
+            padding-left:10px;
+          }
+          
+          .p15 {
+            padding-top:15px;
+            padding-right:15px;
+            padding-bottom:15px;
+            padding-left:15px;
+          }
+          
+          .p20 {
+            padding-top:20px;
+            padding-right:20px;
+            padding-bottom:20px;
+            padding-left:20px;
+          }
+          
+          .p25 {
+            padding-top:25px;
+            padding-right:25px;
+            padding-bottom:25px;
+            padding-left:25px;
+          }
+          
+          .p30 {
+            padding-top:30px;
+            padding-right:30px;
+            padding-bottom:30px;
+            padding-left:30px;
+          }
+          
+          .p35 {
+            padding-top:35px;
+            padding-right:35px;
+            padding-bottom:35px;
+            padding-left:35px;
+          }
+          
+          .p40 {
+            padding-top:40px;
+            padding-right:40px;
+            padding-bottom:40px;
+            padding-left:40px;
+          }
+          
+          /* zero padding on all side*/
+          .ptb0 {
+            padding-top:0;
+            padding-bottom:0;
+          }
+          
+          .ptb5 {
+            padding-top:5px;
+            padding-bottom:5px;
+          }
+          
+          .ptb10 {
+            padding-top:10px;
+            padding-bottom:10px;
+          }
+          
+          .ptb15 {
+            padding-top:15px;
+            padding-bottom:15px;
+          }
+          
+          .ptb20 {
+            padding-top:20px;
+            padding-bottom:20px;
+          }
+          
+          .ptb25 {
+            padding-top:25px;
+            padding-bottom:25px;
+          }
+          
+          .ptb30 {
+            padding-top:30px;
+            padding-bottom:30px;
+          }
+          
+          .ptb35 {
+            padding-top:35px;
+            padding-bottom:35px;
+          }
+          
+          .ptb40 {
+            padding-top:40px;
+            padding-bottom:40px;
+          }
+          
+          /* Padding top and bottom */
+          .prl0 {
+            padding-right:0;
+            padding-left:0;
+          }
+          
+          .prl5 {
+            padding-right:5px;
+            padding-left:5px;
+          }
+          
+          .prl10 {
+            padding-right:10px;
+            padding-left:10px;
+          }
+          
+          .prl15 {
+            padding-right:15px;
+            padding-left:15px;
+          }
+          
+          .prl20 {
+            padding-right:20px;
+            padding-left:20px;
+          }
+          
+          .prl25 {
+            padding-right:25px;
+            padding-left:25px;
+          }
+          
+          .prl30 {
+            padding-right:30px;
+            padding-left:30px;
+          }
+          
+          .prl35 {
+            padding-right:35px;
+            padding-left:35px;
+          }
+          
+          .prl40 {
+            padding-right:40px;
+            padding-left:40px;
+          }
+          
+          /* Padding left and right */
+          .pt0 {
+            padding-top:0;
+          }
+          
+          .pt5 {
+            padding-top:5px;
+          }
+          
+          .pt7 {
+            padding-top:7px;
+          }
+          
+          .pt10 {
+            padding-top:10px;
+          }
+          
+          .pt15 {
+            padding-top:15px;
+          }
+          
+          .pt20 {
+            padding-top:20px;
+          }
+          
+          .pt25 {
+            padding-top:25px;
+          }
+          
+          .pt30 {
+            padding-top:30px;
+          }
+          
+          .pt35 {
+            padding-top:35px;
+          }
+          
+          .pt40 {
+            padding-top:40px;
+          }
+          
+          /* padding top */
+          .pr0 {
+            padding-right:0;
+          }
+          
+          .pr5 {
+            padding-right:5px;
+          }
+          
+          .pr10 {
+            padding-right:10px;
+          }
+          
+          .pr15 {
+            padding-right:15px;
+          }
+          
+          .pr20 {
+            padding-right:20px;
+          }
+          
+          .pr25 {
+            padding-right:25px;
+          }
+          
+          .pr30 {
+            padding-right:30px;
+          }
+          
+          .pr35 {
+            padding-right:35px;
+          }
+          
+          .pr40 {
+            padding-right:40px;
+          }
+          
+          /* padding right */
+          .pb5 {
+            padding-bottom:5px;
+          }
+          
+          .pb0 {
+            padding-bottom:0;
+          }
+          
+          .pb10 {
+            padding-bottom:10px;
+          }
+          
+          .pb15 {
+            padding-bottom:15px;
+          }
+          
+          .pb20 {
+            padding-bottom:20px;
+          }
+          
+          .pb25 {
+            padding-bottom:25px;
+          }
+          
+          .pb30 {
+            padding-bottom:30px;
+          }
+          
+          .pb35 {
+            padding-bottom:35px;
+          }
+          
+          .pb40 {
+            padding-bottom:40px;
+          }
+          
+          /* padding bottom */
+          .pl0 {
+            padding-left:0;
+          }
+          
+          .pl5 {
+            padding-left:5px;
+          }
+          
+          .pl10 {
+            padding-left:10px;
+          }
+          
+          .pl15 {
+            padding-left:15px;
+          }
+          
+          .pl20 {
+            padding-left:20px;
+          }
+          
+          .pl25 {
+            padding-left:25px;
+          }
+          
+          .pl30 {
+            padding-left:30px;
+          }
+          
+          .pl35 {
+            padding-left:35px;
+          }
+          
+          .pl40 {
+            padding-left:40px;
+          }
+          
+          /* padding left */
+          /***************************************
+                      CLIENT SPECIFIC STYLES
+              ****************************************/
+          /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+          .mso-exact {
+            mso-line-height-rule:exactly;
+          }
+          
+          .preheader-text,.hide-all {
+            display:none;
+            font-size:0;
+            max-height:0;
+            line-height:0;
+            visibility:hidden;
+          }
+          
+          /* Used to hide elements for mobile */
+          #outlook a {
+            padding:0;
+          }
+          
+          /* Force Outlook to provide a "view in browser" menu link. */
+          body {
+            width:100% !important;
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+            margin:0;
+            padding:0;
+          }
+          
+          /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+          #backgroundTable {
+            margin:0;
+            padding:0;
+            width:100% !important;
+            line-height:100% !important;
+          }
+          
+          /* end reset */
+          img {
+            display:block;
+            outline:none;
+            text-decoration:none;
+            -ms-interpolation-mode:bicubic;
+            font-size:10px;
+          }
+          
+          a img {
+            border:none;
+          }
+          
+          /* Some sensible defaults for images*//***************************************
+                          GLOBAL STYLES
+              ****************************************/
+          .main-td {
+            min-width:600px;
+            /*android fix*/
+            font-family:Verdana,Arial,sans-serif;
+            font-size:13px;
+            color:#000001;
+            line-height:17px;
+          }
+          
+          .h1 {
+            font-size:22px;
+            line-height:26px;
+            color:#404040;
+            font-weight:bold;
+          }
+          
+          .h2 {
+            font-size:20px;
+            line-height:24px;
+            color:#8c1d40;
+            font-weight:bold;
+            font-style:italic;
+          }
+          
+          .h2-scholarships {
+            font-size:20px;
+            line-height:24px;
+            color:#8c1d40;
+            font-weight:bold;
+            font-style:italic;
+          }
+          
+          .h2-resources {
+            font-size:20px;
+            line-height:24px;
+            color:#8c1d40;
+            font-weight:bold;
+            font-style:italic;
+          }
+          
+          .h2-events {
+            font-size:20px;
+            line-height:24px;
+            color:#8c1d40;
+            font-weight:bold;
+            font-style:italic;
+          }
+          
+          .h2-clubs {
+            font-size:20px;
+            line-height:24px;
+            color:#8c1d40;
+            font-weight:bold;
+            font-style:italic;
+          }
+          
+          .h3 {
+            font-size:14px;
+            line-height:18px;
+            color:#8c1d40;
+            font-weight:bold;
+          }
+          
+          .h4 {
+            font-size:12px;
+            line-height:16px;
+            color:#000001;
+            font-weight:bold;
+          }
+          
+          .h5 {
+            font-size:10px;
+            line-height:14px;
+            color:#8c1d40;
+            font-weight:bold;
+          }
+          
+          .p,.ul {
+            padding-bottom:15px;
+          }
+          
+          .p {
+            color:#737373;
+          }
+          
+          .li {
+            width:1px;
+          }
+          
+          .ul .li {
+            padding-right:5px;
+          }
+          
+          .ul .ul {
+            padding-top:0;
+            padding-right:0;
+            padding-bottom:0;
+            padding-left:10px;
+          }
+          
+          .ul tr:first-child .li + td {
+            width:100%;
+          }
+          
+          .references tr:first-child .li + td {
+            width:auto;
+          }
+          
+          .references .li {
+            width:11px;
+          }
+          
+          /*fixes width issue in yahoo*/
+          .hr {
+            background-color:#ffdc7b;
+            display:block;
+            font-size:0;
+            height:1px;
+            line-height:0;
+            padding:0;
+          }
+          
+          /* horizontal rule */
+          .centerText {
+            text-align:center;
+          }
+          
+          .footnote,.footnote table {
+            font-size:10px;
+            line-height:13px;
+          }
+          
+          sup {
+            line-height:0;
+            font-size:75%;
+          }
+          
+          .webversion {
+            font-size:10px;
+            text-decoration:underline;
+          }
+          
+          .linkDivider {
+            font-weight:lighter;
+            padding-left:6px;
+            padding-right:6px;
+          }
+          
+          .no-underline {
+            text-decoration:none;
+          }
+          
+          .underline {
+            text-decoration:underline;
+          }
+          
+          .bold {
+            font-weight:bold;
+          }
+          
+          .no-link {
+            color:#000001;
+            text-decoration:none;
+            cursor:text;
+          }
+          
+          .six-star {
+            font-family:Georgia,Times,'Times New Roman',serif;
+          }
+          
+          .mobile-only {
+            display:none;
+            max-height:0;
+            overflow:hidden;
+          }
+          
+          .legal a {
+            text-decoration:none;
+          }
+          
+          .legal a span {
+            text-decoration:underline;
+          }
+          
+          .yahoo-table-fix {
+            margin:0 auto;
+          }
+          
+          /*fixes table width issue in yahoo*/
+          .black {
+            color:#000001;
+          }
+          
+          .white {
+            color:#ffffff;
+          }
+          
+          .button {
+            background-color:#8c1d40;
+          }
+          
+          .button a {
+            color:#ffffff;
+            text-decoration:none;
+            display:inline-block;
+            padding-top:5px;
+            padding-right:25px;
+            padding-left:25px;
+            padding-bottom:5px;
+            border:1px solid #8c1d40;
+            /*border hack needed for outlook clients*/
+          }
+          
+          .babyline {
+            background-color:#ffd255;
+          }
+          
+          .babybayline {
+            border-top:1px solid #ffd255;
+          }
+          
+          .background-gold {
+            background-color:#ffd255;
+          }
+          
+          .maroon-color {
+            background-color:#8c1d40;
+          }
+          
+          strong,.maroon-text {
+            color:#8C1D40;
+          }
+          
+          a {
+            color:#e6a800;
+            font-weight:600;
+          }
+          
+          a:hover {
+            color:#00A3E0;
+          }
+          
+          a span.link {
+            color:#8c1d40 !important;
+            text-decoration:none !important;
+          }
+          
+          em {
+            color:#000001;
+          }
+          
+          p {
+            color:#5C6670;
+          }
+          
+          .border-top {
+            border-top:1px solid #ffd255;
+            padding-top:5px;
+            margin-top:5px;
+          }
+          
+          /*.border table { border-top: 1px solid; border-left: 1px solid; } */
+            /*.border td {  border-bottom: 1px solid; border-right: 1px solid; } */
+              /***************************************
+                               SPACING STYLES 
+                  ****************************************/
+              .p0 {
+                padding-top:0;
+                padding-right:0;
+                padding-bottom:0;
+                padding-left:0;
+              }
+              
+              .p5 {
+                padding-top:5px;
+                padding-right:5px;
+                padding-bottom:5px;
+                padding-left:5px;
+              }
+              
+              .p10 {
+                padding-top:10px;
+                padding-right:10px;
+                padding-bottom:10px;
+                padding-left:10px;
+              }
+              
+              .p15 {
+                padding-top:15px;
+                padding-right:15px;
+                padding-bottom:15px;
+                padding-left:15px;
+              }
+              
+              .p20 {
+                padding-top:20px;
+                padding-right:20px;
+                padding-bottom:20px;
+                padding-left:20px;
+              }
+              
+              .p25 {
+                padding-top:25px;
+                padding-right:25px;
+                padding-bottom:25px;
+                padding-left:25px;
+              }
+              
+              .p30 {
+                padding-top:30px;
+                padding-right:30px;
+                padding-bottom:30px;
+                padding-left:30px;
+              }
+              
+              .p35 {
+                padding-top:35px;
+                padding-right:35px;
+                padding-bottom:35px;
+                padding-left:35px;
+              }
+              
+              .p40 {
+                padding-top:40px;
+                padding-right:40px;
+                padding-bottom:40px;
+                padding-left:40px;
+              }
+              
+              /* zero padding on all side*/
+              .ptb0 {
+                padding-top:0;
+                padding-bottom:0;
+              }
+              
+              .ptb5 {
+                padding-top:5px;
+                padding-bottom:5px;
+              }
+              
+              .ptb10 {
+                padding-top:10px;
+                padding-bottom:10px;
+              }
+              
+              .ptb15 {
+                padding-top:15px;
+                padding-bottom:15px;
+              }
+              
+              .ptb20 {
+                padding-top:20px;
+                padding-bottom:20px;
+              }
+              
+              .ptb25 {
+                padding-top:25px;
+                padding-bottom:25px;
+              }
+              
+              .ptb30 {
+                padding-top:30px;
+                padding-bottom:30px;
+              }
+              
+              .ptb35 {
+                padding-top:35px;
+                padding-bottom:35px;
+              }
+              
+              .ptb40 {
+                padding-top:40px;
+                padding-bottom:40px;
+              }
+              
+              /* Padding top and bottom */
+              .prl0 {
+                padding-right:0;
+                padding-left:0;
+              }
+              
+              .prl5 {
+                padding-right:5px;
+                padding-left:5px;
+              }
+              
+              .prl10 {
+                padding-right:10px;
+                padding-left:10px;
+              }
+              
+              .prl15 {
+                padding-right:15px;
+                padding-left:15px;
+              }
+              
+              .prl20 {
+                padding-right:20px;
+                padding-left:20px;
+              }
+              
+              .prl25 {
+                padding-right:25px;
+                padding-left:25px;
+              }
+              
+              .prl30 {
+                padding-right:30px;
+                padding-left:30px;
+              }
+              
+              .prl35 {
+                padding-right:35px;
+                padding-left:35px;
+              }
+              
+              .prl40 {
+                padding-right:40px;
+                padding-left:40px;
+              }
+              
+              /* Padding left and right */
+              .pt0 {
+                padding-top:0;
+              }
+              
+              .pt5 {
+                padding-top:5px;
+              }
+              
+              .pt7 {
+                padding-top:7px;
+              }
+              
+              .pt10 {
+                padding-top:10px;
+              }
+              
+              .pt15 {
+                padding-top:15px;
+              }
+              
+              .pt20 {
+                padding-top:20px;
+              }
+              
+              .pt25 {
+                padding-top:25px;
+              }
+              
+              .pt30 {
+                padding-top:30px;
+              }
+              
+              .pt35 {
+                padding-top:35px;
+              }
+              
+              .pt40 {
+                padding-top:40px;
+              }
+              
+              /* padding top */
+              .pr0 {
+                padding-right:0;
+              }
+              
+              .pr5 {
+                padding-right:5px;
+              }
+              
+              .pr10 {
+                padding-right:10px;
+              }
+              
+              .pr15 {
+                padding-right:15px;
+              }
+              
+              .pr20 {
+                padding-right:20px;
+              }
+              
+              .pr25 {
+                padding-right:25px;
+              }
+              
+              .pr30 {
+                padding-right:30px;
+              }
+              
+              .pr35 {
+                padding-right:35px;
+              }
+              
+              .pr40 {
+                padding-right:40px;
+              }
+              
+              /* padding right */
+              .pb5 {
+                padding-bottom:5px;
+              }
+              
+              .pb0 {
+                padding-bottom:0;
+              }
+              
+              .pb10 {
+                padding-bottom:10px;
+              }
+              
+              .pb15 {
+                padding-bottom:15px;
+              }
+              
+              .pb20 {
+                padding-bottom:20px;
+              }
+              
+              .pb25 {
+                padding-bottom:25px;
+              }
+              
+              .pb30 {
+                padding-bottom:30px;
+              }
+              
+              .pb35 {
+                padding-bottom:35px;
+              }
+              
+              .pb40 {
+                padding-bottom:40px;
+              }
+              
+              /* padding bottom */
+              .pl0 {
+                padding-left:0;
+              }
+              
+              .pl5 {
+                padding-left:5px;
+              }
+              
+              .pl10 {
+                padding-left:10px;
+              }
+              
+              .pl15 {
+                padding-left:15px;
+              }
+              
+              .pl20 {
+                padding-left:20px;
+              }
+              
+              .pl25 {
+                padding-left:25px;
+              }
+              
+              .pl30 {
+                padding-left:30px;
+              }
+              
+              .pl35 {
+                padding-left:35px;
+              }
+              
+              .pl40 {
+                padding-left:40px;
+              }
+              
+              /* padding left */
+              /***************************************
+                          CLIENT SPECIFIC STYLES
+                  ****************************************/
+              /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+              .mso-exact {
+                mso-line-height-rule:exactly;
+              }
+              
+              .preheader-text,.hide-all {
+                display:none;
+                font-size:0;
+                max-height:0;
+                line-height:0;
+                visibility:hidden;
+              }
+              
+              /* Used to hide elements for mobile */
+              #outlook a {
+                padding:0;
+              }
+              
+              /* Force Outlook to provide a "view in browser" menu link. */
+              body {
+                width:100% !important;
+                -webkit-text-size-adjust:100%;
+                -ms-text-size-adjust:100%;
+                margin:0;
+                padding:0;
+              }
+              
+              /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+              #backgroundTable {
+                margin:0;
+                padding:0;
+                width:100% !important;
+                line-height:100% !important;
+              }
+              
+              /* end reset */
+              img {
+                display:block;
+                outline:none;
+                text-decoration:none;
+                -ms-interpolation-mode:bicubic;
+                font-size:10px;
+              }
+              
+              a img {
+                border:none;
+              }
+              
+              /* Some sensible defaults for images*/
+              /***************************************
+                              GLOBAL STYLES
+                  ****************************************/
+              body {
+                font-family:Verdana,Arial,sans-serif;
+                font-size:12px;
+                color:#000001;
+                line-height:16px;
+              }
+              
+              /* Render font family properly in Outlook */
+              table {
+                font-size:inherit;
+              }
+              
+              /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+              * {
+                line-height:inherit;
+              }
+              
+              /* Prevent Outlook.com from overriding line-height */
+              table td {
+                border-collapse:collapse;
+                /*mso-line-height-rule: exactly;*/
+              }
+              
+              /* Outlook 07, 10 Padding issue fix
+                  Bring inline: No.*/
+              a[x-apple-data-detectors] {
+                color:inherit !important;
+                text-decoration:none !important;
+                font-size:inherit !important;
+                font-family:inherit !important;
+                font-weight:inherit !important;
+                line-height:inherit !important;
+              }
+              
+              /* Disguises iOS auto links */
+              .mobile-only td,.mobile-only table {
+                mso-hide:all;
+              }
+              
+              /* Fix to hide elements in Outlook 2007-13 issue */
+              .mobile-only {
+                display:none;
+                max-height:0;
+                overflow:hidden;
+              }
+              
+              /***************************************
+                        UNRESPONSIVE MOBILE STYLES
+                  ****************************************/
+              /*@media only screen and (max-width: 37.5em) {
+                      .main-table { padding-left: 5px !important; padding-right: 5px !important; }
+                    }*/
+                /***************************************
+                               MOBILE STYLES
+                    ****************************************/
+                @media only screen and (max-width: 37.5em) {
+                  .main-table {
+                    width:100% !important;
+                  }
+                  
+                  .main-td {
+                    min-width:initial !important;
+                  }
+                  
+                  .main-table table {
+                    width:100% !important;
+                    margin:0 auto !important;
+                  }
+                  
+                  .block,.content,.safety {
+                    display:block;
+                  }
+                  
+                  /* place content you want stacked here */
+                  .desktop-only {
+                    display:none !important;
+                  }
+                  
+                  /* hide elements for mobile */
+                  img {
+                    max-width:100% !important;
+                    height:auto !important;
+                  }
+                  
+                  /* large images resize down according to their parent container size */
+                  .mobile-only {
+                    display:block !important;
+                    max-height:none !important;
+                    overflow:visible !important;
+                  }
+                  
+                  .width-auto {
+                    width:auto !important;
+                    height:auto !important;
+                  }
+                  
+                  .text-center {
+                    text-align:center !important;
+                  }
+                  
+                  .main-table .fixed-60 {
+                    width:60px !important;
+                  }
+                  
+                  .m-prl10 {
+                    padding-right:10px !important;
+                    padding-left:10px !important;
+                  }
+                  
+                  .m-prl0 {
+                    padding-right:0 !important;
+                    padding-left:0 !important;
+                  }
+                  
+                  .m-img-center img {
+                    margin:0 auto !important;
+                  }
+                  
+                  .m-pr0 {
+                    padding-right:0 !important;
+                  }
+                  
+                  .m-pb10 {
+                    padding-bottom:10px !important;
+                  }
+                  
+                  .m-pb15 {
+                    padding-bottom:15px !important;
+                  }
+                  
+                  .m-img-resize img {
+                    width:15% !important;
+                  }
+                  
+                  .m-pt20 {
+                    padding-top:20px !important;
+                  }
+                }
+                
+                /***************************************
+                            DARK MODE BACKGROUND STYLES
+                    ****************************************/
+                @media (prefers-color-scheme: dark) {
+                  body {
+                    background-color:#fff;
+                  }
+                }
+    </style>
+  </head>
+  <body style="line-height: 16px;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;font-family: Verdana, Arial, sans-serif;font-size: 12px;color: #000001;width: 100% !important;">
+    <!-- Adds preheader text to build -->
+    <!-- This text shows in inbox as the email description -->
+    <span class="preheader-text" style="line-height: 0;display: none;font-size: 0;max-height: 0;visibility: hidden;">Apply for the GIT Creative Agency!</span>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%" style="line-height:100% !important;font-size:inherit;margin:0;padding:0;width:100% !important;">
+      <tr bgcolor="#eaeaea" style="line-height:inherit;">
+        <td class="main-td" style="line-height:17px;border-collapse:collapse;min-width:600px;font-family:Verdana, Arial, sans-serif;font-size:13px;color:#000001;">
+          <table class="yahoo-table-fix main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+            <!-- Start Preheader -->
+            <tr style="line-height:inherit;">
+              <td class="preheader" style="border-bottom:4px solid #ffca38;line-height:inherit;border-collapse:collapse;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;">
+                  <tr style="line-height:inherit;">
+                    <td class="p10 text-center" style="line-height:inherit;border-collapse:collapse;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;"><a href="https://www.public.asu.edu/~jlbarn11/scoop/20201108newsletter.html" class="webversion" style="line-height:inherit;color:#e6a800;font-weight:600;font-size:10px;text-decoration:underline;">View this email in your browser</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End Preheader -->
+          <!-- Start Header -->
+          <tr bgcolor="#ffffff" style="line-height:inherit;">
+            <td class="header" style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-web-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-bottom:1px solid #f2f2f2;line-height:inherit;font-size:inherit;">
+                <!-- Start Scoop Logo -->
+                <tr style="line-height:inherit;">
+                  <td class="image yahoo-web-fix pt10 m-prl10" align="center" style="line-height:inherit;border-collapse:collapse;padding-top:10px;"><img src="https://www.public.asu.edu/~jlbarn11/scoop/scoopLogov2.png" alt="Scoop Logo" width="540" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;">
+                  </td>
+                </tr>
+                <!-- End Scoop Logo -->
+                <!-- Start Social Media Links -->
+                <tr style="line-height:inherit;">
+                  <td style="line-height:inherit;border-collapse:collapse;">
+                    <table align="center" class="yahoo-web-fix pb10 fixed-60" border="0" cellpadding="0" cellspacing="0" width="60" style="line-height:inherit;font-size:inherit;padding-bottom:10px;">
+                      <tr style="line-height:inherit;">
+                        <td class="image" align="center" width="30" style="line-height:inherit;border-collapse:collapse;"><a href="http://fb.me/gitasupoly" style="line-height:inherit;color:#e6a800;font-weight:600;"><img src="https://www.public.asu.edu/~jlbarn11/scoop/facebooklogo2copy.png" alt="Facebook logo" width="30" height="30" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;border: none;"></a>
+                      </td>
+                      <td class="image" width="30" align="center" style="line-height:inherit;border-collapse:collapse;"><a href="https://twitter.com/ASUGIT?lang=en" style="line-height:inherit;color:#e6a800;font-weight:600;"><img src="https://www.public.asu.edu/~jlbarn11/scoop/twitterlogo2copy.png" alt="Twitter Logo" width="30" height="30" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;border: none;"></a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- End Social Media Links -->
+            <!-- Single column header code start -->
+          </table>
+        </td>
+      </tr>
+      <!-- End Header -->
+      <!-- Start Highlighted Content block -->
+      <tr style="line-height:inherit;">
+        <td style="line-height:inherit;border-collapse:collapse;">
+          <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+            <!-- Start heading above hero -->
+            <!--   <tr>
+            <td class="h2 m-prl10 pt15 centerText">
+              Happening Wednesday Night!
+            </td>
+          </tr>-->
+            <!-- Start Hero Image-->
+            <tr style="line-height:inherit;">
+              <td class="image pb10 pt20 m-prl10" align="center" style="line-height:inherit;border-collapse:collapse;padding-top:20px;padding-bottom:10px;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtBvgBns3B6D04wJM4thYMeMBO4HTt79tekBqp3bQWGFgVoA/viewform" style="line-height:inherit;color:#e6a800;font-weight:600;"><img src="https://www.public.asu.edu/~jlbarn11/scoop/agencyDeadline.png" width="540" alt="Apply for GIT creative Agency by November 13th at links.asu.edu/agency" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;border: none;"></a>
+              </td>
+            </tr>
+            <!-- End Hero Image -->
+            <!-- Hero text -->
+            <!-- <tr>
+            <td class="h2 m-prl10 ptb10 centerText">
+            </td>
+          </tr> -->
+            <tr style="line-height:inherit;">
+              <td class="p m-prl10 pb15" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                From client brief and scope to design and delivery, Creative Agency students produce cross-media design solutions, gaining real-world experience in an academic setting.<br style="line-height:inherit;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdtBvgBns3B6D04wJM4thYMeMBO4HTt79tekBqp3bQWGFgVoA/viewform" style="line-height:inherit;color:#e6a800;font-weight:600;">Learn more and apply to join online</a>.
+              </td>
+            </tr>
+            <!-- End hero text -->
+          </table>
+        </td>
+      </tr>
+      <!--  End header/hero block -->
+      <!-- Virtual Events Block -->
+      <!-- Start h2 Banner-->
+      <!--         <tr>
+      <td>
+        <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr bgcolor="#ffca38">
+            <td>
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                <tr>
+                  <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;">Virtual Events</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr> -->
+      <!-- End h2 Banner - Don't Touch -->
+      <!--  Start Virtual Events Block -->
+      <!--         <tr>
+      <td class="prl10 m-prl0">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+          <tr>
+            <td class="m-prl10">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"> -->
+      <!-- Begin single Virtual Event -->
+      <!-- OPTIONAL EVENT IMAGE -->
+      <!-- <tr>
+      <td class="image pb10 pt5">
+        <a href="https://studyabroad.asu.edu/index.cfm?FuseAction=Programs.ViewProgramAngular&amp;id=8181"><img src="https://www.public.asu.edu/~jlbarn11/scoop/parisInfoSession.png" width="540" alt="Paris Info Session"></a>
+      </td>
+    </tr> -->
+      <!--                       <tr>
+      <td class="p pb15">
+        <strong>Virtual Information Sessions for Study Abroad Paris 2021</strong>
+        <br>
+        Join Professors Dolin and Westover in Paris and the Loire Valley next year! This will be our 6th program and we have it wired. Create great images and enjoy the delicious food and culture of France. Summer Session A 2021.<br>
+        <a href="https://asu.zoom.us/meeting/register/tJEpfuqprTsrH9ApXs1nXNjYzJI1CW3FVb5c">Register to attend on October 21 from 5:00-6:00PM</a>.<br>
+          <a href="https://asu.zoom.us/meeting/register/tJIsf-2qpz8uGdxO1QORmxJAkYMVKnwN5CoZ">Register to attend on October 23 from 2:00-3:00PM</a>.
+          </td>
+        </tr> -->
+      <!-- End single Virtual Event -->
+      <!--                     </table>
+    </td>
+  </tr>
+</table>
+</td>
+</tr> -->
+      <!--  End Virtual Events  -->
+      <!-- Start Jobs and Internships Block -->
+      <!-- Start h2 Banner - Don't Touch -->
+      <tr style="line-height:inherit;">
+        <td style="line-height:inherit;border-collapse:collapse;">
+          <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;padding-bottom:15px;">
+            <tr bgcolor="#ffca38" style="line-height:inherit;">
+              <td style="line-height:inherit;border-collapse:collapse;">
+                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                  <tr style="line-height:inherit;">
+                    <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;line-height:24px;border-collapse:collapse;font-size:20px;font-weight:bold;font-style:italic;padding-top:5px;padding-bottom:5px;">Jobs and Internships</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- End h2 Banner - Don't Touch-->
+      <tr style="line-height:inherit;">
+        <td class="prl10 m-prl0" style="line-height:inherit;border-collapse:collapse;padding-right:10px;padding-left:10px;">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;">
+            <tr style="line-height:inherit;">
+              <td class="m-prl10" style="line-height:inherit;border-collapse:collapse;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;">
+                  <!-- Start Job - Added November 8 - Expires November 13  -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student PAB Coordinator</strong> <em style="line-height:inherit;color:#000001;">Polytechnic Campus</em>
+                      <br style="line-height:inherit;">
+                      Educational Outreach and Student Services seeks a student to work with a team to create, promote, and execute events for the student population.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63940BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 8 - Expires November 20 -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student Web Developer/Editor</strong> <em style="line-height:inherit;color:#000001;">Tempe Campus</em>
+                      <br style="line-height:inherit;">
+                      The College of Liberal Arts and Sciences seeks a student to assist with web and marketing development projects using React, Node.js and PHP.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63959BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 8 - Expires November 16 -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student Program Assistant</strong> <em style="line-height:inherit;color:#000001;">Tempe Campus</em>
+                      <br style="line-height:inherit;">
+                      ASU Project Cities seeks a student to assist with drafting, editing, and designing of project summary reports as well as various marketing/design tasks. A background, major, or minor in sustainability is preferred.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63904BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 1 - Expires November 10 -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student Qualitative Research Aide</strong> <em style="line-height:inherit;color:#000001;">Tempe Campus</em>
+                      <br style="line-height:inherit;">
+                      The Enterprise Marketing Hub seeks a student to assist the analytic team with UX research and to provide insights to improve the digital experience on ASU websites. An understanding of UX research methods and best practices is desired.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63829BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 1 - Expires November 11 -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student Web Developer</strong> <em style="line-height:inherit;color:#000001;">Tempe Campus</em>
+                      <br style="line-height:inherit;">
+                      The Physics Department seeks a student to develop a website for the Ultra Materials DOE-EFRC center on the Drupal platform.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63838BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 1 - Expires November 13 -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student Digital Reformatting Assistant</strong> <em style="line-height:inherit;color:#000001;">Tempe Campus</em>
+                      <br style="line-height:inherit;">
+                      The ASU Library seeks a student to assist with a digitization project. Scanning, editing, and operating other digitization equipment.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63868BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 1 - Expires November 13 -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student Communications Aide</strong> <em style="line-height:inherit;color:#000001;">Downtown Phoenix Campus</em>
+                      <br style="line-height:inherit;">
+                      ASU Sandra Day O'Connor College of Law seeks a student to design and produce media work including video, copy, graphic content and digital communications.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63880BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 1 - Expires November 9 -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student Events Assistant</strong> <em style="line-height:inherit;color:#000001;">Tempe Campus</em>
+                      <br style="line-height:inherit;">
+                      The Knowledge Enterprise Events team seeks a student to provide support for KE Events by assisting with a variety of administrative duties.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63902BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 1 - Expires November 13 -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Student Project Assistant</strong> <em style="line-height:inherit;color:#000001;">ASU SkySong</em>
+                      <br style="line-height:inherit;">
+                      EdPlus at ASU seeks a student to work with their project manager to document, track and schedule projects while providing excellent customer service.<br style="line-height:inherit;"><a href="https://students.asu.edu/employment" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply through ASU</a>. Requisition ID: 63895BR.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                  <!-- Start Job - Added November 8 - Expires November  -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Full-Time Production Designer</strong> <em style="line-height:inherit;color:#000001;">Scottsdale, AZ</em>
+                      <br style="line-height:inherit;">
+                      Staffing Strong is recruiting a Contract Jr. Graphic Designer for a 40-hour per week contract. This position will assist with designing marketing collateral, including product brochures, packaging, advertising and emails.<br style="line-height:inherit;"><a href="https://www.staffingstrong.com/newwp/wp-content/plugins/bullhorn-oscp/#/jobs/668" style="line-height:inherit;color:#e6a800;font-weight:600;">Learn more and apply online</a>.
+                    </td>
+                  </tr>
+                  <!-- End Job -->
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- End Jobs and Internships Block -->
+      <!-- Announcements Block -->
+      <!-- Start h2 Banner-->
+      <!-- <tr>
+      <td>
+        <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr bgcolor="#ffca38">
+            <td>
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                <tr>
+                  <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;">Announcements</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr> -->
+      <!-- End h2 Banner - Don't Touch -->
+      <!--  Start Announcements Block -->
+      <!--    <tr>
+      <td class="prl10 m-prl0">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+          <tr>
+            <td class="m-prl10">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"> -->
+      <!-- Begin single announcement - Added August 30-->
+      <!--     <tr>
+      <td class="image pb15 pt5" align="center"><a href="https://www.eventbrite.com/e/college-amazon-design-creative-jam-live-with-adobe-xd-registration-115508648477"><img src="https://www.public.asu.edu/~jlbarn11/scoop/adobeCJfall2020.png" width="540" alt="Adobe College and Amazon Design Creative Jam"></a>
+    </td>
+  </tr>
+  <tr>
+    <td class="p pt0">
+      <strong>Adobe College and Amazon Design Creative Jam</strong>
+      <br>
+      Join Adobe, Amazon Design, and college students across the United States, United Kingdom, and Canada (excluding Quebec) in a beginner-friendly designathon to identify solutions that matter.<br>
+      Create a team, invite up to 2 friends to join your team, and then get details before we begin! No experience necessary.<br>
+      <a href="https://www.eventbrite.com/e/college-amazon-design-creative-jam-live-with-adobe-xd-registration-115508648477">Learn more and register online</a>. Event starts September 10th.
+      </td>
+    </tr>  -->
+      <!-- End Announcement -->
+      <!--     </table>
+    </td>
+  </tr>
+</table>
+</td>
+</tr> -->
+      <!--  End announcements  -->
+      <!-- Start Scholarships Block -->
+      <!-- Start h2 Banner - Don't Touch -->
+      <tr style="line-height:inherit;">
+        <td style="line-height:inherit;border-collapse:collapse;">
+          <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;padding-bottom:15px;">
+            <tr bgcolor="#ffca38" style="line-height:inherit;">
+              <td style="line-height:inherit;border-collapse:collapse;">
+                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                  <tr style="line-height:inherit;">
+                    <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;line-height:24px;border-collapse:collapse;font-size:20px;font-weight:bold;font-style:italic;padding-top:5px;padding-bottom:5px;">Scholarships</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- End h2 Banner - Don't Touch-->
+      <tr style="line-height:inherit;">
+        <td class="prl10 m-prl0" style="line-height:inherit;border-collapse:collapse;padding-right:10px;padding-left:10px;">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;">
+            <tr style="line-height:inherit;">
+              <td class="m-prl10" style="line-height:inherit;border-collapse:collapse;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;">
+                  <!--  Start Scholarship - (Added August 23, expires March 1, 2021) - -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Pathways for the Future Scholarship</strong>
+                      <br style="line-height:inherit;">
+                      The Pathways for the Future Scholarship for degree seeking students was created to provide learners the knowledge necessary for life and work in the 21st century.<br style="line-height:inherit;"><a href="https://scholarships.asu.edu/scholarship/167847" style="line-height:inherit;color:#e6a800;font-weight:600;">Learn more and apply online</a>.
+                    </td>
+                  </tr>
+                  <!-- End Scholarship -->
+                  <!--  Start Scholarship - (Added August 23, closes December 1) - -->
+                  <tr style="line-height:inherit;">
+                    <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                      <strong style="line-height:inherit;color:#8C1D40;">Dura-Pack Scholarship Opportunity</strong>
+                      <br style="line-height:inherit;">
+                      As a leading manufacturer of flexible packaging bags and equipment, Dura-Pack is consistently striving to adopt and implement environmentally friendly manufacturing practices and have tailored our essay topics to reflect our “Green” initiatives.<br style="line-height:inherit;"><a href="https://scholarships.asu.edu/scholarship/169800" style="line-height:inherit;color:#e6a800;font-weight:600;">Learn more and apply online</a>. </td>
+                    </tr>
+                    <!-- End Scholarship -->
+                    <!--  Start Scholarship - (Added August 23, Rolling (March and May due dates)) - -->
+                    <tr style="line-height:inherit;">
+                      <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                        <strong style="line-height:inherit;color:#8C1D40;">Arizona Community Foundation Scholarships</strong>
+                        <br style="line-height:inherit;">
+                        The Arizona Community Foundation allows high school seniors and current college students throughout Arizona to apply for more than 90 scholarship awards online with one general application.<br style="line-height:inherit;"><a href="https://scholarships.asu.edu/scholarship/1548" style="line-height:inherit;color:#e6a800;font-weight:600;">Learn more and apply online</a>. </td>
+                      </tr>
+                      <!-- End Scholarship -->
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End Scholarships Block -->
+          <!-- Start Student Resources Block -->
+          <!-- Start h2 Banner - Don't Touch -->
+          <tr style="line-height:inherit;">
+            <td style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;padding-bottom:15px;">
+                <tr bgcolor="#ffca38" style="line-height:inherit;">
+                  <td style="line-height:inherit;border-collapse:collapse;">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                      <tr style="line-height:inherit;">
+                        <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;line-height:24px;border-collapse:collapse;font-size:20px;font-weight:bold;font-style:italic;padding-top:5px;padding-bottom:5px;">Student Resources</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End h2 Banner - Don't Touch-->
+          <!-- Start Remote Learning Block -->
+          <tr style="line-height:inherit;">
+            <td class="prl10 m-prl0" style="line-height:inherit;border-collapse:collapse;padding-right:10px;padding-left:10px;">
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                <tr style="line-height:inherit;">
+                  <td class="m-prl10" style="line-height:inherit;border-collapse:collapse;">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                      <tr style="line-height:inherit;">
+                        <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                          <strong style="line-height:inherit;color:#8C1D40;">ASU Fall 2020 Resources</strong>
+                          <br style="line-height:inherit;">
+                          ASU classes for fall 2020 are in-session. Consistent with our efforts to always meet learners where they are, ASU will offer courses in a variety of learning environments to accommodate students’ needs depending on location or circumstance as a result of COVID-19.<br style="line-height:inherit;"><a href="https://www.asu.edu/about/fall-2020" style="line-height:inherit;color:#e6a800;font-weight:600;">Fall 2020 at ASU</a> <br style="line-height:inherit;"><a href="https://provost.asu.edu/sync" style="line-height:inherit;color:#e6a800;font-weight:600;">ASU Sync Tips and Resources</a> <br style="line-height:inherit;"><a href="https://eoss.asu.edu/health/announcements/coronavirus" style="line-height:inherit;color:#e6a800;font-weight:600;">ASU's Novel Coronavirus Information Site</a> <br style="line-height:inherit;"><a href="https://eoss.asu.edu/health/announcements/coronavirus/faqs" style="line-height:inherit;color:#e6a800;font-weight:600;">ASU's Novel Coronavirus FAQ Page</a>
+                          <br style="line-height:inherit;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Start ASU Activities and Events Block -->
+          <tr style="line-height:inherit;">
+            <td style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                <tr style="line-height:inherit;">
+                  <td class="m-prl10 m-pb10" style="line-height:inherit;border-collapse:collapse;">
+                    <table align="center" class="yahoo-table-fix border-top" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;border-top:1px solid #ffd255;padding-top:5px;margin-top:5px;">
+                      <tr style="line-height:inherit;">
+                        <td class="p pt10" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;padding-top:10px;">
+                          <strong style="line-height:inherit;color:#8C1D40;">ASU Activities and Events</strong>
+                          <br style="line-height:inherit;">
+                          Find and join in these virtual and/or in-person events hosted by ASU.<br style="line-height:inherit;"><a href="https://fitnessonline.asu.edu/Program/GetProducts?classification=22d440d1-ee4d-4ae5-811b-37ec106b0cd6" style="line-height:inherit;color:#e6a800;font-weight:600;">Free Group Wellness Classes with Sun Devil Fitness</a> <br style="line-height:inherit;"><a href="https://eoss.asu.edu/clubs/programs/virtual-engage-events" style="line-height:inherit;color:#e6a800;font-weight:600;">ASU Programming and Activities Board Events</a> <br style="line-height:inherit;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Start DULL block -->
+          <tr style="line-height:inherit;">
+            <td style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                <tr style="line-height:inherit;">
+                  <td class="m-prl10 m-pb10" style="line-height:inherit;border-collapse:collapse;">
+                    <table align="center" class="yahoo-table-fix border-top" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;border-top:1px solid #ffd255;padding-top:5px;margin-top:5px;">
+                      <tr style="line-height:inherit;">
+                        <td class="block m-img-center pr25" style="line-height:inherit;border-collapse:collapse;padding-right:25px;"><img class="pb15" width="175" height="175" src="https://www.public.asu.edu/~jlbarn11/scoop/DULL-square-logo-02.png" alt="DULL Logo" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;padding-bottom: 15px;">
+                        </td>
+                        <td class="block" style="line-height:inherit;border-collapse:collapse;">
+                          <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                            <tr style="line-height:inherit;">
+                              <td class="p pb5" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;"><strong style="line-height:inherit;color:#8C1D40;">The Device and Usability Learning Lab</strong>
+                            </td>
+                          </tr>
+                          <!--   <tr>
+                          <td class="p pb5">Tutoring | Study Space | Collaboration Space</td>
+                        </tr> -->
+                          <!-- <tr>
+                          <td class="p pb5">Santa Catalina #157</td>
+                        </tr> -->
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;">
+                              The DULL will be closed for in-person tutoring during the Fall 2020 semester. Please reach out to your professors for help connecting with a tutor or with other course questions.
+                            </td>
+                          </tr>
+                          <!-- <tr>
+                          <td class="p pb5">Monday - Thursday: 9:00AM-2:45PM</td>
+                        </tr>
+                        <tr>
+                          <td class="p pb5">Friday: 9:00AM-2:30PM</td>
+                        </tr>
+                        <tr>
+                          <td class="p pb5">
+                            <strong>JavaScript Tutoring</strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p pb5">
+                            Monday, Wednesday &amp; Friday: 9:00AM-2:30PM
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p pb5">Tuesday &amp; Thursday: 9:00AM-1:00PM</td>
+                        </tr>  -->
+                          <tr style="line-height:inherit;">
+                            <td class="p pb15" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                              <a href="http://device.lab.asu.edu/" style="line-height:inherit;color:#e6a800;font-weight:600;">Visit the DULL website</a>.</td>
+                            </tr>
+                          </table>
+                          <!-- END TABLE BLOCK -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End DULL Block -->
+          <!-- Start Make Media Lab block -->
+          <tr style="line-height:inherit;">
+            <td style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                <tr style="line-height:inherit;">
+                  <td class="m-prl10 m-pb10 ptb10" style="line-height:inherit;border-collapse:collapse;padding-top:10px;padding-bottom:10px;">
+                    <table align="center" class="yahoo-table-fix border-top" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;border-top:1px solid #ffd255;padding-top:5px;margin-top:5px;">
+                      <tr style="line-height:inherit;">
+                        <td class="block m-img-center pr25" style="line-height:inherit;border-collapse:collapse;padding-right:25px;"><img class="ptb15 pr10" width="170" height="170" src="https://www.public.asu.edu/~jlbarn11/scoop/makeMediaLogo.jpg" alt="Make Media Lab Logo" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;padding-top: 15px;padding-bottom: 15px;padding-right: 10px;">
+                        </td>
+                        <td class="block" style="line-height:inherit;border-collapse:collapse;">
+                          <table align="center" class="yahoo-table-fix pb10" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;padding-bottom:10px;">
+                            <tr style="line-height:inherit;">
+                              <td class="p pb5 pt15" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;padding-top:15px;"><strong style="line-height:inherit;color:#8C1D40;">The Make Media Lab</strong>
+                            </td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;">The Make Media Lab in TECH #104 is a video studio providing students, teachers, and faculty with equipment and help in videography, photography, and animation.</td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;">Monday: 10:00AM-12:00PM</td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;">Wednesday: 4:30PM-6:30PM</td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;">Friday: 10:00AM-4:00PM</td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;">
+                              <a href="mailto:makemedialab@gmail.com" style="line-height:inherit;color:#e6a800;font-weight:600;">Email makemedialab@gmail.com</a> with questions.
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- END TABLE BLOCK -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End Make Media Lab Block -->
+          <!-- Start Events Block -->
+          <!-- Start h2 Banner - Don't Touch -->
+          <tr style="line-height:inherit;">
+            <td style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;padding-bottom:15px;">
+                <tr bgcolor="#ffca38" style="line-height:inherit;">
+                  <td style="line-height:inherit;border-collapse:collapse;">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                      <tr style="line-height:inherit;">
+                        <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;line-height:24px;border-collapse:collapse;font-size:20px;font-weight:bold;font-style:italic;padding-top:5px;padding-bottom:5px;">Events</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End h2 Banner - Don't Touch-->
+          <tr style="line-height:inherit;">
+            <td class="prl10 m-prl0 yahoo-table-fix" style="line-height:inherit;border-collapse:collapse;margin:0 auto;padding-right:10px;padding-left:10px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;">
+                <tr style="line-height:inherit;">
+                  <td class="m-prl10 yahoo-table-fix" style="line-height:inherit;border-collapse:collapse;margin:0 auto;">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;">
+                      <!-- begin event -->
+                      <tr style="line-height:inherit;">
+                        <td style="line-height:inherit;border-collapse:collapse;">
+                          <strong style="line-height:inherit;color:#8C1D40;">Deadline to Apply for GIT Creative Agency</strong>
+                        </td>
+                      </tr>
+                      <tr style="line-height:inherit;">
+                        <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                          November 13<br style="line-height:inherit;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdtBvgBns3B6D04wJM4thYMeMBO4HTt79tekBqp3bQWGFgVoA/viewform" style="line-height:inherit;color:#e6a800;font-weight:600;">Apply online</a>.
+                        </td>
+                      </tr>
+                      <!-- end event -->
+                      <!-- begin event -->
+                      <tr style="line-height:inherit;">
+                        <td style="line-height:inherit;border-collapse:collapse;">
+                          <strong style="line-height:inherit;color:#8C1D40;">Drive-Through Public Food Distribution</strong>
+                        </td>
+                      </tr>
+                      <tr style="line-height:inherit;">
+                        <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                          Every Thursday and Friday, 7:00-9:00AM<br style="line-height:inherit;"><a href="https://www.facebook.com/HouseofRefugeInc/photos/pcb.3546671628726063/3546671215392771/" style="line-height:inherit;color:#e6a800;font-weight:600;">Learn more on Facebook</a>.
+                        </td>
+                      </tr>
+                      <!-- end event -->
+                      <!-- begin event -->
+                      <tr style="line-height:inherit;">
+                        <td style="line-height:inherit;border-collapse:collapse;">
+                          <strong style="line-height:inherit;color:#8C1D40;">Last Day of the Fall Semester</strong>
+                        </td>
+                      </tr>
+                      <tr style="line-height:inherit;">
+                        <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                          December 4
+                        </td>
+                      </tr>
+                      <!-- end event -->
+                      <!-- begin event -->
+                      <tr style="line-height:inherit;">
+                        <td style="line-height:inherit;border-collapse:collapse;">
+                          <strong style="line-height:inherit;color:#8C1D40;">GIT Awards</strong>
+                        </td>
+                      </tr>
+                      <tr style="line-height:inherit;">
+                        <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">
+                          December 4, 5:00-7:00PM on Zoom<br style="line-height:inherit;"><a href="http://carrasquilla.faculty.asu.edu/GIT-Awards/" style="line-height:inherit;color:#e6a800;font-weight:600;">Learn more about this event online</a>.
+                        </td>
+                      </tr>
+                      <!-- end event -->
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End Events Block -->
+          <!-- Updates Block -->
+          <!-- Start h2 Banner - Don't Touch -->
+          <!-- Commented out March 31 for no updates
+          <tr>
+            <td>
+              <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr bgcolor="#ffca38">
+                  <td>
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                      <tr>
+                        <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;">Updates</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr> -->
+          <!-- End h2 Banner - Don't Touch-->
+          <!-- Commented out March 31 for no updates
+          <tr>
+            <td class="prl10 m-prl0">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                <tr>
+                  <td class="m-prl10">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>]-->
+          <!-- End Updates Block -->
+          <!-- Industry Networking event Block -->
+          <!-- Start h2 Banner - Don't Touch comment out 2/28, no announcements!-->
+          <!--  <tr>
+          <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                  <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;">Industry Networking</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr> -->
+          <!-- End h2 Banner - Don't Touch -->
+          <!--  Start Industry Networking event -->
+          <!--   <tr>
+          <td class="prl10 m-prl0">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+              <tr>
+                <td class="m-prl10">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td>
+                        <strong>Creative Connect</strong>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="p">
+                        Creative Connect will be held on February 11th at <a href="https://www.paulmarkow.com/Artist.asp?ArtistID=8198&amp;Akey=N7FHNS24">Paul Markow Studios</a>. This event is a mixer format with no agenda. Light refreshments are provided, and there is no cost and no need to RSVP. <br>
+                        <a href="http://www.creativeconnect.org/">Visit the Creative Connect website</a> to learn more.
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr> -->
+          <!--  End Industry Networking Block -->
+          <!-- Start Clubs Block -->
+          <!-- Start h2 Banner - Don't Touch -->
+          <tr style="line-height:inherit;">
+            <td style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                <tr bgcolor="#ffca38" style="line-height:inherit;">
+                  <td style="line-height:inherit;border-collapse:collapse;">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                      <tr style="line-height:inherit;">
+                        <td class="h2 pt5 pb5 m-prl10" style="color:#ffffff;line-height:24px;border-collapse:collapse;font-size:20px;font-weight:bold;font-style:italic;padding-top:5px;padding-bottom:5px;">Student Clubs</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End h2 Banner - Don't Touch-->
+          <!-- Start Photo Club block -->
+          <tr style="line-height:inherit;">
+            <td style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                <tr style="line-height:inherit;">
+                  <td class="m-pb10 pt10" style="line-height:inherit;border-collapse:collapse;padding-top:10px;">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                      <tr style="line-height:inherit;">
+                        <td class="block m-img-center pr5" style="line-height:inherit;border-collapse:collapse;padding-right:5px;"><img class="m-pb15" width="175" height="175" src="https://www.public.asu.edu/~jlbarn11/scoop/PhotoClub.png" alt="Photo Club Logo" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;">
+                        </td>
+                        <td class="block" style="line-height:inherit;border-collapse:collapse;">
+                          <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                            <tr style="line-height:inherit;">
+                              <td class="p pb5 pl20 m-prl10" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;padding-left:20px;"><strong style="line-height:inherit;color:#8C1D40;">The ASU Poly Photo Club</strong>
+                            </td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5 pl20 m-prl10" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;padding-left:20px;">Meet fellow photographers and collaborate! </td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5 pl20 m-prl10" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;padding-left:20px;">
+                              <a href="mailto:asupolyphotoclub@gmail.com" style="line-height:inherit;color:#e6a800;font-weight:600;">Contact the Photography Club</a> for more information.</td>
+                            </tr>
+                            <tr style="line-height:inherit;">
+                              <td class="p pb5 pl20 m-prl10" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;padding-left:20px;">
+                                Find us on <a href="https://www.facebook.com/asupolyphotoclub" style="line-height:inherit;color:#e6a800;font-weight:600;">Facebook</a> and <a href="https://www.instagram.com/asupolyphotoclub/" style="line-height:inherit;color:#e6a800;font-weight:600;">Instagram</a>.
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <!-- END TABLE BLOCK -->
+                        <!-- </td> -->
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- End Photo Club Block -->
+          <!-- Start AIGA Poly block -->
+          <tr style="line-height:inherit;">
+            <td style="line-height:inherit;border-collapse:collapse;">
+              <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                <tr style="line-height:inherit;">
+                  <td class="m-pb10 ptb20 border-top" style="line-height:inherit;border-collapse:collapse;border-top:1px solid #ffd255;padding-top:20px;margin-top:5px;padding-bottom:20px;">
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                      <tr style="line-height:inherit;">
+                        <td class="block m-img-center pr20 m-pb15" style="line-height:inherit;border-collapse:collapse;padding-right:20px;"><img width="175" height="175" src="https://www.public.asu.edu/~jlbarn11/scoop/AIGA-POLY-logo.png" alt="AIGA Logo" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;">
+                        </td>
+                        <td class="block m-prl0" style="line-height:inherit;border-collapse:collapse;">
+                          <!--  Second Column -->
+                          <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height:inherit;font-size:inherit;margin:0 auto;">
+                            <tr style="line-height:inherit;">
+                              <td class="p pb5 pl5 m-pt20 m-prl10" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;padding-left:5px;"><strong style="line-height:inherit;color:#8C1D40;">AIGA Poly</strong>
+                            </td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5 pl5 m-prl10" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;padding-left:5px;">
+                              AIGA Poly members meet and talk design. Sometimes we have tacos!<br style="line-height:inherit;">
+                            </td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pb5 pl5 m-prl10" style="line-height:inherit;border-collapse:collapse;padding-bottom:5px;color:#737373;padding-left:5px;">Join the #club channel in Slack to get involved.</td>
+                          </tr>
+                          <tr style="line-height:inherit;">
+                            <td class="p pl5 m-prl10" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;padding-left:5px;">
+                              Find us on <a href="https://www.facebook.com/aigapoly/" style="line-height:inherit;color:#e6a800;font-weight:600;">Facebook</a> and <a href="https://www.instagram.com/aigapoly/" style="line-height:inherit;color:#e6a800;font-weight:600;">Instagram</a>.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- End Second Column -->
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End AIGA Poly Block -->
+        <!-- Start VP Club block -->
+        <!-- <tr>
+        <td>
+          <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+            <tr>
+              <td class="m-pb10 border-top">
+                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="block m-img-center pr20 m-pb15"><img width="175" height="175" src="http://www.public.asu.edu/~jlbarn11/scoop/VPClubLogo.jpg" alt="AIGA Logo">
+                    </td>
+                    <td class="block m-prl0">  -->
+        <!--  Second Column -->
+        <!-- <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="p pb5 pl5 m-pt20 m-prl10"><strong>Visual Production Club</strong>
+        </td>
+      </tr>
+      <tr>
+        <td class="p pb5 pl5 m-prl10">
+          Join us this Friday at 12:00pm in Tech 113 as we start discussing fundraising and events for this spring and next fall. Anyone who has an interest in larger visual production, such as video and/or animation productions, photography exhibitions, image mapping, etc., is invited to check the VPC out!
+        </td>
+      </tr>
+    </table>
+  </td>  -->
+        <!-- End Second Column -->
+        <!-- </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</td> -->
+        <!--  </tr> -->
+        <!-- End VP Club Block -->
+        <!-- Start Footer -->
+        <tr style="line-height:inherit;">
+          <td class="footer pt15 m-prl10" style="border-top:3px solid #8c1d40;line-height:inherit;border-collapse:collapse;padding-top:15px;">
+            <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="540" style="line-height:inherit;font-size:inherit;">
+              <tr style="line-height:inherit;">
+                <td class="h3 pt15" style="line-height:18px;border-collapse:collapse;font-size:14px;color:#8c1d40;font-weight:bold;padding-top:15px;">Post in The Scoop!</td>
+              </tr>
+              <tr style="line-height:inherit;">
+                <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;"> Do you know of an opportunity or event that should be shared in The Scoop? Please fill out <a href="https://forms.gle/5Skht62rekVMtytW8" style="line-height:inherit;color:#e6a800;font-weight:600;"> The Scoop Request Form</a>. </td>
+              </tr>
+              <tr style="line-height:inherit;">
+                <td class="h3" style="line-height:18px;border-collapse:collapse;font-size:14px;color:#8c1d40;font-weight:bold;">Subscribe to The Scoop!</td>
+              </tr>
+              <tr style="line-height:inherit;">
+                <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;"> Was this email forwarded to you? <a href="https://mailchi.mp/asu/roksic6u8v" style="line-height:inherit;color:#e6a800;font-weight:600;">Subscribe online</a> to receive your own copy each week. </td>
+              </tr>
+              <tr style="line-height:inherit;">
+                <td class="h3" style="line-height:18px;border-collapse:collapse;font-size:14px;color:#8c1d40;font-weight:bold;">Have Questions?</td>
+              </tr>
+              <tr style="line-height:inherit;">
+                <td class="p" style="line-height:inherit;border-collapse:collapse;padding-bottom:15px;color:#737373;">Direct any questions about The Scoop to <a href="mailto:ask.git@asu.edu" style="line-height:inherit;color:#e6a800;font-weight:600;">ask.git@asu.edu</a>.</td>
+              </tr>
+              <tr style="line-height:inherit;">
+                <td class="image pb20" style="line-height:inherit;border-collapse:collapse;padding-bottom:20px;"><img src="https://www.public.asu.edu/~jlbarn11/scoop/asu-logo.png" alt="ASU Logo" width="115" height="49" style="line-height: inherit;display: block;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;font-size: 10px;">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- end table wrapper -->
+<div style="display:none;white-space:nowrap;font:15px courier;line-height:inherit;">
+                       
+                       
+                 
+</div>
+            <center>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="canspamBarWrapper" style="background-color:#FFFFFF; border-top:1px solid #E5E5E5;">
+                    <tr>
+                        <td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;">
+                            <table border="0" cellpadding="0" cellspacing="0" id="canspamBar">
+                                <tr>
+                                    <td align="center" valign="top" style="color:#606060; font-family:Helvetica, Arial, sans-serif; font-size:11px; line-height:150%; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:center;">
+                                        This email was sent to <a href="mailto:*|EMAIL|*" target="_blank" style="color:#404040 !important;">*|EMAIL|*</a>
+                                        <br/>
+                                        <a href="*|ABOUT_LIST|*" target="_blank" style="color:#404040 !important;"><em>why did I get this?</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="*|UNSUB|*" style="color:#404040 !important;">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="*|UPDATE_PROFILE|*" style="color:#404040 !important;">update subscription preferences</a>
+                                        <br/>
+                                        *|LIST:ADDRESSLINE|*
+                                        <br/>
+                                        <br/>
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <style type="text/css">
+                    @media only screen and (max-width: 480px){
+                        table#canspamBar td{font-size:14px !important;}
+                        table#canspamBar td a{display:block !important; margin-top:10px !important;}
+                    }
+                </style>
+            </center></body>
+</html>
