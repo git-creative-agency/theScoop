@@ -1,0 +1,605 @@
+/* The styles below would be inside of a set of style tags in the head of the HTML */
+
+/***************************************
+            GLOBAL STYLES
+****************************************/
+.main-td {
+    min-width: 600px;/*android fix*/
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #000001;
+    line-height: 17px;
+}
+.h1 {
+    font-size: 22px;
+    line-height: 26px;
+    color: #404040;
+    font-weight: bold;
+}
+.h2 {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h2-scholarships {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h2-resources {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h2-events {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h2-clubs {
+    font-size: 20px;
+    line-height: 24px;
+    color: #8c1d40;
+    font-weight: bold;
+    font-style: italic;
+}
+.h3 {
+    font-size: 14px;
+    line-height: 18px;
+    color: #8c1d40;
+    font-weight: bold;
+}
+.hero-h3{
+font-size: 16px;
+line-height: 20px;
+color: #8c1d40;
+font-weight: bold;
+}
+.h4 {
+    font-size: 12px;
+    line-height: 16px;
+    color: #000001;
+    font-weight: bold;
+}
+.h5 {
+    font-size: 10px;
+    line-height: 14px;
+    color: #8c1d40;
+    font-weight: bold;
+}
+.p,  .ul {
+    padding-bottom: 15px;
+}
+.p {
+    color: #737373;
+}
+.li {
+    width: 1px;
+}
+.ul .li {
+    padding-right: 5px;
+}
+.ul .ul {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+}
+.ul tr:first-child .li + td {
+    width: 100%;
+}
+.references tr:first-child .li + td {
+    width: auto;
+}
+.references .li {
+    width: 11px;
+}
+/*fixes width issue in yahoo*/
+.hr {
+    background-color: #ffdc7b;
+    display: block;
+    font-size: 0px;
+    height: 1px;
+    line-height: 0px;
+    padding: 0;
+}
+/* horizontal rule */
+.centerText {
+    text-align: center;
+}
+.footnote,  .footnote table {
+    font-size: 10px;
+    line-height: 13px;
+}
+sup {
+    line-height: 0;
+    font-size: 75%;
+}
+.webversion {
+    font-size: 10px;
+    text-decoration: underline;
+}
+.linkDivider {
+    font-weight: lighter;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.no-underline {
+    text-decoration: none;
+}
+.underline {
+    text-decoration: underline;
+}
+.bold {
+    font-weight: bold;
+}
+.no-link {
+    color: #000001;
+    text-decoration: none;
+    cursor: text;
+}
+.six-star {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.mobile-only {
+    display: none;
+    max-height: 0px;
+    overflow: hidden;
+}
+.legal a {
+    text-decoration: none;
+}
+.legal a span {
+    text-decoration: underline;
+}
+.yahoo-table-fix {
+    margin: 0 auto;
+}
+/*fixes table width issue in yahoo*/
+.black {
+    color: #000001;
+}
+.white {
+    color: #ffffff;
+}
+.button {
+    background-color: #8c1d40;
+}
+.button a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    border: 1px solid #8c1d40; /*border hack needed for outlook clients*/
+}
+.babyline {
+    background-color: #ffd255;
+}
+.babybayline {
+    border-top: 1px solid #ffd255;
+}
+.background-gold {
+    background-color: #ffd255;
+}
+.maroon-color {
+    background-color: #8c1d40;
+}
+strong,  .maroon-text {
+    color: #8C1D40;
+}
+a {
+    color: #e6a800;
+    font-weight: 600;
+}
+a:hover {
+    color: #00A3E0;
+}
+a span.link {
+    color: #8c1d40 !important;
+    text-decoration: none !important;
+}
+em {
+    color: #000001;
+}
+p {
+    color: #5C6670;
+}
+.border-top {
+    border-top: 1px solid #ffd255;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+.border-bottom {
+    border-bottom: 1px solid #ffd255;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+/*.border table { border-top: 1px solid; border-left: 1px solid; } */
+    /*.border td {  border-bottom: 1px solid; border-right: 1px solid; } */
+
+    /***************************************
+                SPACING STYLES
+    ****************************************/
+.p0 {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+.p5 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.p10 {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.p15 {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+.p20 {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+.p25 {
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+}
+.p30 {
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+.p35 {
+    padding-top: 35px;
+    padding-right: 35px;
+    padding-bottom: 35px;
+    padding-left: 35px;
+}
+.p40 {
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+/* zero padding on all side*/
+.ptb0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.ptb5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.ptb10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ptb15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.ptb20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.ptb25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.ptb30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ptb35 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.ptb40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+/* Padding top and bottom */
+.prl0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+.prl5 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.prl10 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.prl15 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.prl20 {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.prl25 {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.prl30 {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.prl35 {
+    padding-right: 35px;
+    padding-left: 35px;
+}
+.prl40 {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+/* Padding left and right */
+.pt0 {
+    padding-top: 0px;
+}
+.pt5 {
+    padding-top: 5px;
+}
+.pt7 {
+    padding-top: 7px;
+}
+.pt10 {
+    padding-top: 10px;
+}
+.pt15 {
+    padding-top: 15px;
+}
+.pt20 {
+    padding-top: 20px;
+}
+.pt25 {
+    padding-top: 25px;
+}
+.pt30 {
+    padding-top: 30px;
+}
+.pt35 {
+    padding-top: 35px;
+}
+.pt40 {
+    padding-top: 40px;
+}
+/* padding top */
+.pr0 {
+    padding-right: 0px;
+}
+.pr5 {
+    padding-right: 5px;
+}
+.pr10 {
+    padding-right: 10px;
+}
+.pr15 {
+    padding-right: 15px;
+}
+.pr20 {
+    padding-right: 20px;
+}
+.pr25 {
+    padding-right: 25px;
+}
+.pr30 {
+    padding-right: 30px;
+}
+.pr35 {
+    padding-right: 35px;
+}
+.pr40 {
+    padding-right: 40px;
+}
+/* padding right */
+.pb5 {
+    padding-bottom: 5px;
+}
+.pb0 {
+    padding-bottom: 0px;
+}
+.pb10 {
+    padding-bottom: 10px;
+}
+.pb15 {
+    padding-bottom: 15px;
+}
+.pb20 {
+    padding-bottom: 20px;
+}
+.pb25 {
+    padding-bottom: 25px;
+}
+.pb30 {
+    padding-bottom: 30px;
+}
+.pb35 {
+    padding-bottom: 35px;
+}
+.pb40 {
+    padding-bottom: 40px;
+}
+/* padding bottom */
+.pl0 {
+    padding-left: 0px;
+}
+.pl5 {
+    padding-left: 5px;
+}
+.pl10 {
+    padding-left: 10px;
+}
+.pl15 {
+    padding-left: 15px;
+}
+.pl20 {
+    padding-left: 20px;
+}
+.pl25 {
+    padding-left: 25px;
+}
+.pl30 {
+    padding-left: 30px;
+}
+.pl35 {
+    padding-left: 35px;
+}
+.pl40 {
+    padding-left: 40px;
+}
+/* padding left */
+    /***************************************
+            CLIENT SPECIFIC STYLES
+    ****************************************/
+    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+.mso-exact {
+    mso-line-height-rule: exactly;
+}
+.preheader-text,  .hide-all {
+    display: none;
+    font-size: 0;
+    max-height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+/* Used to hide elements for mobile */
+#outlook a {
+    padding: 0;
+}
+/* Force Outlook to provide a "view in browser" menu link. */
+body {
+    width: 100% !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+#backgroundTable {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    line-height: 100% !important;
+}
+/* end reset */
+img {
+    display: block;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+    font-size: 10px;
+}
+a img {
+    border: none;
+}
+/* Some sensible defaults for images*/
+
+
+/* The styles below would be inside of style tags with the following attributes included on the opening tag:
+    type="text/css" data-embed
+*/
+/* **************************************
+            GLOBAL STYLES
+***************************************  */
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+    color: #000001;
+    line-height: 16px;
+}
+/* Render font family properly in Outlook */
+table { font-size: inherit; }
+/* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+* { line-height: inherit; }
+/* Prevent Outlook.com from overriding line-height */
+table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+/* Outlook 07, 10 Padding issue fix
+Bring inline: No.*/
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+/* Disguises iOS auto links */
+.mobile-only td,
+.mobile-only table { mso-hide:all;}
+/* Fix to hide elements in Outlook 2007-13 issue */
+.mobile-only { display: none; max-height:0px; overflow:hidden; }
+
+/***************************************
+    UNRESPONSIVE MOBILE STYLES
+****************************************/
+
+/*@media only screen and (max-width: 37.5em) {
+.main-table { padding-left: 5px !important; padding-right: 5px !important; }
+}*/
+/***************************************
+        MOBILE STYLES
+****************************************/
+@media only screen and (max-width: 37.5em) {
+    .main-table { width: 100% !important; }
+    .main-td { min-width: initial !important; }
+    .main-table table { width:100% !important; margin: 0 auto !important; }
+
+    .block,
+    .content,
+    .safety { display: block; }
+    /* place content you want stacked here */
+    .desktop-only { display:none !important; }
+    /* hide elements for mobile */
+    img { max-width: 100% !important; height: auto !important; }
+    /* large images resize down according to their parent container size */
+    .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+    .width-auto { width: auto !important; height: auto !important; }
+    .text-center { text-align: center !important; }
+    .main-table .fixed-60 { width: 60px !important; }
+    .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
+    .m-prl0 { padding-right: 0 !important; padding-left: 0 !important; }
+    .m-img-center img { margin: 0 auto !important; }
+    .m-pr0 { padding-right: 0 !important; }
+    .m-pb0 { padding: 0 !important; }
+    .m-pb10 { padding-bottom: 10px !important; }
+    .m-pb15 { padding-bottom: 15px !important; }
+    .m-img-resize img { width: 15% !important; }
+    .m-pt20 { padding-top: 20px !important; }
+}
+
+/***************************************
+        DARK MODE BACKGROUND STYLES
+****************************************/
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #fff;
+    }
+}

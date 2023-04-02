@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Footer Block for The Scoop</title>
+
+        <!-- the only styles needed for this block are included below -->
+        <style>
+            /* global/other styles for the table itself, would be included in the original email already */
+            body {
+                width: 100% !important;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: Verdana, Arial, sans-serif;
+                font-size: 12px;
+                color: #000001;
+                line-height: 16px;
+            }
+
+            /* Render font family properly in Outlook */
+            table { font-size: inherit; }
+
+            /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+            * { line-height: inherit; }
+
+            /* Prevent Outlook.com from overriding line-height */
+            table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
+            /* Disguises iOS auto links */
+
+            .ptb40 {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .centerText {
+                text-align: center;
+            }
+
+            strong{
+                color: #8C1D40;
+            }
+
+            /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+            #backgroundTable {
+                margin: 0;
+                padding: 0;
+                width: 100% !important;
+                line-height: 100% !important;
+            }
+
+            .main-td {
+                min-width: 600px;/*android fix*/
+                font-family: Verdana, Arial, sans-serif;
+                font-size: 13px;
+                color: #000001;
+                line-height: 17px;
+            }
+
+            /*  the styles needed for this block are included below, others are used for the outer table/email styles  */
+
+            img {
+                display: block;
+                outline: none;
+                text-decoration: none;
+                -ms-interpolation-mode: bicubic;
+                font-size: 10px;
+            }
+
+            a {
+                color: #e6a800;
+                font-weight: 600;
+            }
+            a:hover {
+                color: #00A3E0;
+            }
+
+            .yahoo-table-fix {
+                margin: 0 auto;
+            }
+
+            .h3 {
+                font-size: 14px;
+                line-height: 18px;
+                color: #8c1d40;
+                font-weight: bold;
+            }
+
+            .p {
+                color: #737373;
+                padding-bottom: 15px;
+            }
+
+            .pb20 {
+                padding-bottom: 20px;
+            }
+
+            .pt15 {
+                padding-top: 15px;
+            }
+
+            /* mobile styles */
+            @media only screen and (max-width: 37.5em) {
+                /* global/other styles for the table itself, would be included in the original email already */
+                .main-table { width: 100% !important; }
+                .main-td { min-width: initial !important; }
+                .main-table table { width:100% !important; margin: 0 auto !important; }
+                .block { display: block; }
+
+                /* the styles needed for this block are included below, others are used for the outer table/email styles */
+                .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
+            }
+
+            /* global/other styles for the table itself, would be included in the original email already */
+            /* needed to handle dark mode display issues outside of Outlook (which can't be fixed) */
+            @media (prefers-color-scheme: dark){
+                body{
+                background-color: #fff;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- this code is meant to be copied and added as a row to The Scoop for a new announcement (you do not need to copy the outer table, just the code that includes the outer tr tags) -->
+        <table  align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+            <tr bgcolor="#eaeaea">
+                <td class="main-td">
+                    <table class="yahoo-table-fix main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
+                        <tr>
+                            <td class="block ptb40 centerText"><strong>The code below represents the footer section of The Scoop, including links and the ASU logo</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+                                    <!-- Start Footer -->
+                                    <tr>
+                                        <td class="pt15 m-prl10" style="border-top: 3px solid #8c1d40; padding-bottom: 20px;">
+                                            <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                <tr>
+                                                    <td class="h3 pt15">Post in The Scoop!</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p"> Do you know of an opportunity or event that should be shared in The Scoop? Please fill out <a href="https://forms.gle/5Skht62rekVMtytW8"> The Scoop Request Form</a>. </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="h3">Subscribe to The Scoop!</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p"> Was this email forwarded to you? <a href="https://mailchi.mp/asu/roksic6u8v">Subscribe online</a> to receive your own copy each week. </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="h3">Have Questions?</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">Direct any questions about The Scoop to <a href="mailto:ask.git@asu.edu">ask.git@asu.edu</a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="image pb20"><img src="https://github.com/git-creative-agency/theScoop/blob/main/images/asu-logo.png?raw=true" alt="ASU Logo" width="115" height="49"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <!-- End Footer -->
+
+
+
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+
+    </body>
+</html>

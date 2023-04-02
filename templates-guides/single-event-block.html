@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Single Event Block for The Scoop</title>
+
+        <!-- the only styles needed for this block are included below -->
+        <style>
+            /* global/other styles for the table itself, would be included in the original email already */
+            body {
+                width: 100% !important;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: Verdana, Arial, sans-serif;
+                font-size: 12px;
+                color: #000001;
+                line-height: 16px;
+            }
+
+            /* Render font family properly in Outlook */
+            table { font-size: inherit; }
+
+            /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+            * { line-height: inherit; }
+
+            /* Prevent Outlook.com from overriding line-height */
+            table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
+            /* Disguises iOS auto links */
+
+            .ptb40 {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .centerText {
+                text-align: center;
+            }
+
+            /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+            #backgroundTable {
+                margin: 0;
+                padding: 0;
+                width: 100% !important;
+                line-height: 100% !important;
+            }
+
+            .main-td {
+                min-width: 600px;/*android fix*/
+                font-family: Verdana, Arial, sans-serif;
+                font-size: 13px;
+                color: #000001;
+                line-height: 17px;
+            }
+
+            /*  the styles needed for this block are included below, others are used for the outer table/email styles  */
+            strong{
+                color: #8C1D40;
+            }
+
+            a {
+                color: #e6a800;
+                font-weight: 600;
+            }
+            a:hover {
+                color: #00A3E0;
+            }
+
+            .yahoo-table-fix {
+                margin: 0 auto;
+            }
+
+            .p {
+                color: #737373;
+                padding-bottom: 15px;
+            }
+
+            .prl10 {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            /* mobile styles */
+            @media only screen and (max-width: 37.5em) {
+                /* global/other styles for the table itself, would be included in the original email already */
+                .main-table { width: 100% !important; }
+                .main-td { min-width: initial !important; }
+                .main-table table { width:100% !important; margin: 0 auto !important; }
+                .block { display: block; }
+
+                /* the styles needed for this block are included below, others are used for the outer table/email styles */
+                .m-pb10 { padding-bottom: 10px !important; }
+                .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
+            }
+
+            /* global/other styles for the table itself, would be included in the original email already */
+            /* needed to handle dark mode display issues outside of Outlook (which can't be fixed) */
+            @media (prefers-color-scheme: dark){
+                body{
+                background-color: #fff;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- this code is meant to be copied and added as a row to The Scoop for a new announcement (you do not need to copy the outer table, just the code that includes the outer tr tags) -->
+        <table  align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+            <tr bgcolor="#eaeaea">
+                <td class="main-td">
+                    <table class="yahoo-table-fix main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
+                        <tr>
+                            <td class="block ptb40 centerText"><strong>The code below can be used for any two-column style student club block</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="prl10 m-prl10 yahoo-table-fix">
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+
+
+                                    <!-- begin event -->
+                                    <tr>
+                                        <td>
+                                        <strong>2023 Virtual Portfolio Review</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p">
+                                            Thursday, March 30 from 6:00-8:00PM<br>
+                                            <a href="https://www.eventbrite.com/e/2023-aiga-az-portfolio-review-tickets-548100803257">Learn more and register to attend online</a>.
+                                        </td>
+                                    </tr>
+                                    <!-- end event -->
+
+
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+
+    </body>
+</html>

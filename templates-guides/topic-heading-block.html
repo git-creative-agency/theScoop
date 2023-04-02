@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Topic Heading Block for The Scoop</title>
+
+        <!-- the only styles needed for this block are included below -->
+        <style>
+            /* global/other styles for the table itself, would be included in the original email already */
+            body {
+                width: 100% !important;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: Verdana, Arial, sans-serif;
+                font-size: 12px;
+                color: #000001;
+                line-height: 16px;
+            }
+
+            /* Render font family properly in Outlook */
+            table { font-size: inherit; }
+
+            /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+            * { line-height: inherit; }
+
+            /* Prevent Outlook.com from overriding line-height */
+            table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
+            /* Disguises iOS auto links */
+
+            .ptb40 {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .centerText {
+                text-align: center;
+            }
+
+            strong{
+                color: #8C1D40;
+            }
+
+            /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+            #backgroundTable {
+                margin: 0;
+                padding: 0;
+                width: 100% !important;
+                line-height: 100% !important;
+            }
+
+            .main-td {
+                min-width: 600px;/*android fix*/
+                font-family: Verdana, Arial, sans-serif;
+                font-size: 13px;
+                color: #000001;
+                line-height: 17px;
+            }
+
+            /*  the styles needed for this block are included below, others are used for the outer table/email styles  */
+            .yahoo-table-fix {
+                margin: 0 auto;
+            }
+
+            .h2 {
+                font-size: 20px;
+                line-height: 24px;
+                color: #8c1d40;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            .ptb5 {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            /* mobile styles */
+            @media only screen and (max-width: 37.5em) {
+                /* global/other styles for the table itself, would be included in the original email already */
+                .main-table { width: 100% !important; }
+                .main-td { min-width: initial !important; }
+                .main-table table { width:100% !important; margin: 0 auto !important; }
+                .block { display: block; }
+
+                /* the styles needed for this block are included below, others are used for the outer table/email styles */
+                .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
+            }
+
+            /* global/other styles for the table itself, would be included in the original email already */
+            /* needed to handle dark mode display issues outside of Outlook (which can't be fixed) */
+            @media (prefers-color-scheme: dark){
+                body{
+                background-color: #fff;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- this code is meant to be copied and added as a row to The Scoop for a new section/topic (you do not need to copy the outer table, just the code that includes the outer tr tags) -->
+        <table  align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+            <tr bgcolor="#eaeaea">
+                <td class="main-td">
+                    <table class="yahoo-table-fix main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
+                        <tr>
+                            <td class="block ptb40 centerText"><strong>The code below can be used for any topic heading</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                    <!-- Start h2 Banner - Don't Touch -->
+                                    <tr>
+                                        <td>
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr bgcolor="#ffca38">
+                                                    <td>
+                                                        <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                            <tr>
+                                                                <td class="h2 ptb5 m-prl10" style="color: #ffffff;">Jobs and Internships</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <!-- End h2 Banner - Don't Touch-->
+
+
+
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+
+    </body>
+</html>
