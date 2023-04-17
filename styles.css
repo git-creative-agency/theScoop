@@ -1,0 +1,593 @@
+/* 
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ---------- CUSTOM/GLOBAL STYLES ---------- */
+:root{
+	/* ASU Brand Colors */
+	--wht: #fff;
+	--black: #000;
+	--maroon: #8c1d40;
+	--gold: #ffc627;
+	--blue: #00a3e0;
+	--green: #78be20;
+	--orange: #ffcf32;
+    --gray: #747474;
+    --gray1: #FAFAFA;/* open accordion panel background */ 
+    --gray2: #E8E8E8; /* background on accordion heading: hover/focus */
+    --gray3: #D0D0D0; /* border on accordion heading */
+    --gray4: #BFBFBF;
+    --gray5: #747474;
+    --gray6: #484848;
+    --gray7: #191919; /* accordion text & sidebar */
+	
+	/* ASU Fonts */
+	--fonts: Arial, sans-serif;
+}
+
+/* ----- skip link styles ----- */
+/* found here: https://webaim.org/techniques/css/invisiblecontent/ */
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--wht);
+    outline: 2px solid var(--orange);
+    margin-bottom: 2px;
+}
+
+/* ----- hidden content styles - for screen readers ----- */
+/* found here: https://webaim.org/techniques/css/invisiblecontent/ */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+body{
+    font-family: var(--fonts);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+	background-color: var(--gray7); 	
+	line-height: 1.5;
+}
+
+#background{
+	width: 100vw;
+	height: 100vh;
+	background-image: url("images/mobile-background.svg"); 
+	background-repeat: no-repeat;
+	background-size: cover;
+    position: fixed;
+    z-index: -2;
+}
+
+#flex-bkgrnd{
+	display: none;
+}
+
+/* Header, Main, Footer Styles */
+header, main, footer{
+    background-color: var(--wht);
+    width: 80%;
+    max-width: calc(1000px - 32px);
+    margin: 0 auto;
+    padding: 32px 16px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styles */
+header{
+    background-color: var(--black);
+    color: var(--wht);
+}
+
+/* Link Styles */
+a{
+    display: block;
+    padding: 1rem;
+}
+
+/* Link Focus Styles */
+a:focus, a:focus-visible{
+    outline: 2px solid var(--gold);
+}
+
+/* Link Around Logo */
+header > a{
+    padding: 0;
+}
+
+/* Logo Image Link on Focus */
+header > a:focus{
+    outline: 2px solid var(--gold);
+}
+
+/* Logo Image Styles */
+header > a img{
+    width: 50%;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+/* Image Styles */
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Shared Heading Styles */
+h1, h2, h3{
+    font-weight: bold;
+    width: fit-content;
+    letter-spacing: -0.5px;
+}
+
+/* H1 Styles */
+h1{
+    font-size: 3rem;
+    line-height: 3.25rem;
+    color: var(--wht);
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav{
+    width: 100%;
+    margin: 16px 0;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+    padding: 16px 32px;
+    margin: 32px auto;
+    background-color: var(--gold);
+    color: var(--black);
+    border-radius: 32px;
+    transition: all 300ms;
+}
+
+/* Nav Link Hover Styles */
+nav a:hover{
+    transform: scale(105%);
+}
+
+/* Nav Link Focus Styles */
+nav a:focus, nav a:focus-visible{
+    transform: scale(95%);
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* Main Styles */
+main{
+    /* padding: 0; */
+}
+
+/* Sections in Main */
+main > section{
+    padding: 2rem 0;
+}
+
+/* H2 Styles */
+h2{
+    font-size: 2rem;
+    margin: 8px 0;
+    background-color: var(--gold);
+    padding: 0 8px;
+    text-align: center;
+}
+
+main > img{
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+/* Paragraph Styles */
+p{
+    width: 100%;
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 16px 0;
+    line-height: 1.4;
+}
+
+/* Paragraph About Images */
+main > p:last-of-type{
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* Accordion Styles */
+
+.ui-widget{
+    font-family: var(--fonts);
+    width: 100%;
+    max-width: 700px;
+    margin: 16px auto;
+}
+
+/* Shared Heading Styles */
+.ui-accordion .ui-accordion-header{
+    background: none;
+    background-color: var(--wht);
+    border-top: 1px solid var(--gray3);
+    border-bottom: 1px solid var(--gray3);
+    border-left: 8px solid var(--gold);
+    border-right: 1px solid var(--gray3);
+    border-radius: 0;
+    font-size: 1.25rem;
+    color: var(--gray7);
+    width: calc(100% - 33px);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active, h3.ui-accordion-header.ui-corner-top.ui-accordion-header-collapsed.ui-corner-all.ui-state-default, h3.ui-accordion-header.ui-corner-top.ui-accordion-header-collapsed.ui-corner-all.ui-state-default.ui-state-hover{
+    background: none;
+    background-color: var(--wht);
+    border: 1px solid var(--gray3);
+    border-left: 8px solid var(--gold);
+    border-radius: 0;
+    color: var(--gray7);
+    width: 85%;
+    max-width: 700px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active{
+    /* margin: 0 auto; */
+}
+
+h3.ui-accordion-header.ui-corner-top.ui-accordion-header-collapsed.ui-corner-all.ui-state-default, h3.ui-accordion-header.ui-corner-top.ui-accordion-header-collapsed.ui-corner-all.ui-state-default.ui-state-hover{
+    margin: 0 auto 24px auto;
+}
+
+/* Heading on Hover */
+h3.ui-accordion-header.ui-corner-top.ui-accordion-header-collapsed.ui-corner-all.ui-state-default.ui-state-hover{
+    background-color: var(--gray3);
+}
+
+/* Active Heading Styles */
+h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active{
+    padding: 8px 10px;
+}
+
+/* Hover Heading Styles */
+/* h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active */
+#accordion h3:focus, #accordion h3:focus-visible{
+    outline: 4px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* Headings When the Accordion Panel is Collapsed */
+h3.ui-accordion-header.ui-corner-top.ui-accordion-header-collapsed.ui-corner-all.ui-state-default span.fa-solid.fa-chevron-down{
+    display: inline-block;
+    content: url("images/chevron-down-solid.svg");
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--gray7);
+}
+
+/* h3.ui-state-hover .fa-solid.fa-chevron-down, h3.ui-state-focus .fa-solid.fa-chevron-down{
+    display: inline-block;
+    content: url("images/chevron-down-solid.svg");
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--gray7);
+} */
+
+/* Headings When the Accordion Panel is Open */
+h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active span.fa-solid.fa-chevron-down{
+    transform: rotate(180deg);
+}
+
+/* Heading Arrows (Default) */
+.ui-accordion .ui-accordion-header span.fa-solid.fa-chevron-down{
+    display: inline-block;
+    content: url("images/chevron-down-solid.svg");
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--gray7);
+    transition: all 500ms;
+}
+
+/* Sections of Accordion When Open */
+#accordion section{
+    width: calc(100% - 13px) !important;
+    margin: 0 auto 24px auto !important;
+    padding: 1rem 0 !important;
+    background: none;
+    background-color: var(--gray1);
+    color: var(--gray7);
+    border: 1px solid var(--gray3);
+    border-top-width: 1px !important;
+    border-bottom-width: 1px !important;
+    border-left: 8px solid var(--gold) !important;
+    border-radius: 0;
+    font-size: 1rem;
+    position: relative;
+    transition: all 300ms;
+    /* left: 5px; */
+}
+
+#accordion section a{
+    color: var(--gray7);
+    padding: 8px;
+    width: fit-content;
+    margin: 8px auto;
+}
+
+/* Footer Styles */
+footer{
+    background: var(--black);
+    color: var(--wht);
+}
+
+/* Footer Social Media Section Styles */
+#socials{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* gap: 16px; */
+    max-width: 180px;
+    margin: 16px auto;
+    color: var(--wht);
+}
+
+/* Links to Socials */
+.social-link{
+    display: block;
+    padding: 8px 16px;
+}
+
+.social-link svg{
+    display: block;
+    fill: var(--gray4);
+    width: 28px;
+    height: 32px;
+}
+
+/* Footer Paragraph Styles */
+footer p{
+    padding: 16px 0;
+    text-align: center;
+
+}
+
+/* Footer Second Span Styles */
+footer span:last-of-type{
+    display: block;
+    margin: 8px auto;
+}
+
+/* Footer Link Styles */
+footer a{
+    padding: 4px 8px;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--wht);
+}
+
+/* Footer Link Hover Styles */
+footer a:hover{
+    color: var(--gold);
+}
+
+/* Footer Links on Focus Styles */
+footer a:focus, footer a:focus-visible{
+    outline: 2px solid var(--gold);
+}
+
+footer > p a:focus, footer > p a:focus-visible{
+    outline-offset: 4px;
+}
+
+
+/* ---------- Media Queries ---------- */
+/* for larger mobile and tablet screens */
+@media screen and (min-width: 605px){
+    /* Update Background SVG Layout */
+	#background{
+		width: 100vw;
+		background-image: url("images/tablet.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+    /* Allow Header to Display in Two Columns */
+    header{
+        /* display: grid;
+        grid-template-columns: 1fr 2fr; */
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        /* justify-content: space-around; */
+    }
+
+    /* H1 Styles */
+    h1{
+        text-align: left;
+    }
+
+    /* H2 Styles */
+    h2{
+        text-align: left;
+    }
+
+    /* Logo Image Styles */
+    header > a img{
+        width: 100%;
+    }
+
+    /* Navigation List Adjustments */
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /* Navigation Link Styles */
+    nav a{
+        margin: 0 auto;
+    }
+
+    /* Link in Footer */
+    footer a{
+        display: inline;
+        padding: 0;
+    }
+}
+
+/* for larger tablet and smaller laptop screens */
+@media screen and (min-width: 900px){
+
+    #background{
+		display: block;
+		background-image: url("images/wide-backround.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+    #flex-bkgrnd{
+		display: none;
+	}
+
+    header{
+        /* grid-template-columns: 1fr 4fr; */
+        justify-content: space-around;
+    }
+
+	/* #background{
+		background-image: none; */
+		/* display: flex;
+		justify-content: end; */
+	/* }
+	
+	#flex-bkgrnd{
+		display: block;
+	} */
+
+    header > a img{
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    /* H1 Styles */
+    h1{
+        font-size: 3.5rem;
+        line-height: 3.75rem;
+    }
+
+    /* Active Heading Styles */
+    h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active{
+        padding: 8px 10px;
+        max-width: calc(100% - 20px);
+    }
+
+    /* #accordion section{
+        width: calc(100% - 13px) !important;
+    } */
+}
+
+/* for large and extra large screens */
+@media screen and (min-width: 1200px){
+
+    /* H1 Styles */
+    h1{
+        font-size: 4rem;
+        line-height: 4.25rem;
+    }
+	
+	/* #background{
+		display: block;
+		background-image: url("images/wide-backround.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	} */
+	
+	/* #background img{
+		width: 100%;
+		height: auto;
+	} */
+	
+	/* #flex-bkgrnd{
+		display: none;
+	} */
+}
