@@ -67,6 +67,7 @@ table {
     --gray5: #747474;
     --gray6: #484848;
     --gray7: #191919; /* accordion text & sidebar */
+    --visited-inline-link: #440E22;
 	
 	/* ASU Fonts */
 	--fonts: Arial, sans-serif;
@@ -111,6 +112,8 @@ body{
     box-sizing: border-box;
 	background-color: var(--gray7); 	
 	line-height: 1.5;
+    /* overflow-y: scroll; */
+    /* scroll-behavior: smooth; */
 }
 
 #background{
@@ -121,6 +124,8 @@ body{
 	background-size: cover;
     position: fixed;
     z-index: -2;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 #flex-bkgrnd{
@@ -136,6 +141,7 @@ header, main, footer{
     padding: 32px 16px;
     position: relative;
     z-index: 2;
+    /* scroll-behavior: smooth; */
 }
 
 /* Header Styles */
@@ -148,12 +154,34 @@ header{
 a{
     display: block;
     padding: 1rem;
+    color: var(--maroon);
+}
+
+/* Link Hover Styles */
+a:hover{
+    text-decoration: none;
 }
 
 /* Link Focus Styles */
-a:focus, a:focus-visible{
-    outline: 2px solid var(--gold);
+a:focus, a:focus-visible, a:visited:focus-visible{
+    /* outline: 2px solid var(--gold); */
+    background-color: var(--maroon);
+    color: var(--wht);
+    outline-color: var(--gold);
+    outline-offset: 2px;
+    text-decoration: none;
 }
+
+/* Visited Link Styles */
+a:visited{
+    color: var(--visited-inline-link);
+}
+
+/* Visited Links on Focus Styles */
+/* a:visited:focus-visible{
+    color: var(--wht);
+    outline-color: var(--gold);
+} */
 
 /* Link Around Logo */
 header > a{
@@ -197,7 +225,8 @@ h1{
 /* Navigation Styles */
 nav{
     width: 100%;
-    margin: 16px 0;
+    max-width: 600px;
+    margin: 16px auto;
     flex-basis: 100%;
     text-align: center;
 }
@@ -229,7 +258,7 @@ nav a:focus, nav a:focus-visible{
 
 /* Main Styles */
 main{
-    /* padding: 0; */
+    
 }
 
 /* Sections in Main */
@@ -246,7 +275,7 @@ h2{
     text-align: center;
 }
 
-main > img{
+main img:first-of-type{
     max-width: 540px;
     margin: 0 auto;
 }
@@ -261,9 +290,11 @@ p{
 }
 
 /* Paragraph About Images */
-main > p:last-of-type{
+.additional-info{
     font-style: italic;
     font-size: 1rem;
+    max-width: 68ch;
+    padding: 0 0 0;
 }
 
 /* Accordion Styles */
@@ -294,22 +325,6 @@ main > p:last-of-type{
     justify-content: space-between;
     align-items: center;
 }
-
-
-/* h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active, h3.ui-accordion-header.ui-corner-top.ui-accordion-header-collapsed.ui-corner-all.ui-state-default, h3.ui-accordion-header.ui-corner-top.ui-accordion-header-collapsed.ui-corner-all.ui-state-default.ui-state-hover{
-    background: none;
-    background-color: var(--wht);
-    border: 1px solid var(--gray3);
-    border-left: 8px solid var(--gold);
-    border-radius: 0;
-    color: var(--gray7);
-    width: 85%;
-    max-width: 700px;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 
 h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active{
     /* margin: 0 auto; */
@@ -388,10 +403,32 @@ h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active
 }
 
 #accordion section a{
-    color: var(--gray7);
     padding: 8px;
     width: fit-content;
-    margin: 8px auto;
+    margin: 8px 0;
+}
+
+/* For the Button to Subscribe to The Scoop in the Subscribe Section */
+.btn-default{
+    background-color: var(--maroon);
+    color: var(--wht);
+    font-weight: bold;
+    padding: 16px 32px;
+    margin: 16px auto;
+    width: fit-content;
+    border-radius: 32px;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+/* For the External Link SVG */
+/* .btn-default svg{
+    display: inline;
+} */
+
+/* For the Button to Subscribe on Hover */
+.btn-default:hover{
+    transform: scale(105%);
 }
 
 /* Footer Styles */
@@ -456,6 +493,56 @@ footer a:focus, footer a:focus-visible{
 
 footer > p a:focus, footer > p a:focus-visible{
     outline-offset: 4px;
+}
+
+/* For the Back to top Link */
+#btt{
+    background-color: var(--gray);
+    color: var(--wht);
+    line-height: 1;
+    text-decoration: none;
+    padding: 16px;
+    width: 6rem;
+    height: 48px;
+    transform: rotate(270deg);
+    position: fixed;
+    top: calc(100vh - 176px);
+    left: calc(100vw - 100px);
+    text-align: right;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0 8px;
+    align-items: center;
+    transition: all 300ms;
+}
+
+/* For styling the text in the Back to Top Button */
+#btt span{
+    display: block;
+    margin: 0;
+    grid-column: 1/2;
+}
+
+/* For the Arrow Icon in the Back To Top Button */
+#btt svg{
+    display: inline-block;
+    height: 3rem;
+    width: auto;
+    padding: 0;
+    fill: var(--wht);
+    grid-column: 2/3;
+    grid-row: 1/3;
+    transition: padding 300ms;
+}
+
+/* For the Back to Top Button on Hover */
+#btt:hover{
+    width: calc(6rem + 8px);
+    left: calc(100vw - 108px);
+}
+
+#btt:hover svg{
+    padding-left: 8px;
 }
 
 
@@ -530,19 +617,9 @@ footer > p a:focus, footer > p a:focus-visible{
 	}
 
     header{
-        /* grid-template-columns: 1fr 4fr; */
+        gap: 0;
         justify-content: space-around;
     }
-
-	/* #background{
-		background-image: none; */
-		/* display: flex;
-		justify-content: end; */
-	/* }
-	
-	#flex-bkgrnd{
-		display: block;
-	} */
 
     header > a img{
         max-width: 200px;
@@ -555,15 +632,16 @@ footer > p a:focus, footer > p a:focus-visible{
         line-height: 3.75rem;
     }
 
+    /* Nav Styles */
+    nav{
+        margin: 0 auto 16px auto;
+    }
+
     /* Active Heading Styles */
     h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active.ui-state-active{
         padding: 8px 10px;
         max-width: calc(100% - 20px);
     }
-
-    /* #accordion section{
-        width: calc(100% - 13px) !important;
-    } */
 }
 
 /* for large and extra large screens */
@@ -571,23 +649,6 @@ footer > p a:focus, footer > p a:focus-visible{
 
     /* H1 Styles */
     h1{
-        font-size: 4rem;
-        line-height: 4.25rem;
+        font-size: 5rem;
     }
-	
-	/* #background{
-		display: block;
-		background-image: url("images/wide-backround.svg");
-		background-size: cover;
-		background-repeat: no-repeat;
-	} */
-	
-	/* #background img{
-		width: 100%;
-		height: auto;
-	} */
-	
-	/* #flex-bkgrnd{
-		display: none;
-	} */
 }

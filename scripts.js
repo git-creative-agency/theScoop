@@ -7,9 +7,12 @@ $(function(){
     })();
 
     // this creates our accordion, one section for each year
+    // all panels collapsed by default
+    // icons removed to add FontAwesome for brand
     $("#accordion").accordion({
         icons: false,
         collapsible: true,
+        active: false,
         animate: 500
     });
 });
