@@ -71,6 +71,9 @@ table {
 	
 	/* ASU Fonts */
 	--fonts: Arial, sans-serif;
+
+    /* ASU Focus Shadow Style */
+    --focus-shadow: 0 0 8px #00baff;
 }
 
 /* ----- skip link styles ----- */
@@ -158,13 +161,14 @@ a{
 }
 
 /* Link Hover Styles */
-a:hover{
+p a:hover, #accordion section a:hover{
     text-decoration: none;
 }
 
 /* Link Focus Styles */
-a:focus, a:focus-visible, a:visited:focus-visible{
-    /* outline: 2px solid var(--gold); */
+p a:focus, p a:focus-visible, p a:visited:focus-visible, 
+#accordion section a:focus, #accordion section a:focus-visible, 
+#accordion section a:visited:focus-visible{
     background-color: var(--maroon);
     color: var(--wht);
     outline-color: var(--gold);
@@ -173,7 +177,7 @@ a:focus, a:focus-visible, a:visited:focus-visible{
 }
 
 /* Visited Link Styles */
-a:visited{
+p a:visited, #accordion section a:visited{
     color: var(--visited-inline-link);
 }
 
@@ -247,6 +251,13 @@ nav a{
 /* Nav Link Hover Styles */
 nav a:hover{
     transform: scale(105%);
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+/* Nav Visited Link Styles */
+nav a:visited{
+
 }
 
 /* Nav Link Focus Styles */
@@ -402,10 +413,12 @@ h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active
     /* left: 5px; */
 }
 
+/* Accordion Link Styles */
 #accordion section a{
     padding: 8px;
     width: fit-content;
     margin: 8px 0;
+    color: var(--maroon);
 }
 
 /* For the Button to Subscribe to The Scoop in the Subscribe Section */
@@ -421,14 +434,19 @@ h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active
     transition: all 300ms;
 }
 
-/* For the External Link SVG */
-/* .btn-default svg{
-    display: inline;
-} */
-
 /* For the Button to Subscribe on Hover */
 .btn-default:hover{
     transform: scale(105%);
+}
+
+/* Default Button Focus Styles */
+.btn-default:focus,
+.btn-default:focus-visible{
+    /* background-color: var(--maroon);
+    color: var(--wht); */
+    outline: 4px solid var(--gold);
+    outline-offset: 2px;
+    text-decoration: none;
 }
 
 /* Footer Styles */
@@ -483,7 +501,7 @@ footer a{
 
 /* Footer Link Hover Styles */
 footer a:hover{
-    color: var(--gold);
+    color: var(--wht);
 }
 
 /* Footer Links on Focus Styles */
