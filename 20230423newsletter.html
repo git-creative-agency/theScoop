@@ -1,0 +1,1131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <!-- Target IE10 phones -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GIT The Scoop</title>
+        <style type="text/css">
+            /***************************************
+                        GLOBAL STYLES
+            ****************************************/
+            .main-td {
+                min-width: 600px;/*android fix*/
+                font-family: Verdana, Arial, sans-serif;
+                font-size: 13px;
+                color: #000001;
+                line-height: 17px;
+            }
+            .h2 {
+                font-size: 20px;
+                line-height: 24px;
+                color: #8c1d40;
+                font-weight: bold;
+                font-style: italic;
+            }
+            .h3 {
+                font-size: 14px;
+                line-height: 18px;
+                color: #8c1d40;
+                font-weight: bold;
+            }
+            .hero-h3{
+                font-size: 16px;
+                line-height: 20px;
+                color: #8c1d40;
+                font-weight: bold;
+            }
+            .h4 {
+                font-size: 12px;
+                line-height: 16px;
+                color: #000001;
+                font-weight: bold;
+            }
+            .p,  .ul {
+                padding-bottom: 15px;
+            }
+            .p {
+                color: #737373;
+            }
+            /*fixes width issue in yahoo*/
+            .centerText {
+                text-align: center;
+            }
+            .webversion {
+                font-size: 10px;
+                text-decoration: underline;
+            }
+            .yahoo-table-fix {
+                margin: 0 auto;
+            }
+            /*fixes table width issue in yahoo*/
+            strong {
+                color: #8C1D40;
+            }
+            a {
+                color: #e6a800;
+                font-weight: 600;
+            }
+            a:hover {
+                color: #00A3E0;
+            }
+            em {
+                color: #000001;
+            }
+            p {
+                color: #5C6670;
+            }
+            .border-top {
+                border-top: 1px solid #ffd255;
+                padding-top: 5px;
+                margin-top: 5px;
+            }
+
+                /***************************************
+                            SPACING STYLES
+                ****************************************/
+            .p10 {
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+            }
+            /* zero padding on all side*/
+            .ptb5 {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            .ptb10 {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .ptb15 {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .ptb20 {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            /* Padding top and bottom */
+            .prl0 {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .prl10 {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            /* Padding left and right */
+            .pt5 {
+                padding-top: 5px;
+            }
+            .pt10 {
+                padding-top: 10px;
+            }
+            .pt15 {
+                padding-top: 15px;
+            }
+            .pt20 {
+                padding-top: 20px;
+            }
+            /* padding top */
+            .pr0 {
+                padding-right: 0px;
+            }
+            .pr25 {
+                padding-right: 25px;
+            }
+            .pr30 {
+                padding-right: 30px;
+            }
+            .pr35 {
+                padding-right: 35px;
+            }
+            /* padding right */
+            .pb5 {
+                padding-bottom: 5px;
+            }
+            .pb0 {
+                padding-bottom: 0px;
+            }
+            .pb10 {
+                padding-bottom: 10px;
+            }
+            .pb15 {
+                padding-bottom: 15px;
+            }
+            .pb20 {
+                padding-bottom: 20px;
+            }
+            .pb25 {
+                padding-bottom: 25px;
+            }
+            /* padding bottom */
+            .pl5 {
+                padding-left: 5px;
+            }
+            /* padding left */
+
+            /***************************************
+                    CLIENT SPECIFIC STYLES
+            ****************************************/
+            .preheader-text{
+                display: none;
+                font-size: 0;
+                max-height: 0;
+                line-height: 0;
+                visibility: hidden;
+            }
+            /* Force Outlook to provide a "view in browser" menu link. */
+            body {
+                width: 100% !important;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+            #backgroundTable {
+                margin: 0;
+                padding: 0;
+                width: 100% !important;
+                line-height: 100% !important;
+            }
+            /* end reset */
+            img {
+                display: block;
+                outline: none;
+                text-decoration: none;
+                -ms-interpolation-mode: bicubic;
+                font-size: 10px;
+            }
+            a img {
+                border: none;
+            }
+            /* Some sensible defaults for images*/
+        </style>
+        <!--[if gte mso 9]>
+            <style>
+                sup { font-size: 100% !important; }
+            </style>
+        <![endif]-->
+
+        <style type="text/css" data-embed>
+            /***************************************
+                        GLOBAL STYLES
+            ****************************************/
+            body {
+                font-family: Verdana, Arial, sans-serif;
+                font-size: 12px;
+                color: #000001;
+                line-height: 16px;
+            }
+            /* Render font family properly in Outlook */
+            table { font-size: inherit; }
+            /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+            * { line-height: inherit; }
+            /* Prevent Outlook.com from overriding line-height */
+            table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+            /* Outlook 07, 10 Padding issue fix
+            Bring inline: No.*/
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
+            /***************************************
+                UNRESPONSIVE MOBILE STYLES
+            ****************************************/
+
+            /*@media only screen and (max-width: 37.5em) {
+                .main-table { padding-left: 5px !important; padding-right: 5px !important; }
+            }*/
+            /***************************************
+                    MOBILE STYLES
+            ****************************************/
+
+            @media only screen and (max-width: 37.5em) {
+                .main-table { width: 100% !important; }
+                .main-td { min-width: initial !important; }
+                .main-table table { width:100% !important; margin: 0 auto !important; }
+
+                .block { display: block; }
+                /* place content you want stacked here */
+                img { max-width: 100% !important; height: auto !important; }
+                /* large images resize down according to their parent container size */
+                .text-center { text-align: center !important; }
+                .main-table .fixed-60 { width: 60px !important; }
+                .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
+                .m-prl0 { padding-right: 0 !important; padding-left: 0 !important; }
+                .m-img-center img { margin: 0 auto !important; }
+                .m-pr0 { padding-right: 0 !important; }
+                .m-pb0 { padding: 0 !important; }
+                .m-pb10 { padding-bottom: 10px !important; }
+                .m-pb15 { padding-bottom: 15px !important; }
+                .m-pt20 { padding-top: 20px !important; }
+            }
+
+            /***************************************
+                    DARK MODE BACKGROUND STYLES
+            ****************************************/
+
+            @media (prefers-color-scheme: dark){
+                body{
+                    background-color: #fff;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Adds pre-header text to build -->
+        <!-- This text shows in inbox as the email description -->
+        <span class="preheader-text">It's time to submit your work for the GIT Awards!</span>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+            <tr bgcolor="#eaeaea">
+                <td class="main-td pb25 m-pb0">
+                    <table class="yahoo-table-fix main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
+
+                        <!-- Start Pre-header -->
+                        <tr>
+                            <td class="preheader" style="border-bottom: 4px solid #ffca38;">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="p10 text-center"><a href="https://git-creative-agency.github.io/theScoop/20230416newsletter.html" class="webversion">View this email in your browser</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Pre-header -->
+
+                        <!-- Start Header -->
+                        <tr bgcolor="#ffffff">
+                            <td class="header">
+                                <table align="center" class="yahoo-web-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-bottom: 1px solid #f2f2f2;">
+
+                                    <!-- Start Scoop Logo -->
+                                    <tr>
+                                        <td class="image yahoo-web-fix pt10 m-prl10" align="center"><img src="https://github.com/git-creative-agency/theScoop/blob/main/images/scoop-logo.png?raw=true" alt="Scoop Logo" width="540">
+                                        </td>
+                                    </tr>
+                                    <!-- End Scoop Logo -->
+
+                                    <!-- Start Social Media Links -->
+                                    <tr>
+                                        <td>
+                                            <table align="center" class="yahoo-web-fix pb10 fixed-60" border="0" cellpadding="0" cellspacing="0" width="60">
+                                                <tr>
+                                                    <td class="image" align="center" width="30"><a href="http://fb.me/gitasupoly"><img src="https://github.com/git-creative-agency/theScoop/blob/main/images/facebook.png?raw=true" alt="Facebook logo" width="30" height="30"></a>
+                                                    </td>
+                                                    <td class="image" width="30" align="center"><a href="https://twitter.com/ASUGIT?lang=en"><img src="https://github.com/git-creative-agency/theScoop/blob/main/images/twitter.png?raw=true" alt="Twitter Logo" width="30" height="30"></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                <!-- End Social Media Links -->
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Header -->
+
+                        <!-- Start Highlighted Content block -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+
+                                    <!-- Start Hero Image-->
+                                    <tr>
+                                        <td class="image pt20 m-prl10" align="center">
+                                            <img src="https://github.com/git-creative-agency/theScoop/blob/main/images/git-awards-s2023-submit.png?raw=true" alt="g.i.t. awards spring 2023 submissions and nominations due by saturday, april 22" width="540"> 
+                                        </td>
+                                    </tr>
+                                    <!-- End Hero Image -->
+
+                                    <!--  Hero Copy -->
+                                    <tr>
+                                        <td class="p m-prl10 yahoo-web-fix">
+                                            <br>
+                                            You've worked all semester on great projects and now it's time to show them off! Submit your work for awards voted on by the design industry.<br>
+                                            All students, at any level (freshmen to graduate) from GIT, UX, or related programs (but enrolled in a GIT course) can submit work.<br>
+                                            <a href="https://entrepreneurship.asu.edu/programs/virtual-venture-internship/">Learn more and enter your work on the GIT Awards website</a>.
+                                        </td>
+                                    </tr>
+                                    <!-- End hero text -->
+                                </table>
+                            </td>
+                        </tr>
+                        <!--  End header/hero block -->      
+
+                        <!-- Start Secondary Hero block -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10 border-top ptb20" align="center">
+                                            <a href="https://asu.zoom.us/meeting/register/tZEtcO6tpjMvE9wHcDeYCIJW0zN5z1kMEKAB"><img src="https://github.com/git-creative-agency/theScoop/blob/main/images/wordpress-workshop-2.jpg?raw=true" width="540" alt="customizing wordpress websites"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p m-prl10 yahoo-table-fix">
+                                            Join GIT and Web Application Developer Steve Ryan to learn more about customizing a WordPress website with custom content types, themes, creating child themes, and creating blocks using the block builder.<br>
+                                            <a href="https://asu.zoom.us/meeting/register/tZEtcO6tpjMvE9wHcDeYCIJW0zN5z1kMEKAB">Learn more and register to attend online</a>.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- end one row with an image, heading, paragraph, and link -->                  
+
+                        <!-- Start Jobs and Internships Block -->
+                        <!-- Start h2 Banner - Don't Touch -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr bgcolor="#ffca38">
+                                        <td>
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                <tr>
+                                                    <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Jobs and Internships</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End h2 Banner - Don't Touch-->
+
+                        <tr>
+                            <td class="prl10 m-prl0 pt15">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10">
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                                <!-- Start Job - Added April 9 - Expires April 6 ROLLING -->
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>Student Quality Assurance Editor</strong> <em>Tempe Campus</em><br>
+                                                        Student Accessibility and Inclusive Learning Services (SAILS) seeks a student to assist in the production of accessible documents by reviewing and editing for mistakes and discrepancies.<br>
+                                                        <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 89983BR.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Job -->
+
+                                                <!-- Start Job - Added April 9 - Expires April 21 -->
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>Student Engagement Assistant</strong> <em>ASU SkySong</em><br>
+                                                        EdPlus at ASU seeks a student to assist with the development and implementation of online student engagement campaigns, as well as contributing to the management of Sun Devils Connect.<br>
+                                                        <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 90038BR.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Job -->
+
+                                                <!-- Start Job - Added April 9 - Expires April 20 -->
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>Student Data and Technical Project Assistant</strong> <em>ASU SkySong</em><br>
+                                                        EdPlus at ASU seeks a student to provide data and technical project support to Starbucks Global Academy. The focus of this role will be data visualization and reporting, with additional duties of supporting technical projects and learner support as needed.<br>
+                                                        <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 90078BR.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Job -->
+
+                                                <!-- Start Job - Added April 9 - Expires April 20 -->
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>Student Social Media Performance Aide</strong> <em>Tempe Campus</em><br>
+                                                        The Enterprise Marketing Hub seeks a student to assist the digital creative team with a variety of projects, while specializing in reporting analytics for organic and paid social media.<br>
+                                                        <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 90132BR.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Job -->
+
+                                                <!-- Start Job - Added April 2 - Expires April 3 ROLLING -->
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>Student Visual Designer</strong> <em>Tempe Campus</em><br>
+                                                        University Academic Success Programs seeks a student to creatively tackle visual design projects that support our programs, including  Subject Area Tutoring, Writing Tutoring, Supplemental Instruction, and Graduate Academic Support.<br>
+                                                        <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 89831BR.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Job -->
+
+                                                <!-- Start Job - Added April 2 - Expires April 4 ROLLING -->
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>Student Technical Artist</strong> <em>Downtown Phoenix Campus</em><br>
+                                                        The Computational Neuropsychology & Simulation (CNS) Lab at ASU seeks a student to closely work with graphics programmers to build the next cutting-edge real-time graphics and technology for VR/AR.<br>
+                                                        <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 89963BR.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Job -->
+
+                                                <!-- Start Job - Added April 2 - Expires April 4 ROLLING -->
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>Student Enrollment Communications Aide</strong> <em>Tempe Campus</em><br>
+                                                        Academic Enterprise seeks a student to offer support with reviewing and summarizing articles for senior leadership, compiling data, creating slide decks, and working on other projects that support their mission.<br>
+                                                        <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 89944BR.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Job -->
+
+                                                <!-- Start Job - Added April 2 - Expires April 6 ROLLING -->
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>Student Experiential Learning Initiatives Visual Designer</strong> <em>Tempe Campus</em><br>
+                                                        University College seeks a student to create awareness around potential careers and open access to opportunities where learners can acquire skills and knowledge from firsthand work-based experiences.<br>
+                                                        <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 89974BR.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Job -->
+
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Jobs and Internships Block -->
+
+                        <!-- Announcements Block -->
+                        <!-- Start h2 Banner-->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr bgcolor="#ffca38">
+                                        <td>
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                <tr>
+                                                    <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Announcements</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End h2 Banner - Don't Touch -->
+
+                        <!-- Begin single announcement/single column - Added 4-16-23, expires 4-21-23 -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10 m-pb10">
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td class="pb10 pt5">
+                                                        <a href="https://docs.google.com/document/d/1tPsFMF_6XKU__SSqSPAwf1v4MDWn4Pb8suVcvsHP71w/edit"><img src="https://github.com/git-creative-agency/theScoop/blob/main/images/mix-hackathon-s2023.png?raw=true" alt="mix center worlds for change weekend. A two day worldbuilding hackathon april 21 and 22, 2023"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>MIX Center Worlds for Change Weekend</strong><br>
+                                                        Worlds for Change Weekend is a 2-day hackathon inviting ASU undergraduate students of all backgrounds to help prototype an upcoming worldbuilding contest kicking off later this year for ASU's newly launched XRts graduate degrees. Open to current ASU undergraduate students, this is a chance to learn worldbuilding skills and immediately put them into action prototyping a creative vision for the future. No experience required. Win fun prizes, including scholarships!<br>
+                                                        <a href="https://docs.google.com/document/d/1tPsFMF_6XKU__SSqSPAwf1v4MDWn4Pb8suVcvsHP71w/edit">Learn more and register online</a>.
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>    
+                        <!-- End Announcement -->
+
+                        <!-- Begin single announcement/single column - Added 4-2-23, expires 5-15-23 -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10 m-pb10 pt15 border-top">
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td class="p">
+                                                        <strong>SIGGRAPH SpaceTime 2023: Call for Student Submissions</strong><br>
+                                                        Help us celebrate the 50th anniversary of SIGGRAPH.<br>
+                                                        This graphic design competition provides an excellent opportunity for students to exhibit their computer-based media creative work nationally and internationally. Entries will be judged by international jurors based on the solution of the theme, artistic merit, design, originality, technical excellence, and content.<br>
+                                                        <a href="https://education.siggraph.org/conferences/annual-conference/siggraph-2023/spacetime-cfp">Learn more and enter on the SIGGRAPH website</a>.
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>    
+                        <!-- End Announcement -->
+
+                        <!-- Start Scholarships Block -->
+                        <!-- Start h2 Banner - Don't Touch -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr bgcolor="#ffca38">
+                                        <td>
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                <tr>
+                                                    <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Scholarships</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End h2 Banner - Don't Touch-->
+
+                        <tr>
+                            <td class="prl10 m-prl0">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10">
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                
+                                                <!--  Start Scholarship - (Added January 22, expires April 30) - -->
+                                                <tr>
+                                                    <td class="p"><strong>PRINTING United Alliance Scholarships</strong> - <em>Closes April 30</em><br>
+                                                        Supported by generous donations from endowment investors and industry leaders, the 2023 PRINTING United Alliance Scholarship Program will award $2,000 to 25 students studying graphic communications, granting a total of $50,000 in educational assistance for the 2023-2024 academic year.<br>
+                                                        <a href="https://www.sgia.org/programs/sgia-scholarships">Learn more and apply online</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Scholarship -->
+                
+                                                <!--  Start Scholarship - (Added September 12, expires May 1) - -->
+                                                <tr>
+                                                    <td class="p"><strong>PGSF Scholarships</strong> - <em>Closes May 1</em><br>
+                                                        The Print and Graphics Scholarship Foundation has coordinated the printing industry's largest scholarship program since 1956. Individuals, companies, and associations provide both annual and endowed scholarship funds to PGSF, which administers the scholarship and fellowship programs.<br>
+                                                        <a href="https://www.pgsf.org/scholarship-application">Learn more and apply online</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Scholarship -->
+
+                                                <!--  Start Scholarship - (Added February 12, no expiration date) - -->
+                                                <tr>
+                                                    <td class="p"><strong>PGSF Grant Program</strong><br>
+                                                        The Print and Graphics Scholarship Foundation (PGSF) grant program was developed to fund activities and equipment for high school, trade school, community college, and university graphic communications programs. Applications may be submitted for travel expenses or equipment.<br>
+                                                        <a href="https://apply.mykaleidoscope.com/scholarships/PGSFGrantRequest">Learn more and apply online</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Scholarship -->
+
+                                                <!-- Start Scholarship Information Posting (does not expire) -->
+                                                <tr>
+                                                    <td class="p"><strong>Adobe Scholarships &amp; Fellowships</strong><br>
+                                                        Adobe aims to help talented and motivated creatives find a path for success in industry. Opportunities are offered to creators of all ages and backgrounds.<br>
+                                                        <a href="https://www.adobe.com/corporate-responsibility/creativity/scholarship-programs.html">Learn more and apply online</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- End Scholarship -->
+                
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Scholarships Block -->
+
+                        <!-- Start Clubs Block -->
+                        <!-- Start h2 Banner - Don't Touch -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr bgcolor="#ffca38">
+                                        <td>
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                <tr>
+                                                    <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">GIT Student Clubs</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End h2 Banner - Don't Touch-->
+
+                        <!-- Start Coding Club Block block -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10 m-pb10">
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td class="block m-img-center m-prl0 pr30 pt15"><img class="pb15" width="100" src="https://github.com/git-creative-agency/theScoop/blob/main/images/coding-club.png?raw=true" alt="Coding Club Logo">
+                                                    </td>
+                                                    <td class="block">
+                                                        <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td class="p pb5"><strong>Coding Club</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5 m-prl0">
+                                                                    Improve your coding skills and meet other developers!<br>
+                                                                <a href="https://git-asu.slack.com/archives/C01JF1N6ZJ7">Join the Coding Club Slack channel</a> for meeting details.
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    <!-- END TABLE BLOCK -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Coding Club Block -->
+
+                        <!-- Start Photo Club block -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-pb10 ptb10 border-top">
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td class="block m-img-center m-prl0 pr35"><img class="m-pb15" width="100" height="100" src="https://github.com/git-creative-agency/theScoop/blob/main/images/photo-club.png?raw=true" alt="Photo Club Logo">
+                                                    </td>
+                                                    <td class="block">
+                                                        <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td class="p pb5 m-prl10"><strong>The ASU Poly Photo Club</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5 m-prl10">Meet fellow photographers and collaborate! The club meets every other Thursday at Noon.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5 m-prl10"><a href="mailto:asupolyphotoclub@gmail.com">Contact the Photography Club</a> for more information.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5 m-prl10">
+                                                                Find us on <a href="https://www.facebook.com/asupolyphotoclub">Facebook</a> and <a href="https://www.instagram.com/asupolyphotoclub/">Instagram</a>.
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                        <!-- END TABLE BLOCK --><!-- </td> -->
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Photo Club Block -->
+
+                        <!-- Start AIGA Poly block -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-pb10 ptb10 border-top">
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td class="block m-img-center m-prl0 pr30"><img width="100" height="100" src="https://github.com/git-creative-agency/theScoop/blob/main/images/aiga-poly.png?raw=true" alt="AIGA Logo"></td>
+                                                    <td class="block m-prl0">
+                                                    <!--  Second Column -->
+                                                        
+                                                        <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td class="p pb5 pl5 m-pt20 m-prl10"><strong>AIGA Poly</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5 pl5 m-prl10">
+                                                                AIGA Poly members meet and talk design. Sometimes we have tacos!<br>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5 pl5 m-prl10">Join the <a href="https://git-asu.slack.com/archives/CKH05F7PZ">#club channel</a> in Slack to get involved.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pl5 m-prl10">
+                                                                Find us on <a href="https://www.facebook.com/aigapoly/">Facebook</a> and <a href="https://www.instagram.com/aigapoly/">Instagram</a>.
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <!-- End Second Column -->
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr> 
+                        <!-- End AIGA Poly Block -->
+
+                        <!-- Start ASU Clubs Block -->
+                        <!-- Start h2 Banner - Don't Touch -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr bgcolor="#ffca38">
+                                        <td>
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                <tr>
+                                                    <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">ASU Student Clubs</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End h2 Banner - Don't Touch-->
+
+                        <!-- Start Code Devils Club block -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10 m-pb10 ptb10">
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td class="block m-img-center m-prl0 pr35 pt15"><img class="pb15" width="100" src="https://github.com/git-creative-agency/theScoop/blob/main/images/code-devils.png?raw=true" alt="Code Devils">
+                                                    </td>
+                                                    <td class="block">
+                                                        <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td class="p ptb5"><strong>CodeDevils at ASU</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5 m-prl0">
+                                                                    CodeDevils at ASU is an online programming organization that offers real-world experience through industry-led projects and coding challenges. Network with peers and professionals at regular events such as video game nights, homework study sessions, and tech talks.<br>
+                                                                <a href="https://asu.enterprise.slack.com/workspace/T2N76FZ3Q">Join the Code Devils Slack channel</a> for meeting details.
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    <!-- END TABLE BLOCK -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Coding Club Block -->
+
+                        <!-- Start Events Block -->
+                        <!-- Start h2 Banner - Don't Touch -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr bgcolor="#ffca38">
+                                        <td>
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                <tr>
+                                                    <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Events</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End h2 Banner - Don't Touch -->
+
+                        <tr>
+                            <td class="prl10 m-prl0 yahoo-table-fix pt15">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10 yahoo-table-fix">
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                                <!-- begin event -->
+                                                <tr>
+                                                    <td>
+                                                    <strong>2023 Pitchfork Awards</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">
+                                                        Wednesday, April 19 from 7:00-9:00PM<br>
+                                                        <a href="https://asu.campuslabs.com/engage/event/8694171">Learn more and register to attend online</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- end event -->
+
+                                                <!-- begin event -->
+                                                <tr>
+                                                    <td>
+                                                    <strong>WordPress Workshop 2: Customizing WordPress Websites</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">
+                                                        Friday, April 21 from 3:00-4:00PM<br>
+                                                        <a href="https://asu.zoom.us/meeting/register/tZEtcO6tpjMvE9wHcDeYCIJW0zN5z1kMEKAB#/registration">Learn more and register to attend online</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- end event -->
+
+                                                <!-- begin event -->
+                                                <tr>
+                                                    <td>
+                                                    <strong>Deadline to Submit Work to the GIT Awards</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">
+                                                        April 22, 2023<br>
+                                                        <a href="https://gitawards.com/submit/">Learn more and submit your work on the GIT Awards website</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- end event -->
+
+                                                <!-- begin event -->
+                                                <tr>
+                                                    <td>
+                                                    <strong>Take Your Career from 2D to 3D with Adobe Creative Connections</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">
+                                                        Wednesday, April 26 from 11:00AM-12:00PM PDT<br>
+                                                        <a href="https://teamwork.adobe.com/creativecloud/attendease/networking/experience/1f4f27a9-22ad-408a-a9ca-1f1563ff61e4/8d41d90e-8566-4086-b410-95461c7297d1?mc_cid=acf10c5471&mc_eid=f75d53f56a">Learn more and register to attend online</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- end event -->
+
+                                                <!-- begin event -->
+                                                <tr>
+                                                    <td>
+                                                    <strong>Tabling Tuesday - Backus Mall</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">
+                                                        Tuesday, April 25, from 11:30AM-1:00PM
+                                                    </td>
+                                                </tr>
+                                                <!-- end event -->
+
+                                                <!-- begin event -->
+                                                <tr>
+                                                    <td>
+                                                    <strong>GIT Awards - Aravaipa Auditorium &amp; Zoom</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">
+                                                        Friday, April 28, from 7:00-8:00PM<br>
+                                                        <a href="https://gitawards.com/">Learn more and register to attend on the GIT Awards website</a>.
+                                                    </td>
+                                                </tr>
+                                                <!-- end event -->
+
+                                                <!-- begin event -->
+                                                <tr>
+                                                    <td>
+                                                    <strong>Last Day of the Spring 2023 Semester</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">
+                                                        April 28, 2023
+                                                    </td>
+                                                </tr>
+                                                <!-- end event -->
+
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Events Block -->
+
+                        <!-- Start Student Resources Block -->
+                        <!-- Start h2 Banner - Don't Touch -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr bgcolor="#ffca38">
+                                        <td>
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                                <tr>
+                                                    <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff;">Student Resources</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End h2 Banner - Don't Touch-->
+
+                        <!-- Start DULL block -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10 m-pb10">
+                                            <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td class="block m-img-center pr30 m-pr0"><img class="ptb15" width="175" height="175" src="https://github.com/git-creative-agency/theScoop/blob/main/images/dull-square.png?raw=true" alt="DULL Logo">
+                                                    </td>
+                                                    <td class="block pt20">
+                                                        <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td class="p pb5"><strong>The Device and Usability Learning Lab</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">Tutoring | Study Space | Collaboration Space</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">Santa Catalina #157</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">
+                                                                    Monday: 11:15AM-2:30PM
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">
+                                                                    Tuesday: 12:00-5:00PM
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">
+                                                                    Wednesday: 11:15AM-2:30PM
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">
+                                                                    Thursday: 12:00-5:00PM
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">
+                                                                    Friday: CLOSED
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb15"><a href="http://device.lab.asu.edu/">Visit the DULL website for hours and more information</a>.</td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- END TABLE BLOCK -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End DULL Block -->
+                        
+                        <!-- Start Make Media Lab block -->
+                        <tr>
+                            <td>
+                                <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="m-prl10 m-pb10 ptb10">
+                                            <table align="center" class="yahoo-table-fix border-top" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td class="block m-img-center pr25 m-pr0"><img class="ptb15" width="170" height="170" src="https://github.com/git-creative-agency/theScoop/blob/main/images/make-media-lab.jpg?raw=true" alt="Make Media Lab Logo"></td>
+                                                    <td class="block">
+                                                        <table align="center" class="yahoo-table-fix pb10" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td class="p pb5 pt15"><strong>The Make Media Lab</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">The Make Media Lab is a video studio providing students, teachers, and faculty with equipment and help in videography, photography, and animation. Office located in Santa Catalina 330N.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5"><strong>Hours of Operation:</strong>
+                                                                    <br>Monday: 1:30-4:30PM
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">Tuesday: 1:30-4:30PM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">Wednesday: 1:30-4:30PM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">Thursday: 1:30-4:30PM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="p pb5">Friday: 12:00-3:00PM</td>
+                                                            </tr> 
+                                                            <tr>
+                                                                <td class="p pb5">
+                                                                <a href="mailto:makemedialab@gmail.com">Email makemedialab@gmail.com</a> with questions.
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        
+                                                        <!-- END TABLE BLOCK -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Make Media Lab Block -->
+
+                        <!-- Start Footer -->
+                        <tr>
+                            <td class="footer pt15 m-prl10" style="border-top: 3px solid #8c1d40; padding-bottom: 20px;">
+                                <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="540">
+                                    <tr>
+                                        <td class="h3 pt15">Post in The Scoop!</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p">Do you know of an opportunity or event that should be shared in The Scoop? Please fill out <a href="https://forms.gle/5Skht62rekVMtytW8"> The Scoop Request Form</a>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h3">Subscribe to The Scoop!</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p">Was this email forwarded to you? <a href="https://mailchi.mp/asu/roksic6u8v">Subscribe online</a> to receive your own copy each week. </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h3">The Scoop Archive</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p">Past issues of The Scoop can be viewed through the MailChimp website. <a href="https://us10.campaign-archive.com/home/?u=3272755b48ba2f3a6edc41c21&id=bc8ac4671e">Read previous issues of The Scoop online</a>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h3">Have Questions?</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p">Direct any questions about The Scoop to <a href="mailto:ask.git@asu.edu">ask.git@asu.edu</a>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="image pb20"><img src="https://github.com/git-creative-agency/theScoop/blob/main/images/asu-logo.png?raw=true" alt="ASU Logo" width="115" height="49"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Footer -->
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!-- end table wrapper -->
+        <div style="display: none;white-space: nowrap;font: 15px courier;">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        </div>
+    </body>
+</html>
