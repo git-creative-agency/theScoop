@@ -1,0 +1,918 @@
+ <!--
+=== meltBoilerplate - Blank - 2 column layout - version 1.00 ===
+
+This blank template contains the common elements that are used in the production 
+of our 2 column email campaigns here at Meltmedia.
+__________________________________________________________________________________
+
+=== Useful Tips ===
+
+- Use Premailer or Putsmail to bring styles inline with elements 
+   when email is code complete. You'll need to remove/comment out the mobile styles
+   before you move the global styles inline. Then paste/uncomment them back in. 
+   Otherwise Premailer or Putsmail will add the mobile styles inline.(view References)
+
+- Use the "Safe CSS" below to prevent weird client issues
+
+- Do not use shorthand css
+
+- Use VML so background images can be displayed in Outlook 2007-10.
+   Use wisely. (see VML reference)
+
+- Use absolute links for all images
+
+- Outlook 2007-10 will add a page break after a certain height(23 inches).
+   So if you get weird gaps this could be the issue.
+
+- Use nothing but tables. This will ensure cross client compatibility.
+
+- Try using padding for spacing instead of margins
+
+- Add width and height dimensions to all img tags.
+
+__________________________________________________________________________________
+
+=== References ===
+
+Premailer   - http://premailer.dialect.ca/
+
+Putsmail    - http://www.putsmail.com/
+
+VML         - http://www.campaignmonitor.com/forums/viewtopic.php?id=3862   
+__________________________________________________________________________________
+
+=== Snippets ===
+
+If you use Sublime Text 2, tab triggered snippets have been created 
+that mimmick common html tags. Can be found from the link below.
+https://github.com/meltmedia/campaign-monitor/tree/master/_campaign-monitor-boilerplate/snippets/sublime-text/email-snippets
+
+=============================
+Snippet       |  HTML Element
+=============================
+cm-single       | campaign monitor single column layout
+cm-two          | campaign monitor two column layout
+ramp-single     | ramp single column layout
+ramp-two        | ramp two column layout
+th1             | H1 header
+th1             | H1 header
+th2             | H2 header
+th3             | H3 header
+th4             | H4 header
+tp              | paragraph
+timg            | image
+tul             | unordered list
+tulul           | unordered list with sublist
+tulimg          | unordered list with images as bullets
+tfigure         | figure
+tfigcaption     | figcaption
+tfigcaptionlist | figcaption list
+tfootnote       | footnote
+tfootnotelist   | footnote list
+tborder         | add border around table
+tvml            | VML (allow background images in Outlook 2007-10)
+tlegal          | legal links
+taddress        | address
+tunsub          | unsubscribe link (campaign monitor only) 
+tunsubhack      | unsubscribe hack (campaign monitor only) 
+tintable        | inner table block
+tcopyright      | copyright info
+thr             | horizontal rule
+tbutton         | button
+trtd            | sets up a <tr> <td> layout
+__________________________________________________________________________________
+
+=== CSS that is safe to use ===
+
+background-color
+border
+color
+font-family
+font-size
+font-style
+font-variant
+font-weight
+letter-spacing
+line-height
+padding
+table-layout
+text-align
+text-decoration
+text-indent
+text-transform
+
+__________________________________________________________________________________
+
+=== VML Shapes and Attributes ===
+
+SHAPES
+  v:rect              | rectangle
+  v:roundrect         | rectangle with rounded corners  
+
+ELEMENTS
+  v:background        | full page background 
+
+SUB-ELEMENT
+  v:fill              | gradient, tile, frame
+
+ATTRIBUTES
+  arcsize             | change the border radius using % values
+  color2              | use for v:fill gradient
+  colors              | use for v:fill gradient, add multiple colors using 
+                        e.g. colors="20% green, 10% blue"
+  fillcolor           | fill shape with specified color
+  fill                | set to true or false (default is true)
+  href                | link entire shape to create a callout 
+  src                 | source to image
+  stroke              | set to true or false (default is true)
+  strokecolor         | specify color of stroke 
+  strokeweight        | adjust thickness of stroke
+
+STYLES
+  v-text-anchor       | top, middle, bottom
+  
+References:
+  http://msdn.microsoft.com/en-us/library/ee384217(v=vs.85).aspx
+  http://www.w3.org/TR/NOTE-VML
+
+=============================================================================-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Target IE10 phones -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>GIT The Scoop</title>
+  <style type="text/css">
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+      .main-td {
+        min-width: 600px;/*android fix*/
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 13px;
+      color: #000001;
+      line-height: 17px;
+      }
+
+      .h1 { font-size: 22px; line-height: 26px; color: #404040; font-weight: bold; }
+      .h2 { font-size: 20px; line-height: 24px; color: #8c1d40; font-weight: bold; font-style: italic; }
+      .h3 { font-size: 14px; line-height: 18px; color: #8c1d40; font-weight: bold; }
+      .h4 { font-size: 12px; line-height: 16px; color: #000001; font-weight: bold; }
+      .h5 { font-size: 10px; line-height: 14px; color: #8c1d40; font-weight: bold; }
+
+      .p,
+      .ul { padding-bottom: 15px; }
+
+      .p { color: #737373; }
+
+      .li { width: 1px; }
+      .ul .li { padding-right: 5px; }
+
+      .ul .ul { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 10px; }
+      .ul tr:first-child .li + td { width: 100%;}
+
+      .references tr:first-child .li + td { width: auto;}
+      .references .li { width: 11px; }
+      /*fixes width issue in yahoo*/
+
+      .hr {
+        background-color: #ffdc7b;
+        display: block;
+        font-size: 0px;
+        height: 1px;
+        line-height: 0px;
+        padding: 0;
+      }
+      /* horizontal rule */
+ 
+      .footnote,
+      .footnote table { font-size: 10px; line-height: 13px; }
+
+
+      sup { line-height: 0; font-size: 75%; }
+      .webversion { font-size:10px; text-decoration:underline;}
+      .linkDivider { font-weight: lighter; padding-left: 6px; padding-right: 6px; }
+      .no-underline { text-decoration: none; }
+      .underline { text-decoration: underline; }
+      .bold { font-weight: bold; }
+      .no-link { color: #000001; text-decoration: none; cursor: text; }
+      .six-star { font-family: Georgia, Times, 'Times New Roman', serif; }
+      .mobile-only { display: none; max-height:0px; overflow:hidden; }
+
+      .legal a { text-decoration: none; }
+      .legal a span { text-decoration: underline; }
+
+      .yahoo-table-fix { margin: 0 auto; }
+      /*fixes table width issue in yahoo*/
+
+      .black { color: #000001; }  
+      .white { color: #ffffff; }
+
+      .button { background-color: #8c1d40; }
+
+      .button a { 
+        color: #ffffff;  
+        text-decoration: none; 
+        display: inline-block; 
+        padding-top: 5px; 
+        padding-right: 25px; 
+        padding-left: 25px; 
+        padding-bottom: 5px; 
+        border: 1px solid #8c1d40; /*border hack needed for outlook clients*/
+      }
+
+      .babyline {
+        background-color: #ffd255;
+      }
+
+      .babybayline {
+        border-top: 1px solid #ffd255;
+      }
+
+      .background-gold {
+        background-color: #ffd255;
+      }
+
+      .maroon-color {
+        background-color: #8c1d40;
+      }
+
+      strong,
+      .maroon-text {
+      	color: #8C1D40;
+      }
+
+      a {
+        color: #e6a800;
+        font-weight: 600;
+      }
+
+      a:hover {
+      	color: #00A3E0;
+      }
+
+      a span.link {
+        color: #8c1d40 !important;
+        text-decoration: none !important;
+      }
+
+      em {
+      	color: #000001;
+      }
+
+      p {
+      	color: #5C6670;
+      }
+
+      .border-top {
+      	border-top: 1px solid #ffd255;
+      	padding-top: 15px;
+      	margin-top: 15px;
+      }
+
+      /*.border table { border-top: 1px solid; border-left: 1px solid; } */
+      /*.border td {  border-bottom: 1px solid; border-right: 1px solid; } */
+      
+    /***************************************
+                 SPACING STYLES 
+    ****************************************/
+
+      .p0   { padding-top:0;padding-right:0;padding-bottom:0;padding-left:0; }
+      .p5   { padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px; }
+      .p10  { padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px; }
+      .p15  { padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px; }
+      .p20  { padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px; }
+      .p25  { padding-top:25px;padding-right:25px;padding-bottom:25px;padding-left:25px; }
+      .p30  { padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px; }
+      .p35  { padding-top:35px;padding-right:35px;padding-bottom:35px;padding-left:35px; }
+      .p40  { padding-top:40px;padding-right:40px;padding-bottom:40px;padding-left:40px; }
+      /* zero padding on all side*/
+
+      .ptb0  { padding-top:0;padding-bottom:0; }
+      .ptb5  { padding-top:5px;padding-bottom:5px; }
+      .ptb10 { padding-top:10px;padding-bottom:10px; }
+      .ptb15 { padding-top:15px;padding-bottom:15px; }
+      .ptb20 { padding-top:20px;padding-bottom:20px; }
+      .ptb25 { padding-top:25px;padding-bottom:25px; }
+      .ptb30 { padding-top:30px;padding-bottom:30px; }
+      .ptb35 { padding-top:35px;padding-bottom:35px; }
+      .ptb40 { padding-top:40px;padding-bottom:40px; }
+      /* Padding top and bottom */
+
+      .prl0  { padding-right:0;padding-left:0; }
+      .prl5  { padding-right:5px;padding-left:5px; }
+      .prl10 { padding-right:10px;padding-left:10px; }
+      .prl15 { padding-right:15px;padding-left:15px; }
+      .prl20 { padding-right:20px;padding-left:20px; }
+      .prl25 { padding-right:25px;padding-left:25px; }
+      .prl30 { padding-right:30px;padding-left:30px; }
+      .prl35 { padding-right:35px;padding-left:35px; }
+      .prl40 { padding-right:40px;padding-left:40px; }
+      /* Padding left and right */
+
+      .pt0  { padding-top: 0px; }
+      .pt5  { padding-top: 5px; }
+      .pt10 { padding-top: 10px; } 
+      .pt15 { padding-top: 15px; } 
+      .pt20 { padding-top: 20px; } 
+      .pt25 { padding-top: 25px; }
+      .pt30 { padding-top: 30px; }
+      .pt35 { padding-top: 35px; }
+      .pt40 { padding-top: 40px; }
+      /* padding top */
+
+      .pr0  { padding-right: 0px; } 
+      .pr5  { padding-right: 5px; }  
+      .pr10 { padding-right: 10px; }
+      .pr15 { padding-right: 15px; }
+      .pr20 { padding-right: 20px; }
+      .pr25 { padding-right: 25px; }
+      .pr30 { padding-right: 30px; }
+      .pr35 { padding-right: 35px; }
+      .pr40 { padding-right: 40px; }
+      /* padding right */
+
+      .pb5  { padding-bottom: 5px; }
+      .pb0  { padding-bottom: 0px; } 
+      .pb10 { padding-bottom: 10px; }
+      .pb15 { padding-bottom: 15px; }
+      .pb20 { padding-bottom: 20px; }
+      .pb25 { padding-bottom: 25px; }
+      .pb30 { padding-bottom: 30px; }
+      .pb35 { padding-bottom: 35px; }
+      .pb40 { padding-bottom: 40px; }
+      /* padding bottom */
+
+      .pl0  { padding-left: 0px; }
+      .pl5  { padding-left: 5px; }
+      .pl10 { padding-left: 10px; }
+      .pl15 { padding-left: 15px; }
+      .pl20 { padding-left: 20px; }
+      .pl25 { padding-left: 25px; }
+      .pl30 { padding-left: 30px; }
+      .pl35 { padding-left: 35px; }
+      .pl40 { padding-left: 40px; }
+      /* padding left */
+
+    /***************************************
+            CLIENT SPECIFIC STYLES
+    ****************************************/
+
+    /* Use on td's if you need to match line-height. NOTE: Use only on td's with text */
+    .mso-exact { mso-line-height-rule: exactly; }
+
+    .preheader-text,
+    .hide-all { display: none; font-size: 0; max-height: 0; line-height: 0; visibility: hidden;}
+    /* Used to hide elements for mobile */      
+
+    #outlook a {padding:0;} 
+    /* Force Outlook to provide a "view in browser" menu link. */
+
+    body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+
+    #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+    /* end reset */
+
+    img {display:block; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; font-size: 10px;} 
+    a img { border:none; }
+    /* Some sensible defaults for images*/
+
+
+
+    </style>
+    <!--[if gte mso 9]>
+        <style>
+          sup { font-size: 100% !important; }
+        </style> 
+      <![endif]-->
+
+    <style type="text/css" data-embed>
+
+    /***************************************
+                GLOBAL STYLES
+    ****************************************/
+
+    body {
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 12px;
+      color: #000001;
+      line-height: 16px;
+    }
+    /* Render font family properly in Outlook */
+
+    table { font-size: inherit; }
+    /* Prevent user agent from overriding font size e.g. Thunderbird, Lotus Notes 8.5, AOL*/
+
+    * { line-height: inherit; }
+    /* Prevent Outlook.com from overriding line-height */
+
+    table td {border-collapse: collapse; /*mso-line-height-rule: exactly;*/ }
+    /* Outlook 07, 10 Padding issue fix
+    Bring inline: No.*/
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    /* Disguises iOS auto links */
+
+    .mobile-only td, 
+    .mobile-only table { mso-hide:all;}
+    /* Fix to hide elements in Outlook 2007-13 issue */
+
+
+    .mobile-only { display: none; max-height:0px; overflow:hidden; }
+
+   /***************************************
+          UNRESPONSIVE MOBILE STYLES
+    ****************************************/
+    
+    /*@media only screen and (max-width: 37.5em) {
+      .main-table { padding-left: 5px !important; padding-right: 5px !important; }
+    }*/
+
+    /***************************************
+               MOBILE STYLES
+    ****************************************/
+    
+    @media only screen and (max-width: 37.5em) {
+
+      .main-table { width: 100% !important; }
+      .main-td { min-width: initial !important; }
+
+      .main-table table { width:100% !important; margin: 0 auto !important; }
+      
+      .block, 
+      .content, 
+      .safety { display: block; }
+      /* place content you want stacked here */
+
+      .desktop-only { display:none !important; }
+      /* hide elements for mobile */
+
+      img { max-width: 100% !important; height: auto !important; }
+      /* large images resize down according to their parent container size */
+
+      .mobile-only { display: block !important; max-height: none !important; overflow: visible !important; }
+
+      .width-auto { width: auto !important; height: auto !important; }
+
+      .text-center { text-align: center !important; }
+
+      .main-table .fixed-60 { width: 60px !important; }
+
+      .m-prl10 { padding-right: 10px !important; padding-left: 10px !important; }
+
+      .m-prl0 { padding-right: 0 !important; padding-left: 0 !important; }
+
+      .m-img-center img { margin: 0 auto !important; }
+
+      .m-pr0 { padding-right: 0 !important; }
+
+    }
+
+    </style>
+      
+    
+</head>
+<body>
+<!-- Adds preheader text to build -->
+<span class="preheader-text">It's time to apply for the GIT Creative Agency!</span>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable" width="100%">
+    <tr bgcolor="#eaeaea">
+      <td class="main-td">
+        <table class="yahoo-table-fix main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
+
+      <!-- Start Preheader -->
+          <tr>
+            <td class="preheader" style="border-bottom: 4px solid gold">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="p10 text-center">
+                    <a href="http://www.public.asu.edu/~jlbarn11/scoop/newsletter10-7-17.html" class="webversion">View this email in your browser</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+      <!-- End Preheader -->
+
+      <!-- Start Header -->
+          <tr bgcolor="#ffffff">
+            <td class="header">
+              <table align="center" class="yahoo-web-fix" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-bottom: 1px solid #f2f2f2">
+
+                <!-- Start Scoop Logo -->
+                <tr>
+                  <td class="image yahoo-web-fix" align="center">
+                    <img src="http://www.public.asu.edu/~jlbarn11/scoop/scoopLogo.png" alt="Scoop Logo" width="540" height="142"/>
+                  </td>
+                </tr>
+                <!-- End Scoop Logo -->
+
+                <!-- Start Social Media Links -->
+                <tr>
+                  <td>
+                    <table align="center" class="yahoo-web-fix pb10 fixed-60" border="0" cellpadding="0" cellspacing="0" width="60">
+                      <tr>
+                        <td class="image" align="center" width="30">
+                          <a href="https://www.facebook.com/aigapoly/"><img src="http://www.public.asu.edu/~jlbarn11/scoop/facebooklogo2copy.png" alt="Facebook logo" width="30" height="30"/></a>
+                        </td>
+                        <td class="image" width="30" align="center">
+                          <a href="https://twitter.com/ASUGIT?lang=en"><img src="http://www.public.asu.edu/~jlbarn11/scoop/twitterlogo2copy.png" alt="Twitter Logo" width="30" height="30"/></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- End Social Media Links -->
+
+              </table>
+            </td>
+          </tr>
+      <!-- End Header -->
+
+      <!-- Start Higlighted Content -->
+          <tr>
+            <td class="pt10">
+              <table class="yahoo-table-fix" align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                
+                <!-- Start Hero Image, Please Keep Image Dimensions (width must stay the same, height can change) -->
+                <tr>
+                  <td class="image ptb15 m-prl10" align="center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd15d4rp3jk8pqqemJyvaVmLzsRwH81h92i1o8JDpD-9uzjHQ/viewform"><img src="http://www.public.asu.edu/~jlbarn11/scoop/agencyapplication.gif" alt="GIT Creative Agency Application" width="540" height="283"/>
+                  </td></a>
+                </tr>
+                <!-- End Hero Image -->
+
+                <tr>
+                  <td class="h2 pt5 m-prl10 yahoo-table-fix" align="center"><strong>Apply for the GIT Creative Agency!</strong></td>
+                </tr> 
+
+                <tr>
+                  <td class="p pt5 m-prl10 yahoo-table-fix" align="left">The GIT Creative Agency is a fully functional design firm made up of elite students who create projects for real clients in the community. <a href="https://docs.google.com/forms/d/e/1FAIpQLSd15d4rp3jk8pqqemJyvaVmLzsRwH81h92i1o8JDpD-9uzjHQ/viewform">Apply Here</a></td>
+                </tr>
+
+              </table> 
+            </td>
+          </tr>
+      <!-- End Highlighted Content -->
+           
+      <!-- Start Jobs and Internships Block -->
+        <!-- Start h2 Banner - Don't Touch -->
+         <tr>
+           <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                  <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff">Jobs and Internships</td> 
+                    </tr>
+                  </table> 
+                </td>
+              </tr> 
+            </table> 
+           </td>
+        </tr>
+        <!-- End h2 Banner - Don't Touch-->
+
+          <tr>
+            <td class="prl10 m-prl0">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                <tr>
+                  <td class="m-prl10">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                      <!-- Start Job - Added October 7, no end date -->
+                      <tr>
+                        <td class="p"><strong>Proofreader</strong> <em>Scottsdale, AZ</em><br>
+                        Staffing Strong is recruiting for a part time Proofreader for a client in Scottsdale for a two month contract.  The proofreader will be proofing marketing collateral, blogs, website content, etc. This role does require the Proofreader to be onsite 20 hours a week, but the hours can be flexible. <a href="mailto:amy@staffingstrong.com">Contact Amy Roberts for more information</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job -->
+
+                      <!-- Start Job - Added October 7, no end date -->
+                      <tr>
+                        <td class="p"><strong>Graphic Prepress Assistant</strong> <em>Tempe, AZ</em><br>
+                        Ironwood is looking for someone to assist in their prepress department helping prep and manage print files that are producing both offset and digital. This is a part-time position that could lead to full-time employment. <a href="mailto:josh.d.bryzelak@rrd.com">Contact Josh Bryzelak for more information</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job -->
+
+                      <!-- Start Job - Added October 7, no end date -->
+                      <tr>
+                        <td class="p"><strong>Mailing - Variable Data Processor</strong> <em>Phoenix, AZ</em><br>
+                        Prisma Graphics is looking for an individual to joing their mailing team. This is a full-time position. <a href="https://www.prismagraphic.com/about/careers/">Visit their website for an application</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job -->
+
+                      <!-- Start Job - Added October 7, no end date -->
+                      <tr>
+                        <td class="p"><strong>Front-End Coder</strong> <em>Tempe, AZ</em><br>
+                        Humanitarian engineering project SolarSPELL is looking for 1-2 coding positions for the spring semester. Candidates should have strong skills in HTML, CSS and/or JavaScript. <a href="mailto:Christina.Carrasquilla@asu.edu">Contact Christina Carrasquilla for more information</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job -->
+
+                      <!-- Start Job - Added September 27, no end date -->
+                      <tr>
+                        <td class="p"><strong>MAIP Student Fellows</strong> <em>Nationwide</em><br>
+                        The MAIP student fellowship allows students to work at prestigious advertising agencies on various accounts, interact with professionals on a day-to-day basis, and gain valuable professional credentials. <a href="http://maip.aaaa.org/students/">Visit the MAIP Website for more information</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job -->
+
+                      <!-- Start Job - Added September 25, no end date -->
+                      <tr>
+                        <td class="p"><strong>Volunteers needed at the i.d.e.a. Museum</strong> <em>Mesa, Arizona</em><br>
+                        The i.d.e.a. Museum is in need of volunteers in multiple areas including graphic design, photography for special events, video editing, and graphics and multimedia. <a href="mailto:pat.gregan@mesaaz.gov">Contact Pat Gregan for more information</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job -->
+
+                      <!-- Start Job - Added September 25, remove 10-14-17 -->
+                      <tr>
+                        <td class="p"><strong>Social Media and Marketing Intern for Mojo Physio</strong> <em>Scottsdale, Arizona</em><br>
+                        Mojo Physio is looking for a social media, content manager, and marketing intern for the fall semester. This is a paid position that could become full-time for the right candidate. <a href="mailto:paul@mojophysio.com">Contact Paul Ruth to apply</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job -->
+
+                      <!-- Start Job - Added Septempber 25, No end date -->
+                      <tr>
+                        <td class="p"><strong>Intern at Superstition Review</strong> <em>Online</em><br>
+                        Superstition Review is an online literary magazine run by ASU students. They are looking for students from any major to join their team as interns. The magazine has roles involving editing, blogging, social media, advertising, and more. <a href="http://blog.superstitionreview.asu.edu/2015/10/16/internship-opportunities-for-asu-undergraduates/">Visit their blog for the application and more information</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job --> 
+
+                      <!-- Start Job - Added September 25, No end date -->
+                      <tr>
+                        <td class="p"><strong>Corporate Trainee - Quad/Graphics</strong> <em>Sussex, Wisconsin</em><br>
+                        Quad/Graphics is looking for graduating seniors to join them as Corporate Trainees. In this position you will participate in on-the-job training at locations nationwide. <a href="https://www.workatquad.com/en/JobDescription?param=4832">Find more info and apply online</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job --> 
+
+                      <!-- Start Job - Added September 19, No End Date-->
+                      <tr>
+                        <td class="p"><strong>Corporate Trainee Intern - Quad/Graphics</strong> <em>Sussex, Wisconsin</em><br>
+                         Quad/Graphics would love to have a great student from Arizona State University join them as a Corporate Trainee Intern next summer! Currently seeking students pursuing a 4-year print management degree or an equivalent degree. Housing will be provided, free of charge!
+                          <a href="https://www.workatquad.com/en/JobDescription?param=4860"> For more information, interns can apply online</a>.
+                        </td>
+                      </tr>
+                      <!-- End Job -->  
+
+                      <!-- Start Job - Added September 19, No End Date-->
+                      <tr>
+                        <td class="p"><strong>Part-Time Social Media and Outreach Assistant</strong> <em>Tempe Campus</em><br>
+                        Assist the Marketing and Social Media Coordinator in promoting all of the programs and services Live Well @ ASU offers in the SDFC and throughout the ASU community. <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 35961BR.
+                        </td>
+                      </tr>
+                      <!-- End Job --> 
+
+                      <!-- Start Job - Added September 20, closes when job is filled-->
+                      <tr>
+                        <td class="p"><strong>Part-Time Digital Product Analyst Assistant at EdPlus</strong> <em>Scottsdale, Arizona</em><br>
+                        Contribute to improving the quality of different web products and improving user interfaces. The Digital Product Analyst works collaboratively within the Product  team - a part of the larger Development team along with a world-class software development team of designers, coders, engineers, and researchers. <a href="https://students.asu.edu/employment">Apply through ASU</a>. Requisition ID: 36088BR.
+                        </td>
+                      </tr>
+                      <!-- End Job -->
+
+		                </table> 
+		              </td>
+		            </tr>
+              </table> 
+            </td>
+          </tr>
+          <!-- End Jobs and Internships Block -->
+
+        <!-- Start Scholarships Block -->
+        <!-- Start h2 Banner - Don't Touch -->
+         <tr>
+           <td>
+            <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr bgcolor="#ffca38">
+                <td>
+                  <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff">Scholarships</td> 
+                    </tr>
+                  </table> 
+                </td>
+              </tr> 
+            </table> 
+           </td>
+        </tr>
+        <!-- End h2 Banner - Don't Touch-->
+
+          <tr>
+            <td class="prl10 m-prl0">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                <tr>
+                  <td class="m-prl10">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                      <!-- Start Scholarship - (Added September 20 Ends October 15, 2017) -->
+                      <tr>
+                        <td class="p"><strong>Pretty Photoshop Actions Scholarship Program</strong><br>
+                         The Pretty Photoshop Actions $500 bi-annual scholarship (awarded twice per year) provides college and university students an opportunity to earn money to further their education. <a href="https://scholarships.asu.edu/scholarship/89224">Learn more and apply</a>.
+                        </td>
+                      </tr>
+                      <!-- End Scholarship -->
+
+                    </table> 
+                  </td>
+                </tr>
+              </table> 
+            </td>
+          </tr>
+          <!-- End Scholarships Block -->
+
+          <!-- Start Events Block -->
+          <!-- Start h2 Banner - Don't Touch -->
+           <tr>
+             <td>
+              <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr bgcolor="#ffca38">
+                  <td>
+                    <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                      <tr>
+                        <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff">Events</td> 
+                      </tr>
+                    </table> 
+                  </td>
+                </tr> 
+              </table> 
+             </td>
+          </tr>
+          <!-- End h2 Banner - Don't Touch-->
+
+            <tr>
+              <td class="prl10 m-prl0">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                  <tr>
+                    <td class="m-prl10">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                        <!-- Start Event - Event expires  10-8-17-->
+                        <tr>
+                          <td class="image pb15">
+                              <a href="https://goo.gl/forms/ms1jvBiRCFnyezSw2"><img src="http://www.public.asu.edu/~jlbarn11/scoop/adobeFuture.gif" alt="Adobe" width="540"/>
+                          </td></a>
+                        </tr>
+                        <!-- end image -->
+                        <tr>
+                          <td class="p"><strong>Adobe is Coming to Poly!</strong><br>
+                          Adobe is coming to host a workshop and YOU have the opportunity to choose what you want to learn. Fill out our <a href="https://goo.gl/forms/ms1jvBiRCFnyezSw2">poll</a> to let your voice be heard.
+                          </td>
+                        </tr>
+
+                        <!-- Start Event - Event expires  10-14-17-->
+                        <tr>
+                          <td class="image pb15 border-top">
+                              <a href="https://oct2017.desertcodecamp.com/home"><img src="http://www.public.asu.edu/~jlbarn11/scoop/codecamp.png" alt="Desert Code Camp" width="540"/>
+                          </td></a>
+                        </tr>
+                        <!-- end image -->
+                        <tr>
+                          <td class="p"><strong>Desert Code Camp 2017.1</strong><br>
+                          Desert Code Camp is a free educational technology conference held at the Chandler-Gilbert Community College campus. There are sessions offered all day as well as employers onsite and free breakfast and lunch! Visit their <a href="https://oct2017.desertcodecamp.com/home">website</a> for more information about sessions and related events. 
+                          </td>
+                        </tr>
+
+                      </table> 
+                    </td>
+                  </tr>
+                </table> 
+              </td>
+            </tr>
+            <!-- End Events Block -->
+
+            <!-- Start Updates Block -->
+            <!-- Start h2 Banner - Don't Touch -->
+             <tr>
+               <td>
+                <table align="center" class="yahoo-table-fix pb15" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr bgcolor="#ffca38">
+                    <td>
+                      <table align="center" class="yahoo-table-fix" border="0" cellpadding="0" cellspacing="0" width="540">
+                        <tr>
+                          <td class="h2 pt5 pb5 m-prl10" style="color: #ffffff">Updates</td> 
+                        </tr>
+                      </table> 
+                    </td>
+                  </tr> 
+                </table> 
+               </td>
+            </tr>
+            <!-- End h2 Banner - Don't Touch-->
+
+              <tr>
+                <td class="prl10 m-prl0">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="m-prl10">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                      <!-- Start Updates - Place Date here of when to remove  -->
+                        
+                          <tr>
+                            <td class="image">
+                              <img src="http://www.public.asu.edu/~jlbarn11/scoop/photoclub.png" alt="Poly photo club logo" width="540"/>
+                            </td>
+                          </tr>
+                          <!-- end image -->
+
+                          <tr>
+                            <td class="p"><strong>Join the ASU Poly Photo Club</strong><br>
+                            The ASU Polytechnic Photography Club is a place for all photography enthusiasts to convene as a group and socialize with others in the photography community, plan photography-related outings, and learn new techniques or styles from one another. Meet fellow photographers and collaborate at noon every OTHER Monday in TECH 113 to explore new ideas.  <br><br>
+                            Contact <a href="mailto:asupolyphotoclub@gmail.com">The Photography Club</a> for some more information. 
+                            </td>
+                          </tr>
+                          <!-- End Event --> 
+
+                          <!-- Start Event - Place Date here of when to remove  -->
+                          <tr>
+                            <td class="image border-top">
+                              <img src="http://www.public.asu.edu/~jlbarn11/scoop/aigapolylogo.png" alt="" width="540"/>
+                            </td>
+                          </tr>
+                          <!-- end image -->
+
+                          <tr>
+                            <td class="p"><strong>AIGA Poly</strong><br>
+                            AIGA Poly represents all designers for fun and for future. Join the club every Wednesday in TECH 109 at 11:45AM to get involved. <br><br>
+                            Can't make the meetings, but want to be involved? Email Kassidy to join the club's communication channel at <a href="mailto:kmarias@asu.edu">kmarias@asu.edu</a>.
+                            </td>
+                          </tr>
+                          <!-- End Event --> 
+
+                        </table> 
+                      </td>
+                    </tr>
+                  </table> 
+                </td>
+              </tr>
+              <!-- End Updates Block -->
+
+
+              <!-- Start Footer -->
+              <tr>
+                <td class="footer pt15 m-prl10" style="border-top: 3px solid #8c1d40">
+                  <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="540">
+                    <tr>
+                      <td class="h3 pt15">Post in The Scoop!
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="p">
+                      Do you know of an opportunity or event that should be shared in The Scoop? Please fill out <a href="https://goo.gl/forms/xK8NwBGRrHi3yuYo1"> The Scoop Request Form</a>.
+                      </td>
+                    </tr>
+                              
+                    <tr>
+                      <td class="h3">Have Questions?</td>
+                    </tr>
+
+                    <tr>
+                      <td class="p">Direct any questions about The Scoop to <a href="mailto:ask.git@asu.edu">ask.git@asu.edu</a>.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="image pb20">
+                       <img src="http://www.public.asu.edu/~jlbarn11/scoop/asu-logo.png" alt="ASU Logo" width="115" height="49"/>
+                     </td>
+                    </tr>
+
+                  </table> 
+                </td>
+              </tr>
+              <!-- End Footer -->
+
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- end table wrapper -->
+
+  <div style="display: none;white-space: nowrap;font: 15px courier;line-height: inherit;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  </div>
+  
+</body>
+</html>
