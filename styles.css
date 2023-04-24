@@ -250,7 +250,7 @@ nav a{
 
 /* Nav Link Hover Styles */
 nav a:hover{
-    transform: scale(105%);
+    transform: scale(1.05);
     background-color: var(--gold);
     color: var(--black);
 }
@@ -262,7 +262,7 @@ nav a:visited{
 
 /* Nav Link Focus Styles */
 nav a:focus, nav a:focus-visible{
-    transform: scale(95%);
+    transform: scale(0.95);
     outline: 2px solid var(--gold);
     outline-offset: 4px;
 }
@@ -441,7 +441,7 @@ h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active
 
 /* For the Button to Subscribe on Hover */
 .btn-default:hover{
-    transform: scale(105%);
+    transform: scale(1.05);
 }
 
 /* Default Button Focus Styles */
