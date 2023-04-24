@@ -13,6 +13,7 @@ $(function(){
         icons: false,
         collapsible: true,
         active: false,
-        animate: 500
+        animate: 500,
+        heightStyle: "content"
     });
 });

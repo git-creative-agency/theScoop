@@ -396,9 +396,9 @@ h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active
 
 /* Sections of Accordion When Open */
 #accordion section{
-    width: calc(100% - 13px) !important;
+    width: calc(100% - 45px) !important;
     margin: 0 auto 24px auto !important;
-    padding: 1rem 0 !important;
+    padding: 16px !important;
     background: none;
     background-color: var(--gray1);
     color: var(--gray7);
@@ -417,8 +417,13 @@ h3.ui-accordion-header.ui-corner-top.ui-state-default.ui-accordion-header-active
 #accordion section a{
     padding: 8px;
     width: fit-content;
-    margin: 8px 0;
+    margin: 8px 0 0 0;
     color: var(--maroon);
+    font-weight: bold;
+}
+
+#accordion dd{
+    padding: 0 0 0 16px;
 }
 
 /* For the Button to Subscribe to The Scoop in the Subscribe Section */
@@ -625,7 +630,7 @@ footer > p a:focus, footer > p a:focus-visible{
 
     #background{
 		display: block;
-		background-image: url("images/wide-backround.svg");
+		background-image: url("images/wide-background.svg");
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
