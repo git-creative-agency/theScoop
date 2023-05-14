@@ -115,8 +115,6 @@ body{
     box-sizing: border-box;
 	background-color: var(--gray7); 	
 	line-height: 1.5;
-    /* overflow-y: scroll; */
-    /* scroll-behavior: smooth; */
 }
 
 #background{
@@ -144,7 +142,6 @@ header, main, footer{
     padding: 32px 16px;
     position: relative;
     z-index: 2;
-    /* scroll-behavior: smooth; */
 }
 
 /* Header Styles */
